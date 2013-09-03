@@ -26,7 +26,7 @@ public class UserDAO {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/ssm?user=ssmuser&password=ssmpw");
+					.getConnection("jdbc:mysql://localhost:3306/STUDENT_MANAGEMENT?user=smuser&password=smpw");
 
 //			statement = connect.createStatement();
 //			resultSet = statement.executeQuery("select * from user");
@@ -49,7 +49,7 @@ public class UserDAO {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/ssm?user=ssmuser&password=ssmpw");
+					.getConnection("jdbc:mysql://localhost:3306/STUDENT_MANAGEMENT?user=smuser&password=smpw");
 
 //			statement = connect.createStatement();
 //			resultSet = statement.executeQuery("select * from user");

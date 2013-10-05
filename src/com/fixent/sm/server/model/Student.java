@@ -1,37 +1,63 @@
 package com.fixent.sm.server.model;
 
 import java.util.Date;
+import java.util.Set;
+
 
 public class Student {
 	
 	int id;
+	int regNo;
 	String name;
-	String type;
+	String createdBy;
+	Date createdDate;
+	String updatedBy;
+	Date updatedDate;
+	String gender;
 	Date dateOfBirth;
 	String placeOfBirth;
-	Date dateOfBaptism;
-	String placeOfBaptism;	
-	Date dateOfConfirmation;
-	String placeOfRegency;
+	String remarks;
+	Date dateOfJoining;
 	String fatherName;
 	String motherName;
-	String parentsNmae;
-	String parentsLiving;
-	int brothers;
-	int sisters;
-	String occupationOfParents;
-	String parentsAddress;
-	String secularStudies;
-	String minorSeminary;
-	String majorSeminary;
-	boolean certificateOfPhilosopy;
-	boolean spiritualYearFinalAssessment;
-	boolean baptismAndConfirmation;
-	boolean degreeCertificate;
-	boolean finalReportFromMajorSeminary;
-	boolean regencyRfeport;
-	boolean passportSizePhoto;
-	boolean marriageCertificateOfParents;
+	String fatherOccupation;
+	String motherOccupation;
+	int contactNumber;
+	Date dateOfBaptism;
+	String placeOfBaptism;
+	Date dateOfConfirmation;
+	String placeOfConfirmation;
+	boolean fatherLiving;
+	boolean motherLiving;
+	int noOfElderBrother;
+	int noOfYoungerBrother;
+	int noOfElderSister;
+	int noOfYoungerSister;
+	String parish;
+	String village;
+	String dioCongLay;
+	String nameOfDioCong;
+	String minorSeminaryName;
+	Date minorSeminaryFromDate;
+	Date minorSeminaryToDate;
+	String degreeCourse;
+	String degreeCollege;
+	Date degreeFromDate;
+	Date degreeToDate;
+	String philosophySeminary;
+	Date philosophyFromDate;
+	Date philosophyToDate;
+	String regencyParish;
+	Date regencyFromDate;
+	Date regencyToDate;
+	String spiritualitySeminary;
+	Date spiritualityFromDate;
+	Date spiritualityToDate;
+	
+	Batch batch;
+	
+	Set<Mark> marks;
+	
 	
 	public int getId() {
 		return id;
@@ -39,17 +65,47 @@ public class Student {
 	public void setId(int id) {
 		this.id = id;
 	}
+	public int getRegNo() {
+		return regNo;
+	}
+	public void setRegNo(int regNo) {
+		this.regNo = regNo;
+	}
 	public String getName() {
 		return name;
 	}
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getType() {
-		return type;
+	public String getCreatedBy() {
+		return createdBy;
 	}
-	public void setType(String type) {
-		this.type = type;
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+	public Date getCreatedDate() {
+		return createdDate;
+	}
+	public void setCreatedDate(Date createdDate) {
+		this.createdDate = createdDate;
+	}
+	public String getUpdatedBy() {
+		return updatedBy;
+	}
+	public void setUpdatedBy(String updatedBy) {
+		this.updatedBy = updatedBy;
+	}
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	public Date getDateOfBirth() {
 		return dateOfBirth;
@@ -57,12 +113,53 @@ public class Student {
 	public void setDateOfBirth(Date dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
 	}
-	
 	public String getPlaceOfBirth() {
 		return placeOfBirth;
 	}
 	public void setPlaceOfBirth(String placeOfBirth) {
 		this.placeOfBirth = placeOfBirth;
+	}
+	public String getRemarks() {
+		return remarks;
+	}
+	public void setRemarks(String remarks) {
+		this.remarks = remarks;
+	}
+	public Date getDateOfJoining() {
+		return dateOfJoining;
+	}
+	public void setDateOfJoining(Date dateOfJoining) {
+		this.dateOfJoining = dateOfJoining;
+	}
+	public String getFatherName() {
+		return fatherName;
+	}
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
+	}
+	public String getMotherName() {
+		return motherName;
+	}
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+	public String getFatherOccupation() {
+		return fatherOccupation;
+	}
+	public void setFatherOccupation(String fatherOccupation) {
+		this.fatherOccupation = fatherOccupation;
+	}
+	public String getMotherOccupation() {
+		return motherOccupation;
+	}
+	public void setMotherOccupation(String motherOccupation) {
+		this.motherOccupation = motherOccupation;
+	}
+	public int getContactNumber() {
+		return contactNumber;
+	}
+	public void setContactNumber(int contactNumber) {
+		this.contactNumber = contactNumber;
 	}
 	public Date getDateOfBaptism() {
 		return dateOfBaptism;
@@ -82,127 +179,178 @@ public class Student {
 	public void setDateOfConfirmation(Date dateOfConfirmation) {
 		this.dateOfConfirmation = dateOfConfirmation;
 	}
-	public String getPlaceOfRegency() {
-		return placeOfRegency;
+	public String getPlaceOfConfirmation() {
+		return placeOfConfirmation;
 	}
-	public void setPlaceOfRegency(String placeOfRegency) {
-		this.placeOfRegency = placeOfRegency;
+	public void setPlaceOfConfirmation(String placeOfConfirmation) {
+		this.placeOfConfirmation = placeOfConfirmation;
 	}
-	public String getFatherName() {
-		return fatherName;
+	public boolean isFatherLiving() {
+		return fatherLiving;
 	}
-	public void setFatherName(String fatherName) {
-		this.fatherName = fatherName;
+	public void setFatherLiving(boolean fatherLiving) {
+		this.fatherLiving = fatherLiving;
 	}
-	public String getMotherName() {
-		return motherName;
+	public boolean isMotherLiving() {
+		return motherLiving;
 	}
-	public void setMotherName(String motherName) {
-		this.motherName = motherName;
+	public void setMotherLiving(boolean motherLiving) {
+		this.motherLiving = motherLiving;
 	}
-	public String getParentsLiving() {
-		return parentsLiving;
+	public int getNoOfElderBrother() {
+		return noOfElderBrother;
 	}
-	public void setParentsLiving(String parentsLiving) {
-		this.parentsLiving = parentsLiving;
+	public void setNoOfElderBrother(int noOfElderBrother) {
+		this.noOfElderBrother = noOfElderBrother;
 	}
-	public int getBrothers() {
-		return brothers;
+	public int getNoOfYoungerBrother() {
+		return noOfYoungerBrother;
 	}
-	public void setBrothers(int brothers) {
-		this.brothers = brothers;
+	public void setNoOfYoungerBrother(int noOfYoungerBrother) {
+		this.noOfYoungerBrother = noOfYoungerBrother;
 	}
-	public int getSisters() {
-		return sisters;
+	public int getNoOfElderSister() {
+		return noOfElderSister;
 	}
-	public void setSisters(int sisters) {
-		this.sisters = sisters;
+	public void setNoOfElderSister(int noOfElderSister) {
+		this.noOfElderSister = noOfElderSister;
 	}
-	public String getOccupationOfParents() {
-		return occupationOfParents;
+	public int getNoOfYoungerSister() {
+		return noOfYoungerSister;
 	}
-	public void setOccupationOfParents(String occupationOfParents) {
-		this.occupationOfParents = occupationOfParents;
+	public void setNoOfYoungerSister(int noOfYoungerSister) {
+		this.noOfYoungerSister = noOfYoungerSister;
 	}
-	public String getParentsAddress() {
-		return parentsAddress;
+	public String getParish() {
+		return parish;
 	}
-	public void setParentsAddress(String parentsAddress) {
-		this.parentsAddress = parentsAddress;
+	public void setParish(String parish) {
+		this.parish = parish;
 	}
-	public String getSecularStudies() {
-		return secularStudies;
+	public String getVillage() {
+		return village;
 	}
-	public void setSecularStudies(String secularStudies) {
-		this.secularStudies = secularStudies;
+	public void setVillage(String village) {
+		this.village = village;
 	}
-	public String getMinorSeminary() {
-		return minorSeminary;
+	public String getDioCongLay() {
+		return dioCongLay;
 	}
-	public void setMinorSeminary(String minorSeminary) {
-		this.minorSeminary = minorSeminary;
+	public void setDioCongLay(String dioCongLay) {
+		this.dioCongLay = dioCongLay;
 	}
-	public String getMajorSeminary() {
-		return majorSeminary;
+	public String getNameOfDioCong() {
+		return nameOfDioCong;
 	}
-	public void setMajorSeminary(String majorSeminary) {
-		this.majorSeminary = majorSeminary;
+	public void setNameOfDioCong(String nameOfDioCong) {
+		this.nameOfDioCong = nameOfDioCong;
 	}
-	public boolean getCertificateOfPhilosopy() {
-		return certificateOfPhilosopy;
+	public String getMinorSeminaryName() {
+		return minorSeminaryName;
 	}
-	public void setCertificateOfPhilosopy(boolean certificateOfPhilosopy) {
-		this.certificateOfPhilosopy = certificateOfPhilosopy;
+	public void setMinorSeminaryName(String minorSeminaryName) {
+		this.minorSeminaryName = minorSeminaryName;
 	}
-	public boolean getSpiritualYearFinalAssessment() {
-		return spiritualYearFinalAssessment;
+	public Date getMinorSeminaryFromDate() {
+		return minorSeminaryFromDate;
 	}
-	public void setSpiritualYearFinalAssessment(boolean spiritualYearFinalAssessment) {
-		this.spiritualYearFinalAssessment = spiritualYearFinalAssessment;
+	public void setMinorSeminaryFromDate(Date minorSeminaryFromDate) {
+		this.minorSeminaryFromDate = minorSeminaryFromDate;
 	}
-	public boolean getBaptismAndConfirmation() {
-		return baptismAndConfirmation;
+	public Date getMinorSeminaryToDate() {
+		return minorSeminaryToDate;
 	}
-	public void setBaptismAndConfirmation(boolean baptismAndConfirmation) {
-		this.baptismAndConfirmation = baptismAndConfirmation;
+	public void setMinorSeminaryToDate(Date minorSeminaryToDate) {
+		this.minorSeminaryToDate = minorSeminaryToDate;
 	}
-	public boolean getDegreeCertificate() {
-		return degreeCertificate;
+	public String getDegreeCourse() {
+		return degreeCourse;
 	}
-	public void setDegreeCertificate(boolean degreeCertificate) {
-		this.degreeCertificate = degreeCertificate;
+	public void setDegreeCourse(String degreeCourse) {
+		this.degreeCourse = degreeCourse;
 	}
-	public boolean getFinalReportFromMajorSeminary() {
-		return finalReportFromMajorSeminary;
+	public String getDegreeCollege() {
+		return degreeCollege;
 	}
-	public void setFinalReportFromMajorSeminary(boolean finalReportFromMajorSeminary) {
-		this.finalReportFromMajorSeminary = finalReportFromMajorSeminary;
+	public void setDegreeCollege(String degreeCollege) {
+		this.degreeCollege = degreeCollege;
 	}
-	public boolean getRegencyRfeport() {
-		return regencyRfeport;
+	public Date getDegreeFromDate() {
+		return degreeFromDate;
 	}
-	public void setRegencyRfeport(boolean regencyRfeport) {
-		this.regencyRfeport = regencyRfeport;
+	public void setDegreeFromDate(Date degreeFromDate) {
+		this.degreeFromDate = degreeFromDate;
 	}
-	public boolean getPassportSizePhoto() {
-		return passportSizePhoto;
+	public Date getDegreeToDate() {
+		return degreeToDate;
 	}
-	public void setPassportSizePhoto(boolean passportSizePhoto) {
-		this.passportSizePhoto = passportSizePhoto;
+	public void setDegreeToDate(Date degreeToDate) {
+		this.degreeToDate = degreeToDate;
 	}
-	public boolean getMarriageCertificateOfParents() {
-		return marriageCertificateOfParents;
+	public String getPhilosophySeminary() {
+		return philosophySeminary;
 	}
-	public void setMarriageCertificateOfParents(boolean marriageCertificateOfParents) {
-		this.marriageCertificateOfParents = marriageCertificateOfParents;
+	public void setPhilosophySeminary(String philosophySeminary) {
+		this.philosophySeminary = philosophySeminary;
 	}
-	public String getParentsNmae() {
-		return parentsNmae;
+	public Date getPhilosophyFromDate() {
+		return philosophyFromDate;
 	}
-	public void setParentsNmae(String parentsNmae) {
-		this.parentsNmae = parentsNmae;
+	public void setPhilosophyFromDate(Date philosophyFromDate) {
+		this.philosophyFromDate = philosophyFromDate;
 	}
-	
-	
-
+	public Date getPhilosophyToDate() {
+		return philosophyToDate;
+	}
+	public void setPhilosophyToDate(Date philosophyToDate) {
+		this.philosophyToDate = philosophyToDate;
+	}
+	public String getRegencyParish() {
+		return regencyParish;
+	}
+	public void setRegencyParish(String regencyParish) {
+		this.regencyParish = regencyParish;
+	}
+	public Date getRegencyFromDate() {
+		return regencyFromDate;
+	}
+	public void setRegencyFromDate(Date regencyFromDate) {
+		this.regencyFromDate = regencyFromDate;
+	}
+	public Date getRegencyToDate() {
+		return regencyToDate;
+	}
+	public void setRegencyToDate(Date regencyToDate) {
+		this.regencyToDate = regencyToDate;
+	}
+	public String getSpiritualitySeminary() {
+		return spiritualitySeminary;
+	}
+	public void setSpiritualitySeminary(String spiritualitySeminary) {
+		this.spiritualitySeminary = spiritualitySeminary;
+	}
+	public Date getSpiritualityFromDate() {
+		return spiritualityFromDate;
+	}
+	public void setSpiritualityFromDate(Date spiritualityFromDate) {
+		this.spiritualityFromDate = spiritualityFromDate;
+	}
+	public Date getSpiritualityToDate() {
+		return spiritualityToDate;
+	}
+	public void setSpiritualityToDate(Date spiritualityToDate) {
+		this.spiritualityToDate = spiritualityToDate;
+	}
+	public Batch getBatch() {
+		return batch;
+	}
+	public void setBatch(Batch batch) {
+		this.batch = batch;
+	}
+	public Set<Mark> getMarks() {
+		return marks;
+	}
+	public void setMarks(Set<Mark> marks) {
+		this.marks = marks;
+	}
 }

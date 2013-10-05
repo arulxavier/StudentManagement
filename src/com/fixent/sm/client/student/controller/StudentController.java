@@ -37,7 +37,7 @@ public class StudentController {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
-			Student student = new Student();
+			/*Student student = new Student();
 			student.setName(view.getNameTextField().getText());
 			student.setType(view.getTypeComboBox().getModel().getSelectedItem().toString());
 			student.setDateOfBirth(new Date(view.getDateOfBirth().getjTextField1()));
@@ -62,7 +62,7 @@ public class StudentController {
 			student.setFinalReportFromMajorSeminary(view.getFinalReportfromTheMajorSeminaryCheckBox().isSelected());
 			student.setRegencyRfeport(view.getRegencyReportCheckBox().isSelected());
 			student.setPassportSizePhoto(view.getPassportSizePhotoCheckBox().isSelected());
-			student.setMarriageCertificateOfParents(view.getMarriageCertificateOftheParentsCheckBox().isSelected());
+			student.setMarriageCertificateOfParents(view.getMarriageCertificateOftheParentsCheckBox().isSelected());*/
 			
 			
 			/*student.setName("jashdhkjsa");

@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Accordion"/>
 	<classpathentry kind="var" path="3RDPARTY_JAR/mysql-connector-java-5.1.25-bin.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/javax/transaction/jta/1.1/jta-1.1.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/antlr/antlr/2.7.6/antlr-2.7.6.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/commons-collections/commons-collections/3.1/commons-collections-3.1.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/org/hibernate/hibernate-core/3.6.3.Final/hibernate-core-3.6.3.Final.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/junit/junit/4.8.2/junit-4.8.2.jar"/>
+	<classpathentry kind="var" path="SM_3RDPARTY_JAR/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

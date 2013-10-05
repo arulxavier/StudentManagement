@@ -5,7 +5,6 @@ import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -83,7 +82,7 @@ public class UserDAO {
 							+ "PASSPORT_SIZE_PHOTO,"
 							+ "MARRIAGE_CERTIFICATE_OF_PARENTS)"
 							+ "VALUES (default,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
-			preparedStatement.setString(1, student.getName());
+			/*preparedStatement.setString(1, student.getName());
 			preparedStatement.setString(2, student.getType());
 			preparedStatement.setDate(3, getSqlDate(student.getDateOfBirth()));
 			preparedStatement.setString(4, student.getPlaceOfBirth());
@@ -108,7 +107,7 @@ public class UserDAO {
 			preparedStatement.setBoolean(23, student.getFinalReportFromMajorSeminary());
 			preparedStatement.setBoolean(24, student.getRegencyRfeport());
 			preparedStatement.setBoolean(25, student.getPassportSizePhoto());
-			preparedStatement.setBoolean(26, student.getMarriageCertificateOfParents());
+			preparedStatement.setBoolean(26, student.getMarriageCertificateOfParents());*/
 			
 			value = preparedStatement.executeUpdate();
 		} catch (Exception e) {
@@ -139,47 +138,14 @@ public class UserDAO {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/ssm?user=ssmuser&password=ssmpw");
+					.getConnection("jdbc:mysql://localhost:3306/STUDENT_MANAGEMENT?user=smuser&password=smpw");
 
-//			statement = connect.createStatement();
-//			resultSet = statement.executeQuery("select * from user");
-			/*preparedStatement = connect
-					.prepareStatement("select "
-							+ "ID,"
-							+ "NAME,"
-							+ "TYPE,"
-							+ "DATE_OF_BIRTH,"
-							+ "PLACE_OF_BIRTH,"
-							+ "DATE_OF_BAPTISM,"
-							+ "PLACE_OF_BAPTISM,"
-							+ "DATE_OF_CONFIRMATION,"
-							+ "PLACE_OF_REGENCY,"
-							+ "FATHER_NAME,"
-							+ "MOTHER_NAME,"
-							+ "PARENTS_LIVING,"
-							+ "BROTHERS,"
-							+ "SISTERS,"
-							+ "OCCUPATION_OF_PARENTS,"
-							+ "PARENTS_ADDRESS,"
-							+ "SECULAR_STUDIES,"
-							+ "MINOR_SEMINARY,"
-							+ "MAJOR_SEMINARY,"
-							+ "CERTIFICATE_OF_PHILOSOPY,"
-							+ "SPIRITUAL_YEAR_FINAL_ASSESSMENT,"
-							+ "BAPTISM_AND_CONFIRMATION,"
-							+ "DEGREE_CERTIFICATE,"
-							+ "FINAL_REPORT_FROM_MAJOR_SEMINARY,"
-							+ "REGENCY_RFEPORT,"
-							+ "PASSPORT_SIZE_PHOTO,"
-							+ "MARRIAGE_CERTIFICATE_OF_PARENTS"
-							+ " FROM STUDENT_INFO");*/
-			
 			preparedStatement = connect
 					.prepareStatement("select * from student_info");
 			resultSet = preparedStatement.executeQuery();
 			
 			while (resultSet.next()) {
-				Student student = new Student();
+				/*Student student = new Student();
 				student.setId(resultSet.getInt(1));
 				student.setName(resultSet.getString(2));
 				student.setType(resultSet.getString(3));
@@ -206,7 +172,7 @@ public class UserDAO {
 				student.setRegencyRfeport(resultSet.getBoolean(25));
 				student.setPassportSizePhoto(resultSet.getBoolean(26));
 				student.setMarriageCertificateOfParents(resultSet.getBoolean(27));
-				students.add(student);
+				students.add(student);*/
 			    }
 			
 		

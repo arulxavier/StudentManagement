@@ -1,0 +1,5 @@
+#NOTE: This is an internal implementation file, its format can be changed without prior notice.
+#Wed Oct 02 11:26:17 IST 2013
+http\://repo.maven.apache.org/maven2/.lastUpdated=1380693377868
+default-http\://repository.jboss.com/maven2/.lastUpdated=1380693371693
+http\://repository.jboss.com/maven2/.error=Could not transfer artifact junit\:junit\:pom\:3.8.1 from/to JBoss repository (http\://repository.jboss.com/maven2/)\: null to http\://repository.jboss.org/maven2/junit/junit/3.8.1/junit-3.8.1.pom

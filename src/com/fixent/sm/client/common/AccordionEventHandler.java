@@ -40,7 +40,7 @@ extends MenuClickEvent {
 						
 						RightSidePanel rightSidePanel = (RightSidePanel)((JViewport) component).getComponents()[0];
 						rightSidePanel.removeAll();
-						if (item.getText().equalsIgnoreCase("Student")) {
+						if (item.getText().equalsIgnoreCase("College Details")) {
 							rightSidePanel.add(new StudentDashboardController().view,BorderLayout.CENTER);
 						} else {
 							

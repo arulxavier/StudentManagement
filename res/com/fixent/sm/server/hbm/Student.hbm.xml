@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fixent.sm.server.model.Student" table="STUDENT">
+		<id name="id" type="int">
+			<column name="ID" precision="5" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="regNo" type="int">
+			<column name="REG_NO" />
+		</property>
+		<property name="name" type="string">
+			<column name="NAME" />
+		</property>
+
+		<property name="gender" type="string">
+			<column name="GENDER" />
+		</property>
+		<property name="dateOfBirth" type="date">
+			<column name="DATE_OF_BIRTH" />
+		</property>
+		<property name="placeOfBirth" type="string">
+			<column name="PLACE_OF_BIRTH" />
+		</property>
+		<property name="remarks" type="string">
+			<column name="REMARKS" />
+		</property>
+		<property name="dateOfJoining" type="date">
+			<column name="DATE_OF_JOINING" />
+		</property>
+		<property name="fatherName" type="string">
+			<column name="FATHER_NAME" />
+		</property>
+		<property name="motherName" type="string">
+			<column name="MOTHER_NAME" />
+		</property>
+		<property name="fatherOccupation" type="string">
+			<column name="FATHER_OCCUPATION" />
+		</property>
+		<property name="motherOccupation" type="string">
+			<column name="MOTHER_OCCUPATION" />
+		</property>
+		<property name="contactNumber" type="int">
+			<column name="CONTACT_NUMBER" />
+		</property>
+		<property name="dateOfBaptism" type="date">
+			<column name="DATE_OF_BAPTISM" />
+		</property>
+		<property name="placeOfBaptism" type="string">
+			<column name="PLACE_OF_BAPTISM" />
+		</property>
+		<property name="dateOfConfirmation" type="date">
+			<column name="DATE_OF_CONFIRMATION" />
+		</property>
+		<property name="placeOfConfirmation" type="string">
+			<column name="PLACE_OF_CONFIRMATION" />
+		</property>
+		<property name="fatherLiving" type="boolean">
+			<column name="FATHER_LIVING" />
+		</property>
+		<property name="motherLiving" type="boolean">
+			<column name="MOTHER_LIVING" />
+		</property>
+		<property name="noOfElderBrother" type="int">
+			<column name="NO_OF_ELDER_BROTHER" />
+		</property>
+		<property name="noOfYoungerBrother" type="int">
+			<column name="NO_OF_YOUNGER_BROTHER" />
+		</property>
+		<property name="noOfElderSister" type="int">
+			<column name="NO_OF_ELDER_SISTER" />
+		</property>
+		<property name="noOfYoungerSister" type="int">
+			<column name="NO_OF_YOUNGER_SISTER" />
+		</property>
+		<property name="parish" type="string">
+			<column name="PARISH" />
+		</property>
+		<property name="village" type="string">
+			<column name="VILLAGE" />
+		</property>
+		<property name="dioCongLay" type="string">
+			<column name="DIO_CONG_LAY" />
+		</property>
+		<property name="nameOfDioCong" type="string">
+			<column name="NAME_OF_DIO_CONG" />
+		</property>
+		<property name="minorSeminaryName" type="string">
+			<column name="MINOR_SEMINARY_NAME" />
+		</property>
+		<property name="minorSeminaryFromDate" type="date">
+			<column name="MINOR_SEMINARY_FROM_DATE" />
+		</property>
+		<property name="minorSeminaryToDate" type="date">
+			<column name="MINOR_SEMINARY_TO_DATE" />
+		</property>
+		<property name="degreeCourse" type="string">
+			<column name="DEGREE_COURSE" />
+		</property>
+		<property name="degreeCollege" type="string">
+			<column name="DEGREE_COLLEGE" />
+		</property>
+		<property name="degreeFromDate" type="date">
+			<column name="DEGREE_FROM_DATE" />
+		</property>
+		<property name="degreeToDate" type="date">
+			<column name="DEGREE_TO_DATE" />
+		</property>
+		<property name="philosophySeminary" type="string">
+			<column name="PHILOSOPHY_SEMINARY" />
+		</property>
+		<property name="philosophyFromDate" type="date">
+			<column name="PHILOSOPHY_FROM_DATE" />
+		</property>
+		<property name="philosophyToDate" type="date">
+			<column name="PHILOSOPHY_TO_DATE" />
+		</property>
+		<property name="regencyParish" type="string">
+			<column name="REGENCY_PARISH" />
+		</property>
+		<property name="regencyFromDate" type="date">
+			<column name="REGENCY_FROM_DATE" />
+		</property>
+		<property name="regencyToDate" type="date">
+			<column name="REGENCY_TO_DATE" />
+		</property>
+		<property name="spiritualitySeminary" type="string">
+			<column name="SPIRITUALITY_SEMINARY" />
+		</property>
+		<property name="spiritualityFromDate" type="date">
+			<column name="SPIRITUALITY_FROM_DATE" />
+		</property>
+		<property name="spiritualityToDate" type="date">
+			<column name="SPIRITUALITY_TO_DATE" />
+		</property>
+		<property name="createdBy" type="string">
+			<column name="CREATED_BY" length="20" not-null="true" />
+		</property>
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="7" not-null="true" />
+		</property>
+		<property name="updatedBy" type="string">
+			<column name="UPDATED_BY" length="20" not-null="false" />
+		</property>
+		<property name="updatedDate" type="date">
+			<column name="UPDATED_DATE" length="7" not-null="false" />
+		</property>
+
+		<many-to-one name="batch" class="com.fixent.sm.server.model.Batch" column="BATCH_ID" not-null="true" /> 
+		
+		 <set name="marks" table="MARK" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="STUDENT_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.fixent.sm.server.model.Mark" />
+        </set>
+	</class>
+</hibernate-mapping>

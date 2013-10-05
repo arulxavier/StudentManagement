@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fixent.sm.server.model.Syllabus" table="SYLLABUS">
+		<id name="id" type="int">
+			<column name="ID" precision="5" scale="0" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="year" type="int">
+			<column name="YEAR" length="20" not-null="true" />
+		</property>
+		<property name="type" type="string">
+			<column name="TYPE" length="20" not-null="true" />
+		</property>
+		<property name="semaster" type="int">
+			<column name="SEMASTER" length="20" not-null="true" />
+		</property>
+		<property name="createdBy" type="string">
+			<column name="CREATED_BY" length="20" not-null="true" />
+		</property>
+		<property name="createdDate" type="date">
+			<column name="CREATED_DATE" length="7" not-null="true" />
+		</property>
+		<property name="updatedBy" type="string">
+			<column name="UPDATED_BY" length="20" not-null="false" />
+		</property>
+		<property name="updatedDate" type="date">
+			<column name="UPDATED_DATE" length="7" not-null="false" />
+		</property>
+
+
+		<set name="subjects" table="SYLABUS_SUBJECT" inverse="false" lazy="true"
+			fetch="select" >
+			<key>
+				<column name="SYLABUS_ID" not-null="true" />
+			</key>
+			<many-to-many entity-name="com.fixent.sm.server.model.Subject">
+				<column name="SUBJECT_ID" not-null="true" />
+			</many-to-many>
+		</set>
+
+	</class>
+</hibernate-mapping>

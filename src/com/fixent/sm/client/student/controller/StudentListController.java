@@ -19,7 +19,7 @@ public class StudentListController {
 		view = new StudentListView();
 		view.getViewBtn().addActionListener(new ViewAction());
 		StudentServiceImpl studentServiceImpl = new StudentServiceImpl();
-		students = studentServiceImpl.getStudents();
+//		students = studentServiceImpl.getStudents();
 		setView();
 	}
 

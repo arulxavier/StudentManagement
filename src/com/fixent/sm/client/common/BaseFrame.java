@@ -2,6 +2,8 @@ package com.fixent.sm.client.common;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 
 import javax.swing.JFrame;
 
@@ -20,11 +22,13 @@ extends JFrame{
 		User user2 = user;
 		
 		setName("BaseFrame");
-		setBounds(250, 50, 960, 650);
+//		setBounds(250, 50, 960, 650);
+	    setSize(1000, 650);
 		setLayout(new BorderLayout());
 		setBackground(Color.WHITE);
 		add(new BasePane(), BorderLayout.CENTER);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);	
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 

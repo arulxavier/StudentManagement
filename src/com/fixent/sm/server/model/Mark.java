@@ -1,18 +1,19 @@
 package com.fixent.sm.server.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class Mark {
 	
-	int id;
-	double mark;
-	String createdBy;
-	Date createdDate;
-	String updatedBy;
-	Date updatedDate;
-	Syllabus syllabus;
-	Subject subject;
-	Student student;
+	private int id;
+	private BigDecimal mark;
+	private String createdBy;
+	private Date createdDate;
+	private String updatedBy;
+	private Date updatedDate;
+	private Syllabus syllabus;
+	private Subject subject;
+	private Student student;
 	
 	public int getId() {
 		return id;
@@ -20,10 +21,10 @@ public class Mark {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public double getMark() {
+	public BigDecimal getMark() {
 		return mark;
 	}
-	public void setMark(double mark) {
+	public void setMark(BigDecimal mark) {
 		this.mark = mark;
 	}
 	public String getCreatedBy() {

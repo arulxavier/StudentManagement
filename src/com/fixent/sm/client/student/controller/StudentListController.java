@@ -5,12 +5,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+import com.fixent.sm.client.common.BaseController;
 import com.fixent.sm.client.common.RightSidePanel;
 import com.fixent.sm.client.student.view.StudentListView;
 import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.service.impl.StudentServiceImpl;
 
-public class StudentListController {
+public class StudentListController 
+extends BaseController {
 	
 	StudentListView view;
 	List<Student> students;
@@ -19,7 +21,7 @@ public class StudentListController {
 		view = new StudentListView();
 		view.getViewBtn().addActionListener(new ViewAction());
 		StudentServiceImpl studentServiceImpl = new StudentServiceImpl();
-//		students = studentServiceImpl.getStudents();
+		students = studentServiceImpl.getStudents();
 		setView();
 	}
 
@@ -38,7 +40,7 @@ public class StudentListController {
 			int row = view.getStudentListTable().getSelectedRow();
 			System.out.println(students.get(row).getId());
 			
-
+			OBJECT_MAP.put("student", students.get(row));
 			
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
 			rightSidePanel.removeAll();

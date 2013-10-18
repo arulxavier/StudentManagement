@@ -148,6 +148,9 @@
 		</property>
 
 		<many-to-one name="batch" class="com.fixent.sm.server.model.Batch" column="BATCH_ID" not-null="true" /> 
+<!-- 		<many-to-one name="congregation" class="com.fixent.sm.server.model.Congregation" column="CONGREGATION_ID" not-null="true" /> -->
+<!-- 		<many-to-one name="diocese" class="com.fixent.sm.server.model.Diocese" column="DIOCESE_ID" not-null="true" /> -->
+<!-- 		<many-to-one name="address" class="com.fixent.sm.server.model.Address" column="ADDRESS_ID" not-null="true" /> -->
 		
 		 <set name="marks" table="MARK" 
 				inverse="true" lazy="true" fetch="select">
@@ -155,6 +158,20 @@
                 <column name="STUDENT_ID" not-null="true" />
             </key>
             <one-to-many class="com.fixent.sm.server.model.Mark" />
+        </set>
+         <set name="ministries" table="MINISTRY" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="STUDENT_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.fixent.sm.server.model.Ministry" />
+        </set>
+         <set name="documentStatus" table="DOCUMENT_STATUS" 
+				inverse="true" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="STUDENT_ID" not-null="true" />
+            </key>
+            <one-to-many class="com.fixent.sm.server.model.DocumentStatus"/>
         </set>
 	</class>
 </hibernate-mapping>

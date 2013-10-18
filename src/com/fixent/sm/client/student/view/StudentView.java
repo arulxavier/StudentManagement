@@ -11,7 +11,7 @@ package com.fixent.sm.client.student.view;
 public class StudentView extends javax.swing.JPanel {
 
     /**
-     * Creates new form StudentView
+     * Creates new form View
      */
     public StudentView() {
         initComponents();
@@ -26,511 +26,1157 @@ public class StudentView extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        nameLabel = new javax.swing.JLabel();
-        nameTextField = new javax.swing.JTextField();
-        typeLabel = new javax.swing.JLabel();
-        typeComboBox = new javax.swing.JComboBox();
-        dobLabel = new javax.swing.JLabel();
-        placeOfBirthLabel = new javax.swing.JLabel();
-        placeOfBirthComboBox = new javax.swing.JComboBox();
-        doBaptismLabel = new javax.swing.JLabel();
-        poBaptismLabel = new javax.swing.JLabel();
-        placeOfBaptismComboBox = new javax.swing.JComboBox();
-        datOfConfirmationLabel = new javax.swing.JLabel();
-        dateOfBirth = new com.fixent.sm.client.component.ADatePicker();
-        dateOfBaptism = new com.fixent.sm.client.component.ADatePicker();
-        dateOfConfirmation = new com.fixent.sm.client.component.ADatePicker();
-        placeOfRegencyLabel = new javax.swing.JLabel();
-        placeOfRegencyTextField = new javax.swing.JTextField();
-        parentsLivingLabel = new javax.swing.JLabel();
+        tabContainer = new javax.swing.JTabbedPane();
+        primaryInfoPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        parentsNameLabel = new javax.swing.JLabel();
-        parentsNameTextField = new javax.swing.JTextField();
-        occupationOfParentsTextField = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        sistersTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        brothersTextField = new javax.swing.JTextField();
+        regNoTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        parentsLivingComboBox = new javax.swing.JComboBox();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        parentsAddressTextField = new javax.swing.JTextArea();
-        jPanel2 = new javax.swing.JPanel();
-        secularStudiesLabel = new javax.swing.JLabel();
-        secularStudiesTextField = new javax.swing.JTextField();
-        minorSeminaryLabel = new javax.swing.JLabel();
-        minorSeminaryTextField = new javax.swing.JTextField();
-        majorSeminaryLabel = new javax.swing.JLabel();
-        majorSeminaryTextField = new javax.swing.JTextField();
-        jPanel3 = new javax.swing.JPanel();
-        finalReportfromTheMajorSeminaryCheckBox = new javax.swing.JCheckBox();
-        certificateOfPhilosophyCourseCheckBox = new javax.swing.JCheckBox();
-        spirtiualYearFinalAssessmentCheckBox = new javax.swing.JCheckBox();
+        nameTextField = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        genderComboBox = new javax.swing.JComboBox();
+        jLabel4 = new javax.swing.JLabel();
+        dateOfBirthDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel5 = new javax.swing.JLabel();
+        placeOfBirthTextField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        dateOfJoiningDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel7 = new javax.swing.JLabel();
+        remarksScrollPane = new javax.swing.JScrollPane();
+        remarksTextArea = new javax.swing.JTextArea();
+        photoUploadLabel = new javax.swing.JLabel();
+        parishInfoPanel = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        dioConLayComboBox = new javax.swing.JComboBox();
+        jLabel9 = new javax.swing.JLabel();
+        dioConNameComboBox = new javax.swing.JComboBox();
+        jLabel10 = new javax.swing.JLabel();
+        parishTextField = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        villageTextField = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        placeOfBaptismTextField = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        placeOfConfirmationTextField = new javax.swing.JTextField();
+        dateOfBaptismDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        dateOfConfirmationDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        familyInfoPanel = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        fatherNameTextField = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        motherNameTextField = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        fatherOccupationTextField = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        motherOccupationTextField = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        noOfYoungerSisterLabel = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        contactNumberTextField = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        contactPersonTextField = new javax.swing.JTextField();
+        fatherLivingCheckBox = new javax.swing.JCheckBox();
+        motherLivingCheckBox = new javax.swing.JCheckBox();
+        noOfElderSisterSpinner = new javax.swing.JSpinner();
+        noOfElderBrotherSpinner = new javax.swing.JSpinner();
+        noOfYoungerBrotherSpinner = new javax.swing.JSpinner();
+        noOfYoungerSisterSpinner = new javax.swing.JSpinner();
+        jLabel25 = new javax.swing.JLabel();
+        streetTextField = new javax.swing.JTextField();
+        jLabel53 = new javax.swing.JLabel();
+        cityTextField = new javax.swing.JTextField();
+        jLabel54 = new javax.swing.JLabel();
+        stateComboBox = new javax.swing.JComboBox();
+        jLabel55 = new javax.swing.JLabel();
+        countryComboBox = new javax.swing.JComboBox();
+        jLabel56 = new javax.swing.JLabel();
+        pincodeTextField = new javax.swing.JTextField();
+        educationalInfoPanel = new javax.swing.JPanel();
+        jLabel37 = new javax.swing.JLabel();
+        minorSeminaryNameTextField = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        minorSeminaryFromDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel39 = new javax.swing.JLabel();
+        minorSeminaryToDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel40 = new javax.swing.JLabel();
+        degreeTextField = new javax.swing.JTextField();
+        jLabel41 = new javax.swing.JLabel();
+        collegeNameTextField = new javax.swing.JTextField();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
+        degreeFromDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        degreeToDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel44 = new javax.swing.JLabel();
+        philosophySeminaryNameTextField1 = new javax.swing.JTextField();
+        jLabel45 = new javax.swing.JLabel();
+        philosophyFromDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel46 = new javax.swing.JLabel();
+        philosophyToDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel47 = new javax.swing.JLabel();
+        regencyParishNameTextField = new javax.swing.JTextField();
+        jLabel48 = new javax.swing.JLabel();
+        regencyFromDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel49 = new javax.swing.JLabel();
+        regencyToDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel50 = new javax.swing.JLabel();
+        spiritualitySeminaryNameTextField = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        spiritualityFromDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        jLabel52 = new javax.swing.JLabel();
+        spiritualityToDatePicker = new com.fixent.sm.client.component.ADatePicker();
+        documentStatusPanel = new javax.swing.JPanel();
+        jLabel28 = new javax.swing.JLabel();
+        certificateofBaptismCheckBox = new javax.swing.JCheckBox();
+        jLabel29 = new javax.swing.JLabel();
+        certificateOfConfirmationCheckBox = new javax.swing.JCheckBox();
+        jLabel30 = new javax.swing.JLabel();
+        marriageCertificateOfParentsCheckBox = new javax.swing.JCheckBox();
+        jLabel31 = new javax.swing.JLabel();
+        certificateOfPhilosophyCheckBox = new javax.swing.JCheckBox();
+        jLabel32 = new javax.swing.JLabel();
+        finalReportOfPhilosophateCheckBox = new javax.swing.JCheckBox();
+        jLabel33 = new javax.swing.JLabel();
         regencyReportCheckBox = new javax.swing.JCheckBox();
-        marriageCertificateOftheParentsCheckBox = new javax.swing.JCheckBox();
-        baptismAndConfirmationCheckBox = new javax.swing.JCheckBox();
+        jLabel34 = new javax.swing.JLabel();
+        spiritualYearFinalCheckBox = new javax.swing.JCheckBox();
+        jLabel35 = new javax.swing.JLabel();
         degreeCertificateCheckBox = new javax.swing.JCheckBox();
+        jLabel36 = new javax.swing.JLabel();
         passportSizePhotoCheckBox = new javax.swing.JCheckBox();
         saveButton = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        cancelBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setAutoscrolls(true);
+        setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Personal Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(0, 204, 204))); // NOI18N
+        tabContainer.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        tabContainer.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
 
-        nameLabel.setBackground(new java.awt.Color(255, 255, 255));
-        nameLabel.setText("Name");
+        primaryInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
+        primaryInfoPanel.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        typeLabel.setBackground(new java.awt.Color(255, 255, 255));
-        typeLabel.setText("Type");
+        jLabel1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel1.setText("Reg. No");
 
-        typeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Diocese", "Congregation" }));
+        regNoTextField.setColumns(15);
 
-        dobLabel.setBackground(new java.awt.Color(255, 255, 255));
-        dobLabel.setText("Date of Birth");
+        jLabel2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel2.setText("Name");
 
-        placeOfBirthLabel.setText("Place of Birth");
+        nameTextField.setColumns(15);
 
-        placeOfBirthComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Kanchipuram", "Tiruvallur", "Cuddalore", "Villupuram", "Vellore", "Tiruvannamalai", "Salem", "Namakkal", "Dharmapuri", "Erode", "Coimbatore", "The Nilgiris", "Thanjavur", "Nagapattinam", "Tiruvarur", "Tiruchirappalli", "Karur", "Perambalur", "Pudukkottai", "Madurai", "Theni", "Dindigul", "Ramanathapuram", "Virudhunagar", "Sivagangai", "Tirunelveli", "Thoothukkudi", "Kanniyakumari", "Krishnagiri", "Ariyalur", "Tiruppur" }));
-        placeOfBirthComboBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                placeOfBirthComboBoxActionPerformed(evt);
-            }
-        });
+        jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel3.setText("Gender");
 
-        doBaptismLabel.setBackground(new java.awt.Color(255, 255, 255));
-        doBaptismLabel.setText("Date of Baptism");
+        genderComboBox.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
+        genderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Male", "Female", " " }));
 
-        poBaptismLabel.setText("Place Of Baptism");
+        jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel4.setText("Data Of Birth");
 
-        placeOfBaptismComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Kanchipuram", "Tiruvallur", "Cuddalore", "Villupuram", "Vellore", "Tiruvannamalai", "Salem", "Namakkal", "Dharmapuri", "Erode", "Coimbatore", "The Nilgiris", "Thanjavur", "Nagapattinam", "Tiruvarur", "Tiruchirappalli", "Karur", "Perambalur", "Pudukkottai", "Madurai", "Theni", "Dindigul", "Ramanathapuram", "Virudhunagar", "Sivagangai", "Tirunelveli", "Thoothukkudi", "Kanniyakumari", "Krishnagiri", "Ariyalur", "Tiruppur" }));
+        jLabel5.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel5.setText("Place Of Birth");
 
-        datOfConfirmationLabel.setText("Date Of Confirmation");
+        placeOfBirthTextField.setColumns(15);
 
-        placeOfRegencyLabel.setText("Place Of Regency");
+        jLabel6.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel6.setText("Date Of Joining");
 
-        parentsLivingLabel.setText("Parents Living");
+        jLabel7.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel7.setText("Remarks");
 
-        jLabel1.setText(" Address");
+        remarksTextArea.setColumns(40);
+        remarksTextArea.setRows(5);
+        remarksScrollPane.setViewportView(remarksTextArea);
 
-        parentsNameLabel.setText("Parents Name");
+        photoUploadLabel.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mathan\\Desktop\\images.jpg")); // NOI18N
 
-        jLabel4.setText("Occupation of the Parents");
-
-        jLabel3.setText("No. of Sister's");
-
-        jLabel2.setText("No. of Brother's");
-
-        parentsLivingComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Yes", "No" }));
-
-        parentsAddressTextField.setColumns(20);
-        parentsAddressTextField.setLineWrap(true);
-        parentsAddressTextField.setRows(3);
-        jScrollPane1.setViewportView(parentsAddressTextField);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(datOfConfirmationLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dobLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(doBaptismLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateOfConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dateOfBaptism, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(poBaptismLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(typeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(placeOfBirthLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(placeOfRegencyLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(placeOfBirthComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(placeOfBaptismComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(placeOfRegencyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(parentsNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(30, 30, 30)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(parentsNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(brothersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(occupationOfParentsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(20, 20, 20)
-                                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(18, 18, 18)
-                                        .addComponent(parentsLivingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(30, 30, 30)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(parentsLivingComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sistersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+        javax.swing.GroupLayout primaryInfoPanelLayout = new javax.swing.GroupLayout(primaryInfoPanel);
+        primaryInfoPanel.setLayout(primaryInfoPanelLayout);
+        primaryInfoPanelLayout.setHorizontalGroup(
+            primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel3))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel1))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel6))
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel7)))
+                .addGap(19, 19, 19)
+                .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(regNoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dateOfBirthDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(nameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(placeOfBirthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(dateOfJoiningDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(35, 35, 35)
+                        .addComponent(photoUploadLabel))
+                    .addComponent(remarksScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        primaryInfoPanelLayout.setVerticalGroup(
+            primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(regNoTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(nameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel2))
+                        .addGap(20, 20, 20)
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(genderComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(primaryInfoPanelLayout.createSequentialGroup()
+                                .addGap(16, 16, 16)
+                                .addComponent(jLabel4))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, primaryInfoPanelLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addComponent(dateOfBirthDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(20, 20, 20)
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(placeOfBirthTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel5))
+                        .addGap(20, 20, 20)
+                        .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(dateOfJoiningDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
+                    .addComponent(photoUploadLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(primaryInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(remarksScrollPane, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41))
+        );
+
+        tabContainer.addTab("Primary Info", primaryInfoPanel);
+
+        parishInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel8.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel8.setText("Diocese/ Congrgation/ Lay man");
+
+        dioConLayComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        dioConLayComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Diocese", "Congregation", "Lay Man" }));
+
+        jLabel9.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel9.setText("Name Of Diocese/ Congrgation/ Lay man");
+
+        dioConNameComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        dioConNameComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One" }));
+
+        jLabel10.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel10.setText("Parish");
+
+        parishTextField.setColumns(15);
+
+        jLabel11.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel11.setText("Village");
+
+        villageTextField.setColumns(15);
+
+        jLabel12.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel12.setText("Date Of Baptism");
+
+        jLabel13.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel13.setText("Place Of Baptism");
+
+        placeOfBaptismTextField.setColumns(15);
+
+        jLabel14.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel14.setText("Date Of Confirmation");
+
+        jLabel15.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel15.setText("Place Of Confirmation");
+
+        placeOfConfirmationTextField.setColumns(15);
+
+        javax.swing.GroupLayout parishInfoPanelLayout = new javax.swing.GroupLayout(parishInfoPanel);
+        parishInfoPanel.setLayout(parishInfoPanelLayout);
+        parishInfoPanelLayout.setHorizontalGroup(
+            parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(parishInfoPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nameLabel)
-                    .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(typeLabel)
-                    .addComponent(typeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dioConNameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(dioConLayComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                        .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel14)
+                                .addGap(18, 18, 18)
+                                .addComponent(dateOfConfirmationDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(45, 45, 45)
+                                .addComponent(jLabel15))
+                            .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel10)
+                                    .addComponent(jLabel12))
+                                .addGap(48, 48, 48)
+                                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(parishTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(dateOfBaptismDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel11)
+                                    .addComponent(jLabel13))))
+                        .addGap(18, 18, 18)
+                        .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(villageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(placeOfBaptismTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(placeOfConfirmationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(65, Short.MAX_VALUE))
+        );
+        parishInfoPanelLayout.setVerticalGroup(
+            parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(parishInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(dioConLayComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(placeOfBirthComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(placeOfBirthLabel))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(placeOfBaptismComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(poBaptismLabel))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(placeOfRegencyLabel)
-                            .addComponent(placeOfRegencyTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dateOfBirth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dobLabel))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(doBaptismLabel))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addComponent(dateOfBaptism, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(dateOfConfirmation, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(datOfConfirmationLabel))))
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(dioConNameComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
-                        .addComponent(parentsLivingComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(sistersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(parentsNameLabel)
-                            .addComponent(parentsNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(parentsLivingLabel))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel2)
-                            .addComponent(brothersTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel3))
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(occupationOfParentsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(parishTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11)
+                    .addComponent(villageTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1))
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel12)
+                        .addComponent(jLabel13)
+                        .addComponent(placeOfBaptismTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateOfBaptismDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(parishInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel14)
+                        .addComponent(jLabel15)
+                        .addComponent(placeOfConfirmationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(dateOfConfirmationDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Educational Information", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(102, 204, 255))); // NOI18N
+        tabContainer.addTab("Parish Info", parishInfoPanel);
 
-        secularStudiesLabel.setText("Secular Studies");
+        familyInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        minorSeminaryLabel.setText("Minor Seminary");
+        jLabel16.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel16.setText("Father's Name");
 
-        majorSeminaryLabel.setText("Major Seminary");
+        fatherNameTextField.setColumns(15);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(secularStudiesLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(majorSeminaryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(majorSeminaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(secularStudiesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(20, 20, 20)
-                        .addComponent(minorSeminaryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(minorSeminaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(secularStudiesLabel)
-                    .addComponent(secularStudiesTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(minorSeminaryLabel)
-                    .addComponent(minorSeminaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(majorSeminaryLabel)
-                    .addComponent(majorSeminaryTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20))
-        );
+        jLabel17.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel17.setText("Mother's Name");
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Documents to be Attached", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 14), new java.awt.Color(153, 204, 255))); // NOI18N
+        motherNameTextField.setColumns(15);
 
-        finalReportfromTheMajorSeminaryCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        finalReportfromTheMajorSeminaryCheckBox.setText("Final Report from the Major Seminary");
+        jLabel18.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel18.setText("Father Living");
 
-        certificateOfPhilosophyCourseCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        certificateOfPhilosophyCourseCheckBox.setText("Certificate of Philosopy Course");
+        jLabel19.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel19.setText("Mother Living");
 
-        spirtiualYearFinalAssessmentCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        spirtiualYearFinalAssessmentCheckBox.setText("Spiritual Year Final Assessment");
+        jLabel20.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel20.setText("Father's Occupation");
 
-        regencyReportCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        regencyReportCheckBox.setText("Regency Report");
+        fatherOccupationTextField.setColumns(15);
 
-        marriageCertificateOftheParentsCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        marriageCertificateOftheParentsCheckBox.setText("Marriage Certificate of theParents");
+        jLabel21.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel21.setText("Mother's Occupation");
 
-        baptismAndConfirmationCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        baptismAndConfirmationCheckBox.setText("Baptism & Confirmation");
+        motherOccupationTextField.setColumns(15);
 
-        degreeCertificateCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        degreeCertificateCheckBox.setText("Degree Certificate");
+        jLabel22.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel22.setText("No. of Elder Brothers");
 
-        passportSizePhotoCheckBox.setBackground(new java.awt.Color(255, 255, 255));
-        passportSizePhotoCheckBox.setText("Passport Size Photo");
+        jLabel23.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel23.setText("No. of Younger Brothers");
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(certificateOfPhilosophyCourseCheckBox)
-                    .addComponent(finalReportfromTheMajorSeminaryCheckBox)
-                    .addComponent(passportSizePhotoCheckBox))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(spirtiualYearFinalAssessmentCheckBox)
-                            .addComponent(degreeCertificateCheckBox))
+        jLabel24.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel24.setText("No. of Elder Sisters");
+
+        noOfYoungerSisterLabel.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        noOfYoungerSisterLabel.setText("No. of Younger Sisters");
+
+        jLabel26.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel26.setText("Contact Number");
+
+        contactNumberTextField.setColumns(15);
+
+        jLabel27.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel27.setText("Contact Person");
+
+        contactPersonTextField.setColumns(15);
+
+        jLabel25.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel25.setText("Street");
+
+        streetTextField.setColumns(15);
+
+        jLabel53.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel53.setText("City");
+
+        cityTextField.setColumns(15);
+
+        jLabel54.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel54.setText("State");
+
+        stateComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        stateComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Tamil Nadu" }));
+
+        jLabel55.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel55.setText("Country");
+
+        countryComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        countryComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "India" }));
+
+        jLabel56.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel56.setText("Pincode");
+
+        pincodeTextField.setColumns(15);
+
+        javax.swing.GroupLayout familyInfoPanelLayout = new javax.swing.GroupLayout(familyInfoPanel);
+        familyInfoPanel.setLayout(familyInfoPanelLayout);
+        familyInfoPanelLayout.setHorizontalGroup(
+            familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
                         .addGap(10, 10, 10)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(regencyReportCheckBox)
-                            .addComponent(baptismAndConfirmationCheckBox, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addComponent(marriageCertificateOftheParentsCheckBox))
-                .addGap(10, 10, 10))
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(17, 17, 17)
+                                .addComponent(noOfElderBrotherSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(18, 18, 18)
+                                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fatherNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(fatherLivingCheckBox)))
+                            .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(fatherOccupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel56))
+                                .addGap(18, 18, 18)
+                                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(pincodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(contactNumberTextField)
+                                        .addComponent(noOfElderSisterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(streetTextField)
+                                        .addComponent(stateComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel25))
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel54)))
+                .addGap(23, 23, 23)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(motherNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(motherLivingCheckBox)))
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(motherOccupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(noOfYoungerSisterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(noOfYoungerBrotherSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(familyInfoPanelLayout.createSequentialGroup()
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(noOfYoungerSisterLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel53)
+                            .addComponent(jLabel55))
+                        .addGap(18, 18, 18)
+                        .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(cityTextField)
+                            .addComponent(contactPersonTextField)
+                            .addComponent(countryComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(19, 19, 19))
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(certificateOfPhilosophyCourseCheckBox)
-                    .addComponent(spirtiualYearFinalAssessmentCheckBox)
-                    .addComponent(baptismAndConfirmationCheckBox))
+        familyInfoPanelLayout.setVerticalGroup(
+            familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(familyInfoPanelLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(degreeCertificateCheckBox)
-                    .addComponent(finalReportfromTheMajorSeminaryCheckBox)
-                    .addComponent(regencyReportCheckBox))
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(fatherNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17)
+                    .addComponent(motherNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel18)
+                        .addComponent(fatherLivingCheckBox)
+                        .addComponent(motherLivingCheckBox))
+                    .addComponent(jLabel19))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(fatherOccupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel21)
+                    .addComponent(motherOccupationTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(noOfElderBrotherSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(noOfYoungerBrotherSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel24)
+                        .addComponent(noOfElderSisterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(noOfYoungerSisterLabel)
+                        .addComponent(noOfYoungerSisterSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel26)
+                        .addComponent(jLabel27)
+                        .addComponent(contactNumberTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(contactPersonTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(streetTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel53)
+                    .addComponent(cityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel54)
+                        .addComponent(stateComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel55)
+                        .addComponent(countryComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passportSizePhotoCheckBox)
-                    .addComponent(marriageCertificateOftheParentsCheckBox))
-                .addGap(38, 38, 38))
+                .addGroup(familyInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel56)
+                    .addComponent(pincodeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
-        saveButton.setBackground(new java.awt.Color(153, 204, 255));
+        tabContainer.addTab("Family Info", familyInfoPanel);
+
+        educationalInfoPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel37.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel37.setText("Minor Seminary Name");
+
+        minorSeminaryNameTextField.setColumns(10);
+        minorSeminaryNameTextField.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+
+        jLabel38.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel38.setText("Minor Seminary From");
+
+        jLabel39.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel39.setText("Minor Seminary To");
+
+        jLabel40.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel40.setText("Degree");
+
+        degreeTextField.setColumns(10);
+        degreeTextField.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+
+        jLabel41.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel41.setText("College Name");
+
+        collegeNameTextField.setColumns(10);
+        collegeNameTextField.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+
+        jLabel42.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel42.setText("Degree From");
+
+        jLabel43.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel43.setText("Degree To");
+
+        jLabel44.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel44.setText("Philosophy Seminary Name");
+
+        philosophySeminaryNameTextField1.setColumns(15);
+
+        jLabel45.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel45.setText("Philosophy From");
+
+        jLabel46.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel46.setText("Philosophy To");
+
+        jLabel47.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel47.setText("Regency Parish Name");
+
+        regencyParishNameTextField.setColumns(15);
+
+        jLabel48.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel48.setText("Regency From");
+
+        jLabel49.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel49.setText("Regency To");
+
+        jLabel50.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel50.setText("Spirituality Seminary Name");
+
+        spiritualitySeminaryNameTextField.setColumns(15);
+
+        jLabel51.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel51.setText("Spirituality From");
+
+        jLabel52.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel52.setText("Spirituality To");
+
+        javax.swing.GroupLayout educationalInfoPanelLayout = new javax.swing.GroupLayout(educationalInfoPanel);
+        educationalInfoPanel.setLayout(educationalInfoPanelLayout);
+        educationalInfoPanelLayout.setHorizontalGroup(
+            educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(minorSeminaryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(philosophySeminaryNameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(regencyParishNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spiritualitySeminaryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(regencyFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(spiritualityFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(minorSeminaryFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(degreeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(degreeFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(philosophyFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(40, 40, 40)
+                                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel41)
+                                    .addComponent(jLabel43)
+                                    .addComponent(jLabel46)
+                                    .addComponent(jLabel49)
+                                    .addComponent(jLabel52)
+                                    .addComponent(jLabel39))))
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                                .addGap(20, 20, 20)
+                                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(philosophyToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(degreeToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(regencyToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(spiritualityToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(minorSeminaryToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(5, 5, 5))
+        );
+        educationalInfoPanelLayout.setVerticalGroup(
+            educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel37)
+                            .addComponent(minorSeminaryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel38)
+                            .addComponent(minorSeminaryFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel39)))
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addComponent(minorSeminaryToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)))
+                .addGap(24, 24, 24)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel40)
+                    .addComponent(degreeTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel41)
+                    .addComponent(collegeNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel42)
+                    .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(degreeFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(degreeToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel43, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addGap(20, 20, 20)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel44)
+                            .addComponent(philosophySeminaryNameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel45)
+                            .addComponent(philosophyFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel46)))
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addComponent(philosophyToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)))
+                .addGap(20, 20, 20)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel47)
+                            .addComponent(regencyParishNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel48))
+                    .addComponent(regencyFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel49)
+                    .addComponent(regencyToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel50)
+                            .addComponent(spiritualitySeminaryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(educationalInfoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel51)
+                            .addComponent(spiritualityFromDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel52)))
+                    .addGroup(educationalInfoPanelLayout.createSequentialGroup()
+                        .addComponent(spiritualityToDatePicker, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)))
+                .addContainerGap(13, Short.MAX_VALUE))
+        );
+
+        tabContainer.addTab("Educational Info", educationalInfoPanel);
+
+        documentStatusPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel28.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel28.setText("Certificate of Baptism");
+
+        certificateofBaptismCheckBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+
+        jLabel29.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel29.setText("Certificate of Confirmation");
+
+        jLabel30.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel30.setText("Marriage Certificate of Parents");
+
+        jLabel31.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel31.setText("Certificate of Philosophy with marksheet");
+
+        jLabel32.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel32.setText("Final Report from the Philosophate");
+
+        jLabel33.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel33.setText("Regency Report");
+
+        jLabel34.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel34.setText("Spiritual Year final Assessment");
+
+        jLabel35.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel35.setText("Degree Certificate");
+
+        jLabel36.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        jLabel36.setText("Passport Size Photo");
+
+        passportSizePhotoCheckBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+
+        javax.swing.GroupLayout documentStatusPanelLayout = new javax.swing.GroupLayout(documentStatusPanel);
+        documentStatusPanel.setLayout(documentStatusPanelLayout);
+        documentStatusPanelLayout.setHorizontalGroup(
+            documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(passportSizePhotoCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel35)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(degreeCertificateCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel34)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(spiritualYearFinalCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel33)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(regencyReportCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel32)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(finalReportOfPhilosophateCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel30)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(marriageCertificateOfParentsCheckBox))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel28))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(certificateofBaptismCheckBox, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(certificateOfConfirmationCheckBox, javax.swing.GroupLayout.Alignment.TRAILING)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, documentStatusPanelLayout.createSequentialGroup()
+                        .addComponent(jLabel31)
+                        .addGap(18, 18, 18)
+                        .addComponent(certificateOfPhilosophyCheckBox)))
+                .addGap(320, 320, 320))
+        );
+        documentStatusPanelLayout.setVerticalGroup(
+            documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                        .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(certificateofBaptismCheckBox)
+                                    .addComponent(jLabel28))
+                                .addGap(20, 20, 20)
+                                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(certificateOfConfirmationCheckBox)
+                                    .addComponent(jLabel29))
+                                .addGap(20, 20, 20)
+                                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(marriageCertificateOfParentsCheckBox)
+                                    .addComponent(jLabel30))
+                                .addGap(20, 20, 20)
+                                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel31)
+                                    .addComponent(certificateOfPhilosophyCheckBox))
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel32))
+                            .addComponent(finalReportOfPhilosophateCheckBox))
+                        .addGap(25, 25, 25)
+                        .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(regencyReportCheckBox)
+                                    .addComponent(jLabel33))
+                                .addGap(20, 20, 20)
+                                .addComponent(jLabel34))
+                            .addComponent(spiritualYearFinalCheckBox))
+                        .addGap(20, 20, 20)
+                        .addComponent(jLabel35))
+                    .addComponent(degreeCertificateCheckBox))
+                .addGroup(documentStatusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                        .addGap(25, 25, 25)
+                        .addComponent(jLabel36))
+                    .addGroup(documentStatusPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(passportSizePhotoCheckBox)))
+                .addContainerGap(39, Short.MAX_VALUE))
+        );
+
+        tabContainer.addTab("Document Status", documentStatusPanel);
+
+        saveButton.setBackground(new java.awt.Color(61, 86, 109));
         saveButton.setForeground(new java.awt.Color(255, 255, 255));
         saveButton.setText("Save");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Create");
-
-        cancelBtn.setBackground(new java.awt.Color(153, 204, 255));
-        cancelBtn.setForeground(new java.awt.Color(255, 255, 255));
-        cancelBtn.setText("Cancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel5)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cancelBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(tabContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 655, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addComponent(jLabel5)
+                .addComponent(tabContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(saveButton)
-                    .addComponent(cancelBtn))
-                .addGap(43, 43, 43))
+                .addComponent(saveButton)
+                .addContainerGap(16, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void placeOfBirthComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_placeOfBirthComboBoxActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_placeOfBirthComboBoxActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JCheckBox baptismAndConfirmationCheckBox;
-    private javax.swing.JTextField brothersTextField;
-    private javax.swing.JButton cancelBtn;
-    private javax.swing.JCheckBox certificateOfPhilosophyCourseCheckBox;
-    private javax.swing.JLabel datOfConfirmationLabel;
-    private com.fixent.sm.client.component.ADatePicker dateOfBaptism;
-    private com.fixent.sm.client.component.ADatePicker dateOfBirth;
-    private com.fixent.sm.client.component.ADatePicker dateOfConfirmation;
+    private javax.swing.JCheckBox certificateOfConfirmationCheckBox;
+    private javax.swing.JCheckBox certificateOfPhilosophyCheckBox;
+    private javax.swing.JCheckBox certificateofBaptismCheckBox;
+    private javax.swing.JTextField cityTextField;
+    private javax.swing.JTextField collegeNameTextField;
+    private javax.swing.JTextField contactNumberTextField;
+    private javax.swing.JTextField contactPersonTextField;
+    private javax.swing.JComboBox countryComboBox;
+    private com.fixent.sm.client.component.ADatePicker dateOfBaptismDatePicker;
+    private com.fixent.sm.client.component.ADatePicker dateOfBirthDatePicker;
+    private com.fixent.sm.client.component.ADatePicker dateOfConfirmationDatePicker;
+    private com.fixent.sm.client.component.ADatePicker dateOfJoiningDatePicker;
     private javax.swing.JCheckBox degreeCertificateCheckBox;
-    private javax.swing.JLabel doBaptismLabel;
-    private javax.swing.JLabel dobLabel;
-    private javax.swing.JCheckBox finalReportfromTheMajorSeminaryCheckBox;
+    private com.fixent.sm.client.component.ADatePicker degreeFromDatePicker;
+    private javax.swing.JTextField degreeTextField;
+    private com.fixent.sm.client.component.ADatePicker degreeToDatePicker;
+    private javax.swing.JComboBox dioConLayComboBox;
+    private javax.swing.JComboBox dioConNameComboBox;
+    private javax.swing.JPanel documentStatusPanel;
+    private javax.swing.JPanel educationalInfoPanel;
+    private javax.swing.JPanel familyInfoPanel;
+    private javax.swing.JCheckBox fatherLivingCheckBox;
+    private javax.swing.JTextField fatherNameTextField;
+    private javax.swing.JTextField fatherOccupationTextField;
+    private javax.swing.JCheckBox finalReportOfPhilosophateCheckBox;
+    private javax.swing.JComboBox genderComboBox;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel majorSeminaryLabel;
-    private javax.swing.JTextField majorSeminaryTextField;
-    private javax.swing.JCheckBox marriageCertificateOftheParentsCheckBox;
-    private javax.swing.JLabel minorSeminaryLabel;
-    private javax.swing.JTextField minorSeminaryTextField;
-    private javax.swing.JLabel nameLabel;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JCheckBox marriageCertificateOfParentsCheckBox;
+    private com.fixent.sm.client.component.ADatePicker minorSeminaryFromDatePicker;
+    private javax.swing.JTextField minorSeminaryNameTextField;
+    private com.fixent.sm.client.component.ADatePicker minorSeminaryToDatePicker;
+    private javax.swing.JCheckBox motherLivingCheckBox;
+    private javax.swing.JTextField motherNameTextField;
+    private javax.swing.JTextField motherOccupationTextField;
     private javax.swing.JTextField nameTextField;
-    private javax.swing.JTextField occupationOfParentsTextField;
-    private javax.swing.JTextArea parentsAddressTextField;
-    private javax.swing.JComboBox parentsLivingComboBox;
-    private javax.swing.JLabel parentsLivingLabel;
-    private javax.swing.JLabel parentsNameLabel;
-    private javax.swing.JTextField parentsNameTextField;
+    private javax.swing.JSpinner noOfElderBrotherSpinner;
+    private javax.swing.JSpinner noOfElderSisterSpinner;
+    private javax.swing.JSpinner noOfYoungerBrotherSpinner;
+    private javax.swing.JLabel noOfYoungerSisterLabel;
+    private javax.swing.JSpinner noOfYoungerSisterSpinner;
+    private javax.swing.JPanel parishInfoPanel;
+    private javax.swing.JTextField parishTextField;
     private javax.swing.JCheckBox passportSizePhotoCheckBox;
-    private javax.swing.JComboBox placeOfBaptismComboBox;
-    private javax.swing.JComboBox placeOfBirthComboBox;
-    private javax.swing.JLabel placeOfBirthLabel;
-    private javax.swing.JLabel placeOfRegencyLabel;
-    private javax.swing.JTextField placeOfRegencyTextField;
-    private javax.swing.JLabel poBaptismLabel;
+    private com.fixent.sm.client.component.ADatePicker philosophyFromDatePicker;
+    private javax.swing.JTextField philosophySeminaryNameTextField1;
+    private com.fixent.sm.client.component.ADatePicker philosophyToDatePicker;
+    private javax.swing.JLabel photoUploadLabel;
+    private javax.swing.JTextField pincodeTextField;
+    private javax.swing.JTextField placeOfBaptismTextField;
+    private javax.swing.JTextField placeOfBirthTextField;
+    private javax.swing.JTextField placeOfConfirmationTextField;
+    private javax.swing.JPanel primaryInfoPanel;
+    private javax.swing.JTextField regNoTextField;
+    private com.fixent.sm.client.component.ADatePicker regencyFromDatePicker;
+    private javax.swing.JTextField regencyParishNameTextField;
     private javax.swing.JCheckBox regencyReportCheckBox;
+    private com.fixent.sm.client.component.ADatePicker regencyToDatePicker;
+    private javax.swing.JScrollPane remarksScrollPane;
+    private javax.swing.JTextArea remarksTextArea;
     private javax.swing.JButton saveButton;
-    private javax.swing.JLabel secularStudiesLabel;
-    private javax.swing.JTextField secularStudiesTextField;
-    private javax.swing.JTextField sistersTextField;
-    private javax.swing.JCheckBox spirtiualYearFinalAssessmentCheckBox;
-    private javax.swing.JComboBox typeComboBox;
-    private javax.swing.JLabel typeLabel;
+    private javax.swing.JCheckBox spiritualYearFinalCheckBox;
+    private com.fixent.sm.client.component.ADatePicker spiritualityFromDatePicker;
+    private javax.swing.JTextField spiritualitySeminaryNameTextField;
+    private com.fixent.sm.client.component.ADatePicker spiritualityToDatePicker;
+    private javax.swing.JComboBox stateComboBox;
+    private javax.swing.JTextField streetTextField;
+    private javax.swing.JTabbedPane tabContainer;
+    private javax.swing.JTextField villageTextField;
     // End of variables declaration//GEN-END:variables
-	public javax.swing.JCheckBox getBaptismAndConfirmationCheckBox() {
-		return baptismAndConfirmationCheckBox;
+	public javax.swing.JCheckBox getCertificateOfConfirmationCheckBox() {
+		return certificateOfConfirmationCheckBox;
 	}
 
-	public void setBaptismAndConfirmationCheckBox(
-			javax.swing.JCheckBox baptismAndConfirmationCheckBox) {
-		this.baptismAndConfirmationCheckBox = baptismAndConfirmationCheckBox;
+	public void setCertificateOfConfirmationCheckBox(
+			javax.swing.JCheckBox certificateOfConfirmationCheckBox) {
+		this.certificateOfConfirmationCheckBox = certificateOfConfirmationCheckBox;
 	}
 
-	
-
-	public javax.swing.JCheckBox getCertificateOfPhilosophyCourseCheckBox() {
-		return certificateOfPhilosophyCourseCheckBox;
+	public javax.swing.JCheckBox getCertificateOfPhilosophyCheckBox() {
+		return certificateOfPhilosophyCheckBox;
 	}
 
-	public void setCertificateOfPhilosophyCourseCheckBox(
-			javax.swing.JCheckBox certificateOfPhilosophyCourseCheckBox) {
-		this.certificateOfPhilosophyCourseCheckBox = certificateOfPhilosophyCourseCheckBox;
+	public void setCertificateOfPhilosophyCheckBox(
+			javax.swing.JCheckBox certificateOfPhilosophyCheckBox) {
+		this.certificateOfPhilosophyCheckBox = certificateOfPhilosophyCheckBox;
 	}
 
-	public javax.swing.JLabel getDatOfConfirmationLabel() {
-		return datOfConfirmationLabel;
+	public javax.swing.JCheckBox getCertificateofBaptismCheckBox() {
+		return certificateofBaptismCheckBox;
 	}
 
-	public void setDatOfConfirmationLabel(javax.swing.JLabel datOfConfirmationLabel) {
-		this.datOfConfirmationLabel = datOfConfirmationLabel;
+	public void setCertificateofBaptismCheckBox(
+			javax.swing.JCheckBox certificateofBaptismCheckBox) {
+		this.certificateofBaptismCheckBox = certificateofBaptismCheckBox;
 	}
 
-	public com.fixent.sm.client.component.ADatePicker getDateOfBaptism() {
-		return dateOfBaptism;
+	public javax.swing.JTextField getCollegeNameTextField() {
+		return collegeNameTextField;
 	}
 
-	public void setDateOfBaptism(
-			com.fixent.sm.client.component.ADatePicker dateOfBaptism) {
-		this.dateOfBaptism = dateOfBaptism;
+	public void setCollegeNameTextField(javax.swing.JTextField collegeNameTextField) {
+		this.collegeNameTextField = collegeNameTextField;
 	}
 
-	public com.fixent.sm.client.component.ADatePicker getDateOfBirth() {
-		return dateOfBirth;
+	public javax.swing.JTextField getContactNumberTextField() {
+		return contactNumberTextField;
 	}
 
-	public void setDateOfBirth(
-			com.fixent.sm.client.component.ADatePicker dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setContactNumberTextField(
+			javax.swing.JTextField contactNumberTextField) {
+		this.contactNumberTextField = contactNumberTextField;
 	}
 
-	public com.fixent.sm.client.component.ADatePicker getDateOfConfirmation() {
-		return dateOfConfirmation;
+	public javax.swing.JTextField getContactPersonTextField() {
+		return contactPersonTextField;
 	}
 
-	public void setDateOfConfirmation(
-			com.fixent.sm.client.component.ADatePicker dateOfConfirmation) {
-		this.dateOfConfirmation = dateOfConfirmation;
+	public void setContactPersonTextField(
+			javax.swing.JTextField contactPersonTextField) {
+		this.contactPersonTextField = contactPersonTextField;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getDateOfBaptismDatePicker() {
+		return dateOfBaptismDatePicker;
+	}
+
+	public void setDateOfBaptismDatePicker(
+			com.fixent.sm.client.component.ADatePicker dateOfBaptismDatePicker) {
+		this.dateOfBaptismDatePicker = dateOfBaptismDatePicker;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getDateOfBirthDatePicker() {
+		return dateOfBirthDatePicker;
+	}
+
+	public void setDateOfBirthDatePicker(
+			com.fixent.sm.client.component.ADatePicker dateOfBirthDatePicker) {
+		this.dateOfBirthDatePicker = dateOfBirthDatePicker;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getDateOfConfirmationDatePicker() {
+		return dateOfConfirmationDatePicker;
+	}
+
+	public void setDateOfConfirmationDatePicker(
+			com.fixent.sm.client.component.ADatePicker dateOfConfirmationDatePicker) {
+		this.dateOfConfirmationDatePicker = dateOfConfirmationDatePicker;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getDateOfJoiningDatePicker() {
+		return dateOfJoiningDatePicker;
+	}
+
+	public void setDateOfJoiningDatePicker(
+			com.fixent.sm.client.component.ADatePicker dateOfJoiningDatePicker) {
+		this.dateOfJoiningDatePicker = dateOfJoiningDatePicker;
 	}
 
 	public javax.swing.JCheckBox getDegreeCertificateCheckBox() {
@@ -542,56 +1188,581 @@ public class StudentView extends javax.swing.JPanel {
 		this.degreeCertificateCheckBox = degreeCertificateCheckBox;
 	}
 
-	public javax.swing.JLabel getDoBaptismLabel() {
-		return doBaptismLabel;
+	public com.fixent.sm.client.component.ADatePicker getDegreeFromDatePicker() {
+		return degreeFromDatePicker;
 	}
 
-	public void setDoBaptismLabel(javax.swing.JLabel doBaptismLabel) {
-		this.doBaptismLabel = doBaptismLabel;
+	public void setDegreeFromDatePicker(
+			com.fixent.sm.client.component.ADatePicker degreeFromDatePicker) {
+		this.degreeFromDatePicker = degreeFromDatePicker;
 	}
 
-	public javax.swing.JLabel getDobLabel() {
-		return dobLabel;
+	public javax.swing.JTextField getDegreeTextField() {
+		return degreeTextField;
 	}
 
-	public void setDobLabel(javax.swing.JLabel dobLabel) {
-		this.dobLabel = dobLabel;
+	public void setDegreeTextField(javax.swing.JTextField degreeTextField) {
+		this.degreeTextField = degreeTextField;
 	}
 
-	public javax.swing.JCheckBox getFinalReportfromTheMajorSeminaryCheckBox() {
-		return finalReportfromTheMajorSeminaryCheckBox;
+	public com.fixent.sm.client.component.ADatePicker getDegreeToDatePicker() {
+		return degreeToDatePicker;
 	}
 
-	public void setFinalReportfromTheMajorSeminaryCheckBox(
-			javax.swing.JCheckBox finalReportfromTheMajorSeminaryCheckBox) {
-		this.finalReportfromTheMajorSeminaryCheckBox = finalReportfromTheMajorSeminaryCheckBox;
+	public void setDegreeToDatePicker(
+			com.fixent.sm.client.component.ADatePicker degreeToDatePicker) {
+		this.degreeToDatePicker = degreeToDatePicker;
 	}
 
-	public javax.swing.JTextField getMajorSeminaryTextField() {
-		return majorSeminaryTextField;
+	public javax.swing.JComboBox getDioConLayComboBox() {
+		return dioConLayComboBox;
 	}
 
-	public void setMajorSeminaryTextField(
-			javax.swing.JTextField majorSeminaryTextField) {
-		this.majorSeminaryTextField = majorSeminaryTextField;
+	public void setDioConLayComboBox(javax.swing.JComboBox dioConLayComboBox) {
+		this.dioConLayComboBox = dioConLayComboBox;
 	}
 
-	public javax.swing.JCheckBox getMarriageCertificateOftheParentsCheckBox() {
-		return marriageCertificateOftheParentsCheckBox;
+	public javax.swing.JComboBox getDioConNameComboBox() {
+		return dioConNameComboBox;
 	}
 
-	public void setMarriageCertificateOftheParentsCheckBox(
-			javax.swing.JCheckBox marriageCertificateOftheParentsCheckBox) {
-		this.marriageCertificateOftheParentsCheckBox = marriageCertificateOftheParentsCheckBox;
+	public void setDioConNameComboBox(javax.swing.JComboBox dioConNameComboBox) {
+		this.dioConNameComboBox = dioConNameComboBox;
 	}
 
-	public javax.swing.JTextField getMinorSeminaryTextField() {
-		return minorSeminaryTextField;
+	public javax.swing.JPanel getDocumentStatusPanel() {
+		return documentStatusPanel;
 	}
 
-	public void setMinorSeminaryTextField(
-			javax.swing.JTextField minorSeminaryTextField) {
-		this.minorSeminaryTextField = minorSeminaryTextField;
+	public void setDocumentStatusPanel(javax.swing.JPanel documentStatusPanel) {
+		this.documentStatusPanel = documentStatusPanel;
+	}
+
+	public javax.swing.JPanel getEducationalInfoPanel() {
+		return educationalInfoPanel;
+	}
+
+	public void setEducationalInfoPanel(javax.swing.JPanel educationalInfoPanel) {
+		this.educationalInfoPanel = educationalInfoPanel;
+	}
+
+	public javax.swing.JPanel getFamilyInfoPanel() {
+		return familyInfoPanel;
+	}
+
+	public void setFamilyInfoPanel(javax.swing.JPanel familyInfoPanel) {
+		this.familyInfoPanel = familyInfoPanel;
+	}
+
+	public javax.swing.JCheckBox getFatherLivingCheckBox() {
+		return fatherLivingCheckBox;
+	}
+
+	public void setFatherLivingCheckBox(javax.swing.JCheckBox fatherLivingCheckBox) {
+		this.fatherLivingCheckBox = fatherLivingCheckBox;
+	}
+
+	public javax.swing.JTextField getFatherNameTextField() {
+		return fatherNameTextField;
+	}
+
+	public void setFatherNameTextField(javax.swing.JTextField fatherNameTextField) {
+		this.fatherNameTextField = fatherNameTextField;
+	}
+
+	public javax.swing.JTextField getFatherOccupationTextField() {
+		return fatherOccupationTextField;
+	}
+
+	public void setFatherOccupationTextField(
+			javax.swing.JTextField fatherOccupationTextField) {
+		this.fatherOccupationTextField = fatherOccupationTextField;
+	}
+
+	public javax.swing.JCheckBox getFinalReportOfPhilosophateCheckBox() {
+		return finalReportOfPhilosophateCheckBox;
+	}
+
+	public void setFinalReportOfPhilosophateCheckBox(
+			javax.swing.JCheckBox finalReportOfPhilosophateCheckBox) {
+		this.finalReportOfPhilosophateCheckBox = finalReportOfPhilosophateCheckBox;
+	}
+
+	public javax.swing.JComboBox getGenderComboBox() {
+		return genderComboBox;
+	}
+
+	public void setGenderComboBox(javax.swing.JComboBox genderComboBox) {
+		this.genderComboBox = genderComboBox;
+	}
+
+	public javax.swing.JLabel getjLabel1() {
+		return jLabel1;
+	}
+
+	public void setjLabel1(javax.swing.JLabel jLabel1) {
+		this.jLabel1 = jLabel1;
+	}
+
+	public javax.swing.JLabel getjLabel10() {
+		return jLabel10;
+	}
+
+	public void setjLabel10(javax.swing.JLabel jLabel10) {
+		this.jLabel10 = jLabel10;
+	}
+
+	public javax.swing.JLabel getjLabel11() {
+		return jLabel11;
+	}
+
+	public void setjLabel11(javax.swing.JLabel jLabel11) {
+		this.jLabel11 = jLabel11;
+	}
+
+	public javax.swing.JLabel getjLabel12() {
+		return jLabel12;
+	}
+
+	public void setjLabel12(javax.swing.JLabel jLabel12) {
+		this.jLabel12 = jLabel12;
+	}
+
+	public javax.swing.JLabel getjLabel13() {
+		return jLabel13;
+	}
+
+	public void setjLabel13(javax.swing.JLabel jLabel13) {
+		this.jLabel13 = jLabel13;
+	}
+
+	public javax.swing.JLabel getjLabel14() {
+		return jLabel14;
+	}
+
+	public void setjLabel14(javax.swing.JLabel jLabel14) {
+		this.jLabel14 = jLabel14;
+	}
+
+	public javax.swing.JLabel getjLabel15() {
+		return jLabel15;
+	}
+
+	public void setjLabel15(javax.swing.JLabel jLabel15) {
+		this.jLabel15 = jLabel15;
+	}
+
+	public javax.swing.JLabel getjLabel16() {
+		return jLabel16;
+	}
+
+	public void setjLabel16(javax.swing.JLabel jLabel16) {
+		this.jLabel16 = jLabel16;
+	}
+
+	public javax.swing.JLabel getjLabel17() {
+		return jLabel17;
+	}
+
+	public void setjLabel17(javax.swing.JLabel jLabel17) {
+		this.jLabel17 = jLabel17;
+	}
+
+	public javax.swing.JLabel getjLabel18() {
+		return jLabel18;
+	}
+
+	public void setjLabel18(javax.swing.JLabel jLabel18) {
+		this.jLabel18 = jLabel18;
+	}
+
+	public javax.swing.JLabel getjLabel19() {
+		return jLabel19;
+	}
+
+	public void setjLabel19(javax.swing.JLabel jLabel19) {
+		this.jLabel19 = jLabel19;
+	}
+
+	public javax.swing.JLabel getjLabel2() {
+		return jLabel2;
+	}
+
+	public void setjLabel2(javax.swing.JLabel jLabel2) {
+		this.jLabel2 = jLabel2;
+	}
+
+	public javax.swing.JLabel getjLabel20() {
+		return jLabel20;
+	}
+
+	public void setjLabel20(javax.swing.JLabel jLabel20) {
+		this.jLabel20 = jLabel20;
+	}
+
+	public javax.swing.JLabel getjLabel21() {
+		return jLabel21;
+	}
+
+	public void setjLabel21(javax.swing.JLabel jLabel21) {
+		this.jLabel21 = jLabel21;
+	}
+
+	public javax.swing.JLabel getjLabel22() {
+		return jLabel22;
+	}
+
+	public void setjLabel22(javax.swing.JLabel jLabel22) {
+		this.jLabel22 = jLabel22;
+	}
+
+	public javax.swing.JLabel getjLabel23() {
+		return jLabel23;
+	}
+
+	public void setjLabel23(javax.swing.JLabel jLabel23) {
+		this.jLabel23 = jLabel23;
+	}
+
+	public javax.swing.JLabel getjLabel24() {
+		return jLabel24;
+	}
+
+	public void setjLabel24(javax.swing.JLabel jLabel24) {
+		this.jLabel24 = jLabel24;
+	}
+
+	public javax.swing.JLabel getjLabel26() {
+		return jLabel26;
+	}
+
+	public void setjLabel26(javax.swing.JLabel jLabel26) {
+		this.jLabel26 = jLabel26;
+	}
+
+	public javax.swing.JLabel getjLabel27() {
+		return jLabel27;
+	}
+
+	public void setjLabel27(javax.swing.JLabel jLabel27) {
+		this.jLabel27 = jLabel27;
+	}
+
+	public javax.swing.JLabel getjLabel28() {
+		return jLabel28;
+	}
+
+	public void setjLabel28(javax.swing.JLabel jLabel28) {
+		this.jLabel28 = jLabel28;
+	}
+
+	public javax.swing.JLabel getjLabel29() {
+		return jLabel29;
+	}
+
+	public void setjLabel29(javax.swing.JLabel jLabel29) {
+		this.jLabel29 = jLabel29;
+	}
+
+	public javax.swing.JLabel getjLabel3() {
+		return jLabel3;
+	}
+
+	public void setjLabel3(javax.swing.JLabel jLabel3) {
+		this.jLabel3 = jLabel3;
+	}
+
+	public javax.swing.JLabel getjLabel30() {
+		return jLabel30;
+	}
+
+	public void setjLabel30(javax.swing.JLabel jLabel30) {
+		this.jLabel30 = jLabel30;
+	}
+
+	public javax.swing.JLabel getjLabel31() {
+		return jLabel31;
+	}
+
+	public void setjLabel31(javax.swing.JLabel jLabel31) {
+		this.jLabel31 = jLabel31;
+	}
+
+	public javax.swing.JLabel getjLabel32() {
+		return jLabel32;
+	}
+
+	public void setjLabel32(javax.swing.JLabel jLabel32) {
+		this.jLabel32 = jLabel32;
+	}
+
+	public javax.swing.JLabel getjLabel33() {
+		return jLabel33;
+	}
+
+	public void setjLabel33(javax.swing.JLabel jLabel33) {
+		this.jLabel33 = jLabel33;
+	}
+
+	public javax.swing.JLabel getjLabel34() {
+		return jLabel34;
+	}
+
+	public void setjLabel34(javax.swing.JLabel jLabel34) {
+		this.jLabel34 = jLabel34;
+	}
+
+	public javax.swing.JLabel getjLabel35() {
+		return jLabel35;
+	}
+
+	public void setjLabel35(javax.swing.JLabel jLabel35) {
+		this.jLabel35 = jLabel35;
+	}
+
+	public javax.swing.JLabel getjLabel36() {
+		return jLabel36;
+	}
+
+	public void setjLabel36(javax.swing.JLabel jLabel36) {
+		this.jLabel36 = jLabel36;
+	}
+
+	public javax.swing.JLabel getjLabel37() {
+		return jLabel37;
+	}
+
+	public void setjLabel37(javax.swing.JLabel jLabel37) {
+		this.jLabel37 = jLabel37;
+	}
+
+	public javax.swing.JLabel getjLabel38() {
+		return jLabel38;
+	}
+
+	public void setjLabel38(javax.swing.JLabel jLabel38) {
+		this.jLabel38 = jLabel38;
+	}
+
+	public javax.swing.JLabel getjLabel39() {
+		return jLabel39;
+	}
+
+	public void setjLabel39(javax.swing.JLabel jLabel39) {
+		this.jLabel39 = jLabel39;
+	}
+
+	public javax.swing.JLabel getjLabel4() {
+		return jLabel4;
+	}
+
+	public void setjLabel4(javax.swing.JLabel jLabel4) {
+		this.jLabel4 = jLabel4;
+	}
+
+	public javax.swing.JLabel getjLabel40() {
+		return jLabel40;
+	}
+
+	public void setjLabel40(javax.swing.JLabel jLabel40) {
+		this.jLabel40 = jLabel40;
+	}
+
+	public javax.swing.JLabel getjLabel41() {
+		return jLabel41;
+	}
+
+	public void setjLabel41(javax.swing.JLabel jLabel41) {
+		this.jLabel41 = jLabel41;
+	}
+
+	public javax.swing.JLabel getjLabel42() {
+		return jLabel42;
+	}
+
+	public void setjLabel42(javax.swing.JLabel jLabel42) {
+		this.jLabel42 = jLabel42;
+	}
+
+	public javax.swing.JLabel getjLabel43() {
+		return jLabel43;
+	}
+
+	public void setjLabel43(javax.swing.JLabel jLabel43) {
+		this.jLabel43 = jLabel43;
+	}
+
+	public javax.swing.JLabel getjLabel44() {
+		return jLabel44;
+	}
+
+	public void setjLabel44(javax.swing.JLabel jLabel44) {
+		this.jLabel44 = jLabel44;
+	}
+
+	public javax.swing.JLabel getjLabel45() {
+		return jLabel45;
+	}
+
+	public void setjLabel45(javax.swing.JLabel jLabel45) {
+		this.jLabel45 = jLabel45;
+	}
+
+	public javax.swing.JLabel getjLabel46() {
+		return jLabel46;
+	}
+
+	public void setjLabel46(javax.swing.JLabel jLabel46) {
+		this.jLabel46 = jLabel46;
+	}
+
+	public javax.swing.JLabel getjLabel47() {
+		return jLabel47;
+	}
+
+	public void setjLabel47(javax.swing.JLabel jLabel47) {
+		this.jLabel47 = jLabel47;
+	}
+
+	public javax.swing.JLabel getjLabel48() {
+		return jLabel48;
+	}
+
+	public void setjLabel48(javax.swing.JLabel jLabel48) {
+		this.jLabel48 = jLabel48;
+	}
+
+	public javax.swing.JLabel getjLabel49() {
+		return jLabel49;
+	}
+
+	public void setjLabel49(javax.swing.JLabel jLabel49) {
+		this.jLabel49 = jLabel49;
+	}
+
+	public javax.swing.JLabel getjLabel5() {
+		return jLabel5;
+	}
+
+	public void setjLabel5(javax.swing.JLabel jLabel5) {
+		this.jLabel5 = jLabel5;
+	}
+
+	public javax.swing.JLabel getjLabel50() {
+		return jLabel50;
+	}
+
+	public void setjLabel50(javax.swing.JLabel jLabel50) {
+		this.jLabel50 = jLabel50;
+	}
+
+	public javax.swing.JLabel getjLabel51() {
+		return jLabel51;
+	}
+
+	public void setjLabel51(javax.swing.JLabel jLabel51) {
+		this.jLabel51 = jLabel51;
+	}
+
+	public javax.swing.JLabel getjLabel52() {
+		return jLabel52;
+	}
+
+	public void setjLabel52(javax.swing.JLabel jLabel52) {
+		this.jLabel52 = jLabel52;
+	}
+
+	public javax.swing.JLabel getjLabel6() {
+		return jLabel6;
+	}
+
+	public void setjLabel6(javax.swing.JLabel jLabel6) {
+		this.jLabel6 = jLabel6;
+	}
+
+	public javax.swing.JLabel getjLabel7() {
+		return jLabel7;
+	}
+
+	public void setjLabel7(javax.swing.JLabel jLabel7) {
+		this.jLabel7 = jLabel7;
+	}
+
+	public javax.swing.JLabel getjLabel8() {
+		return jLabel8;
+	}
+
+	public void setjLabel8(javax.swing.JLabel jLabel8) {
+		this.jLabel8 = jLabel8;
+	}
+
+	public javax.swing.JLabel getjLabel9() {
+		return jLabel9;
+	}
+
+	public void setjLabel9(javax.swing.JLabel jLabel9) {
+		this.jLabel9 = jLabel9;
+	}
+
+	public javax.swing.JCheckBox getMarriageCertificateOfParentsCheckBox() {
+		return marriageCertificateOfParentsCheckBox;
+	}
+
+	public void setMarriageCertificateOfParentsCheckBox(
+			javax.swing.JCheckBox marriageCertificateOfParentsCheckBox) {
+		this.marriageCertificateOfParentsCheckBox = marriageCertificateOfParentsCheckBox;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getMinorSeminaryFromDatePicker() {
+		return minorSeminaryFromDatePicker;
+	}
+
+	public void setMinorSeminaryFromDatePicker(
+			com.fixent.sm.client.component.ADatePicker minorSeminaryFromDatePicker) {
+		this.minorSeminaryFromDatePicker = minorSeminaryFromDatePicker;
+	}
+
+	public javax.swing.JTextField getMinorSeminaryNameTextField() {
+		return minorSeminaryNameTextField;
+	}
+
+	public void setMinorSeminaryNameTextField(
+			javax.swing.JTextField minorSeminaryNameTextField) {
+		this.minorSeminaryNameTextField = minorSeminaryNameTextField;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getMinorSeminaryToDatePicker() {
+		return minorSeminaryToDatePicker;
+	}
+
+	public void setMinorSeminaryToDatePicker(
+			com.fixent.sm.client.component.ADatePicker minorSeminaryToDatePicker) {
+		this.minorSeminaryToDatePicker = minorSeminaryToDatePicker;
+	}
+
+	public javax.swing.JCheckBox getMotherLivingCheckBox() {
+		return motherLivingCheckBox;
+	}
+
+	public void setMotherLivingCheckBox(javax.swing.JCheckBox motherLivingCheckBox) {
+		this.motherLivingCheckBox = motherLivingCheckBox;
+	}
+
+	public javax.swing.JTextField getMotherNameTextField() {
+		return motherNameTextField;
+	}
+
+	public void setMotherNameTextField(javax.swing.JTextField motherNameTextField) {
+		this.motherNameTextField = motherNameTextField;
+	}
+
+	public javax.swing.JTextField getMotherOccupationTextField() {
+		return motherOccupationTextField;
+	}
+
+	public void setMotherOccupationTextField(
+			javax.swing.JTextField motherOccupationTextField) {
+		this.motherOccupationTextField = motherOccupationTextField;
 	}
 
 	public javax.swing.JTextField getNameTextField() {
@@ -600,6 +1771,66 @@ public class StudentView extends javax.swing.JPanel {
 
 	public void setNameTextField(javax.swing.JTextField nameTextField) {
 		this.nameTextField = nameTextField;
+	}
+
+	public javax.swing.JSpinner getNoOfElderBrotherSpinner() {
+		return noOfElderBrotherSpinner;
+	}
+
+	public void setNoOfElderBrotherSpinner(
+			javax.swing.JSpinner noOfElderBrotherSpinner) {
+		this.noOfElderBrotherSpinner = noOfElderBrotherSpinner;
+	}
+
+	public javax.swing.JSpinner getNoOfElderSisterSpinner() {
+		return noOfElderSisterSpinner;
+	}
+
+	public void setNoOfElderSisterSpinner(
+			javax.swing.JSpinner noOfElderSisterSpinner) {
+		this.noOfElderSisterSpinner = noOfElderSisterSpinner;
+	}
+
+	public javax.swing.JSpinner getNoOfYoungerBrotherSpinner() {
+		return noOfYoungerBrotherSpinner;
+	}
+
+	public void setNoOfYoungerBrotherSpinner(
+			javax.swing.JSpinner noOfYoungerBrotherSpinner) {
+		this.noOfYoungerBrotherSpinner = noOfYoungerBrotherSpinner;
+	}
+
+	public javax.swing.JLabel getNoOfYoungerSisterLabel() {
+		return noOfYoungerSisterLabel;
+	}
+
+	public void setNoOfYoungerSisterLabel(javax.swing.JLabel noOfYoungerSisterLabel) {
+		this.noOfYoungerSisterLabel = noOfYoungerSisterLabel;
+	}
+
+	public javax.swing.JSpinner getNoOfYoungerSisterSpinner() {
+		return noOfYoungerSisterSpinner;
+	}
+
+	public void setNoOfYoungerSisterSpinner(
+			javax.swing.JSpinner noOfYoungerSisterSpinner) {
+		this.noOfYoungerSisterSpinner = noOfYoungerSisterSpinner;
+	}
+
+	public javax.swing.JPanel getParishInfoPanel() {
+		return parishInfoPanel;
+	}
+
+	public void setParishInfoPanel(javax.swing.JPanel parishInfoPanel) {
+		this.parishInfoPanel = parishInfoPanel;
+	}
+
+	public javax.swing.JTextField getParishTextField() {
+		return parishTextField;
+	}
+
+	public void setParishTextField(javax.swing.JTextField parishTextField) {
+		this.parishTextField = parishTextField;
 	}
 
 	public javax.swing.JCheckBox getPassportSizePhotoCheckBox() {
@@ -611,30 +1842,100 @@ public class StudentView extends javax.swing.JPanel {
 		this.passportSizePhotoCheckBox = passportSizePhotoCheckBox;
 	}
 
-	public javax.swing.JComboBox getPlaceOfBaptismComboBox() {
-		return placeOfBaptismComboBox;
+	public com.fixent.sm.client.component.ADatePicker getPhilosophyFromDatePicker() {
+		return philosophyFromDatePicker;
 	}
 
-	public void setPlaceOfBaptismComboBox(
-			javax.swing.JComboBox placeOfBaptismComboBox) {
-		this.placeOfBaptismComboBox = placeOfBaptismComboBox;
+	public void setPhilosophyFromDatePicker(
+			com.fixent.sm.client.component.ADatePicker philosophyFromDatePicker) {
+		this.philosophyFromDatePicker = philosophyFromDatePicker;
 	}
 
-	public javax.swing.JComboBox getPlaceOfBirthComboBox() {
-		return placeOfBirthComboBox;
+	public javax.swing.JTextField getPhilosophySeminaryNameTextField1() {
+		return philosophySeminaryNameTextField1;
 	}
 
-	public void setPlaceOfBirthComboBox(javax.swing.JComboBox placeOfBirthComboBox) {
-		this.placeOfBirthComboBox = placeOfBirthComboBox;
+	public void setPhilosophySeminaryNameTextField1(
+			javax.swing.JTextField philosophySeminaryNameTextField1) {
+		this.philosophySeminaryNameTextField1 = philosophySeminaryNameTextField1;
 	}
 
-	public javax.swing.JTextField getPlaceOfRegencyTextField() {
-		return placeOfRegencyTextField;
+	public com.fixent.sm.client.component.ADatePicker getPhilosophyToDatePicker() {
+		return philosophyToDatePicker;
 	}
 
-	public void setPlaceOfRegencyTextField(
-			javax.swing.JTextField placeOfRegencyTextField) {
-		this.placeOfRegencyTextField = placeOfRegencyTextField;
+	public void setPhilosophyToDatePicker(
+			com.fixent.sm.client.component.ADatePicker philosophyToDatePicker) {
+		this.philosophyToDatePicker = philosophyToDatePicker;
+	}
+
+	public javax.swing.JLabel getPhotoUploadLabel() {
+		return photoUploadLabel;
+	}
+
+	public void setPhotoUploadLabel(javax.swing.JLabel photoUploadLabel) {
+		this.photoUploadLabel = photoUploadLabel;
+	}
+
+	public javax.swing.JTextField getPlaceOfBaptismTextField() {
+		return placeOfBaptismTextField;
+	}
+
+	public void setPlaceOfBaptismTextField(
+			javax.swing.JTextField placeOfBaptismTextField) {
+		this.placeOfBaptismTextField = placeOfBaptismTextField;
+	}
+
+	public javax.swing.JTextField getPlaceOfBirthTextField() {
+		return placeOfBirthTextField;
+	}
+
+	public void setPlaceOfBirthTextField(
+			javax.swing.JTextField placeOfBirthTextField) {
+		this.placeOfBirthTextField = placeOfBirthTextField;
+	}
+
+	public javax.swing.JTextField getPlaceOfConfirmationTextField() {
+		return placeOfConfirmationTextField;
+	}
+
+	public void setPlaceOfConfirmationTextField(
+			javax.swing.JTextField placeOfConfirmationTextField) {
+		this.placeOfConfirmationTextField = placeOfConfirmationTextField;
+	}
+
+	public javax.swing.JPanel getPrimaryInfoPanel() {
+		return primaryInfoPanel;
+	}
+
+	public void setPrimaryInfoPanel(javax.swing.JPanel primaryInfoPanel) {
+		this.primaryInfoPanel = primaryInfoPanel;
+	}
+
+	public javax.swing.JTextField getRegNoTextField() {
+		return regNoTextField;
+	}
+
+	public void setRegNoTextField(javax.swing.JTextField regNoTextField) {
+		this.regNoTextField = regNoTextField;
+	}
+
+	public com.fixent.sm.client.component.ADatePicker getRegencyFromDatePicker() {
+		return regencyFromDatePicker;
+	}
+
+	public void setRegencyFromDatePicker(
+			com.fixent.sm.client.component.ADatePicker regencyFromDatePicker) {
+		this.regencyFromDatePicker = regencyFromDatePicker;
+	}
+
+	public javax.swing.JTextField getRegencyParishNameTextField() {
+		return regencyParishNameTextField;
+	}
+
+	public void setRegencyParishNameTextField(
+			javax.swing.JTextField regencyParishNameTextField) {
+		this.regencyParishNameTextField = regencyParishNameTextField;
 	}
 
 	public javax.swing.JCheckBox getRegencyReportCheckBox() {
@@ -645,6 +1946,31 @@ public class StudentView extends javax.swing.JPanel {
 		this.regencyReportCheckBox = regencyReportCheckBox;
 	}
 
+	public com.fixent.sm.client.component.ADatePicker getRegencyToDatePicker() {
+		return regencyToDatePicker;
+	}
+
+	public void setRegencyToDatePicker(
+			com.fixent.sm.client.component.ADatePicker regencyToDatePicker) {
+		this.regencyToDatePicker = regencyToDatePicker;
+	}
+
+	public javax.swing.JScrollPane getRemarksScrollPane() {
+		return remarksScrollPane;
+	}
+
+	public void setRemarksScrollPane(javax.swing.JScrollPane remarksScrollPane) {
+		this.remarksScrollPane = remarksScrollPane;
+	}
+
+	public javax.swing.JTextArea getRemarksTextArea() {
+		return remarksTextArea;
+	}
+
+	public void setRemarksTextArea(javax.swing.JTextArea remarksTextArea) {
+		this.remarksTextArea = remarksTextArea;
+	}
+
 	public javax.swing.JButton getSaveButton() {
 		return saveButton;
 	}
@@ -653,242 +1979,56 @@ public class StudentView extends javax.swing.JPanel {
 		this.saveButton = saveButton;
 	}
 
-	public javax.swing.JTextField getSecularStudiesTextField() {
-		return secularStudiesTextField;
+	public javax.swing.JCheckBox getSpiritualYearFinalCheckBox() {
+		return spiritualYearFinalCheckBox;
 	}
 
-	public void setSecularStudiesTextField(
-			javax.swing.JTextField secularStudiesTextField) {
-		this.secularStudiesTextField = secularStudiesTextField;
+	public void setSpiritualYearFinalCheckBox(
+			javax.swing.JCheckBox spiritualYearFinalCheckBox) {
+		this.spiritualYearFinalCheckBox = spiritualYearFinalCheckBox;
 	}
 
-	public javax.swing.JCheckBox getSpirtiualYearFinalAssessmentCheckBox() {
-		return spirtiualYearFinalAssessmentCheckBox;
+	public com.fixent.sm.client.component.ADatePicker getSpiritualityFromDatePicker() {
+		return spiritualityFromDatePicker;
 	}
 
-	public void setSpirtiualYearFinalAssessmentCheckBox(
-			javax.swing.JCheckBox spirtiualYearFinalAssessmentCheckBox) {
-		this.spirtiualYearFinalAssessmentCheckBox = spirtiualYearFinalAssessmentCheckBox;
+	public void setSpiritualityFromDatePicker(
+			com.fixent.sm.client.component.ADatePicker spiritualityFromDatePicker) {
+		this.spiritualityFromDatePicker = spiritualityFromDatePicker;
 	}
 
-	public javax.swing.JComboBox getTypeComboBox() {
-		return typeComboBox;
+	public javax.swing.JTextField getSpiritualitySeminaryNameTextField() {
+		return spiritualitySeminaryNameTextField;
 	}
 
-	public void setTypeComboBox(javax.swing.JComboBox typeComboBox) {
-		this.typeComboBox = typeComboBox;
+	public void setSpiritualitySeminaryNameTextField(
+			javax.swing.JTextField spiritualitySeminaryNameTextField) {
+		this.spiritualitySeminaryNameTextField = spiritualitySeminaryNameTextField;
 	}
 
-	
-	public javax.swing.JPanel getjPanel1() {
-		return jPanel1;
+	public com.fixent.sm.client.component.ADatePicker getSpiritualityToDatePicker() {
+		return spiritualityToDatePicker;
 	}
 
-	public void setjPanel1(javax.swing.JPanel jPanel1) {
-		this.jPanel1 = jPanel1;
+	public void setSpiritualityToDatePicker(
+			com.fixent.sm.client.component.ADatePicker spiritualityToDatePicker) {
+		this.spiritualityToDatePicker = spiritualityToDatePicker;
 	}
 
-	public javax.swing.JPanel getjPanel2() {
-		return jPanel2;
+	public javax.swing.JTabbedPane getTabContainer() {
+		return tabContainer;
 	}
 
-	public void setjPanel2(javax.swing.JPanel jPanel2) {
-		this.jPanel2 = jPanel2;
+	public void setTabContainer(javax.swing.JTabbedPane tabContainer) {
+		this.tabContainer = tabContainer;
 	}
 
-	public javax.swing.JPanel getjPanel3() {
-		return jPanel3;
+	public javax.swing.JTextField getVillageTextField() {
+		return villageTextField;
 	}
 
-	public void setjPanel3(javax.swing.JPanel jPanel3) {
-		this.jPanel3 = jPanel3;
+	public void setVillageTextField(javax.swing.JTextField villageTextField) {
+		this.villageTextField = villageTextField;
 	}
-
-	public javax.swing.JLabel getMajorSeminaryLabel() {
-		return majorSeminaryLabel;
-	}
-
-	public void setMajorSeminaryLabel(javax.swing.JLabel majorSeminaryLabel) {
-		this.majorSeminaryLabel = majorSeminaryLabel;
-	}
-
-	public javax.swing.JLabel getMinorSeminaryLabel() {
-		return minorSeminaryLabel;
-	}
-
-	public void setMinorSeminaryLabel(javax.swing.JLabel minorSeminaryLabel) {
-		this.minorSeminaryLabel = minorSeminaryLabel;
-	}
-
-	public javax.swing.JLabel getNameLabel() {
-		return nameLabel;
-	}
-
-	public void setNameLabel(javax.swing.JLabel nameLabel) {
-		this.nameLabel = nameLabel;
-	}
-
-
-	public javax.swing.JLabel getPlaceOfBirthLabel() {
-		return placeOfBirthLabel;
-	}
-
-	public void setPlaceOfBirthLabel(javax.swing.JLabel placeOfBirthLabel) {
-		this.placeOfBirthLabel = placeOfBirthLabel;
-	}
-
-	public javax.swing.JLabel getPlaceOfRegencyLabel() {
-		return placeOfRegencyLabel;
-	}
-
-	public void setPlaceOfRegencyLabel(javax.swing.JLabel placeOfRegencyLabel) {
-		this.placeOfRegencyLabel = placeOfRegencyLabel;
-	}
-
-	public javax.swing.JLabel getPoBaptismLabel() {
-		return poBaptismLabel;
-	}
-
-	public void setPoBaptismLabel(javax.swing.JLabel poBaptismLabel) {
-		this.poBaptismLabel = poBaptismLabel;
-	}
-
-	public javax.swing.JLabel getSecularStudiesLabel() {
-		return secularStudiesLabel;
-	}
-
-	public void setSecularStudiesLabel(javax.swing.JLabel secularStudiesLabel) {
-		this.secularStudiesLabel = secularStudiesLabel;
-	}
-
-	public javax.swing.JLabel getTypeLabel() {
-		return typeLabel;
-	}
-
-	public void setTypeLabel(javax.swing.JLabel typeLabel) {
-		this.typeLabel = typeLabel;
-	}
-
-	public javax.swing.JTextField getBrothersTextField() {
-		return brothersTextField;
-	}
-
-	public void setBrothersTextField(javax.swing.JTextField brothersTextField) {
-		this.brothersTextField = brothersTextField;
-	}
-
-	public javax.swing.JButton getCancelBtn() {
-		return cancelBtn;
-	}
-
-	public void setCancelBtn(javax.swing.JButton cancelBtn) {
-		this.cancelBtn = cancelBtn;
-	}
-
-	public javax.swing.JLabel getjLabel1() {
-		return jLabel1;
-	}
-
-	public void setjLabel1(javax.swing.JLabel jLabel1) {
-		this.jLabel1 = jLabel1;
-	}
-
-	public javax.swing.JLabel getjLabel2() {
-		return jLabel2;
-	}
-
-	public void setjLabel2(javax.swing.JLabel jLabel2) {
-		this.jLabel2 = jLabel2;
-	}
-
-	public javax.swing.JLabel getjLabel3() {
-		return jLabel3;
-	}
-
-	public void setjLabel3(javax.swing.JLabel jLabel3) {
-		this.jLabel3 = jLabel3;
-	}
-
-	public javax.swing.JLabel getjLabel4() {
-		return jLabel4;
-	}
-
-	public void setjLabel4(javax.swing.JLabel jLabel4) {
-		this.jLabel4 = jLabel4;
-	}
-
-	public javax.swing.JLabel getjLabel5() {
-		return jLabel5;
-	}
-
-	public void setjLabel5(javax.swing.JLabel jLabel5) {
-		this.jLabel5 = jLabel5;
-	}
-
-	public javax.swing.JScrollPane getjScrollPane1() {
-		return jScrollPane1;
-	}
-
-	public void setjScrollPane1(javax.swing.JScrollPane jScrollPane1) {
-		this.jScrollPane1 = jScrollPane1;
-	}
-
-	public javax.swing.JTextField getOccupationOfParentsTextField() {
-		return occupationOfParentsTextField;
-	}
-
-	public void setOccupationOfParentsTextField(
-			javax.swing.JTextField occupationOfParentsTextField) {
-		this.occupationOfParentsTextField = occupationOfParentsTextField;
-	}
-
-	public javax.swing.JTextArea getParentsAddressTextField() {
-		return parentsAddressTextField;
-	}
-
-	public void setParentsAddressTextField(
-			javax.swing.JTextArea parentsAddressTextField) {
-		this.parentsAddressTextField = parentsAddressTextField;
-	}
-
-	public javax.swing.JComboBox getParentsLivingComboBox() {
-		return parentsLivingComboBox;
-	}
-
-	public void setParentsLivingComboBox(javax.swing.JComboBox parentsLivingComboBox) {
-		this.parentsLivingComboBox = parentsLivingComboBox;
-	}
-
-	public javax.swing.JLabel getParentsLivingLabel() {
-		return parentsLivingLabel;
-	}
-
-	public void setParentsLivingLabel(javax.swing.JLabel parentsLivingLabel) {
-		this.parentsLivingLabel = parentsLivingLabel;
-	}
-
-	public javax.swing.JLabel getParentsNameLabel() {
-		return parentsNameLabel;
-	}
-
-	public void setParentsNameLabel(javax.swing.JLabel parentsNameLabel) {
-		this.parentsNameLabel = parentsNameLabel;
-	}
-
-	public javax.swing.JTextField getParentsNameTextField() {
-		return parentsNameTextField;
-	}
-
-	public void setParentsNameTextField(javax.swing.JTextField parentsNameTextField) {
-		this.parentsNameTextField = parentsNameTextField;
-	}
-
-	public javax.swing.JTextField getSistersTextField() {
-		return sistersTextField;
-	}
-
-	public void setSistersTextField(javax.swing.JTextField sistersTextField) {
-		this.sistersTextField = sistersTextField;
-	}
-	    
+    
 }

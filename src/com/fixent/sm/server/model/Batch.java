@@ -2,9 +2,10 @@ package com.fixent.sm.server.model;
 
 public class Batch {
 	
-	int id;
-	int year;
-	String type;
+	private int id;
+	private int year;
+	private String type;
+	
 	public int getId() {
 		return id;
 	}

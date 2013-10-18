@@ -1,2 +1,6 @@
 /bin
 
+/nbproject/
+build.xml
+manifest.mf
+/build/

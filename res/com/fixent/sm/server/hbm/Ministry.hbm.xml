@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fixent.sm.server.model.Ministry" table="MINISTRY">
+		<id name="id" type="int">
+			<column name="ID" precision="5" scale="0" />
+			<generator class="increment" />
+		</id>
+		<property name="nameOfTheMinistry" type="string">
+			<column name="NAME_OF_MINISTRY" not-null="true" />
+		</property>
+		<property name="ministryStatus" type="boolean">
+			<column name="MINISTRY_STATUS" length="20" not-null="true" />
+		</property>
+		<many-to-one name="student" class="com.fixent.sm.server.model.Subject" column="SUBJECT_ID" not-null="true"/>
+			
+		
+
+         
+	</class>
+</hibernate-mapping>

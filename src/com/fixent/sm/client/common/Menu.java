@@ -13,15 +13,19 @@ public class Menu {
 	public Menu() {
 		
 		rootMenu.put("1", "Master");
-		rootMenu.put("2", "Student");
+		rootMenu.put("2", "Maintenance");
 
-		masterSubMenu.put("1", "College Details");
+		masterSubMenu.put("1", "Subject/Category");
+		masterSubMenu.put("2", "Dio/Congregation");
 
-		studentSubMenu.put("1", "Master");
-		studentSubMenu.put("2", "Student");
+		studentSubMenu.put("1", "  Student Info  ");
+		studentSubMenu.put("2", "Syllabus");
+		studentSubMenu.put("3", "Mark");
+		studentSubMenu.put("4", "Ministry");
+		
 		
 		subMenuMap.put("Master", masterSubMenu);
-		subMenuMap.put("Student", studentSubMenu);
+		subMenuMap.put("Maintenance", studentSubMenu);
 		
 	}
 

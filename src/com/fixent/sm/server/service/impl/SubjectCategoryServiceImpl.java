@@ -1,5 +1,7 @@
 package com.fixent.sm.server.service.impl;
 
+import java.util.List;
+
 import com.fixent.sm.server.dao.SubjectCategoryDAO;
 import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.SubjectCategoryService;
@@ -43,6 +45,30 @@ implements SubjectCategoryService {
 	
 	}
 	
+	public List<SubjectCategory> getSubjectCategories() {
+		
+		List<SubjectCategory> subjectCategories = null;
+		try {
+			
+			SubjectCategoryDAO dao = new SubjectCategoryDAO();
+			subjectCategories = dao.getSubjectCategories();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return subjectCategories;
+	}
 	
+	public boolean deleteSubjectCategory(int id) {
+		
+		boolean status = false;
+		try {
+			
+			SubjectCategoryDAO dao = new SubjectCategoryDAO();
+			status = dao.deleteSubjectCategory(id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
 
 }

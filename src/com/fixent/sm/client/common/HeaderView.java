@@ -31,7 +31,7 @@ public class HeaderView extends javax.swing.JPanel {
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Mathan\\Desktop\\images_new_1.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/fixent/sm/client/common/Header_Image.png"))); // NOI18N
         jLabel1.setMaximumSize(new java.awt.Dimension(350, 100));
         jLabel1.setMinimumSize(new java.awt.Dimension(350, 100));
         jLabel1.setPreferredSize(new java.awt.Dimension(350, 100));

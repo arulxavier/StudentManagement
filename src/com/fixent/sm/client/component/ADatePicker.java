@@ -123,6 +123,9 @@ public class ADatePicker extends javax.swing.JPanel {
 		return jTextField1.getText();
 	}
 
+	public void setDateTextField(String date) {
+		jTextField1.setText(date);
+	}
 
 	public void setjTextField1(JTextField1 jTextField1) {
 		this.jTextField1 = jTextField1;
@@ -564,7 +567,10 @@ class DatePicker extends Observable implements Runnable, WindowFocusListener {
         if (sdf == null)
             sdf = SimpleDateFormat.getDateInstance(SimpleDateFormat.SHORT,
                     locale);
-        return sdf.format(date);
+        SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MMM-yyyy");
+        String date1 = DATE_FORMAT.format(date);
+//        return sdf.format(date);
+        return date1;
     }
 
     public String formatDate(Date date, String pattern) {

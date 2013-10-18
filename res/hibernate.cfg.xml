@@ -19,6 +19,13 @@
         <mapping resource="com/fixent/sm/server/hbm/Batch.hbm.xml"></mapping>
         <mapping resource="com/fixent/sm/server/hbm/Student.hbm.xml"></mapping>
         <mapping resource="com/fixent/sm/server/hbm/Mark.hbm.xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/Congregation.hbm.xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/Diocese.hbm..xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/Configuration.hbm.xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/Address.hbm.xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/Ministry.hbm.xml"></mapping>
+        <mapping resource="com/fixent/sm/server/hbm/DocumentStatus.hbm.xml"></mapping>
+        
         
     </session-factory>
 </hibernate-configuration>

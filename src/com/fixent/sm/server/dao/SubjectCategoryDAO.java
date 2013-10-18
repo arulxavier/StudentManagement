@@ -53,4 +53,32 @@ extends BaseDAO {
 		return categories.get(0);
 	}
 
+	@SuppressWarnings("unchecked")
+	public List<SubjectCategory> getSubjectCategories() {
+		
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(SubjectCategory.class);
+		List<SubjectCategory> categories=  criteria.list();
+		return categories;
+	}
+
+	public boolean deleteSubjectCategory(int id) {
+		
+		Session session = getSession();
+		session.beginTransaction();
+		session.delete(getSubjectCategories(id));
+		session.getTransaction().commit();
+		return true;
+	}
+
+	private Object getSubjectCategories(int id) {
+		
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(SubjectCategory.class);
+		criteria.add(Restrictions.like("id", id));
+		@SuppressWarnings("unchecked")
+		List<SubjectCategory> categories=  criteria.list();
+		return categories.get(0);
+	}
+
 }

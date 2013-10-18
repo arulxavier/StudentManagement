@@ -23,6 +23,7 @@ public class Student {
 	String fatherOccupation;
 	String motherOccupation;
 	int contactNumber;
+	String contactPerson;
 	Date dateOfBaptism;
 	String placeOfBaptism;
 	Date dateOfConfirmation;
@@ -53,10 +54,24 @@ public class Student {
 	String spiritualitySeminary;
 	Date spiritualityFromDate;
 	Date spiritualityToDate;
+	boolean certificateOfBaptism;
+	boolean certificateOfConfirmation;
+	boolean marriageCertificateOfParents;
+	boolean certificateOfPhilosophy;
+	boolean finalReportFromThePhilosophate;
+	boolean regencyReport;
+	boolean spiritualYearFinalAssessment;
+	boolean degreeCertificate;
+	boolean passportSizePhoto;
 	
-	Batch batch;
 	
+	Batch batch;	
 	Set<Mark> marks;
+	Diocese diocese;
+	Congregation congregation;
+	Address address;
+	Set<Ministry> ministries;
+	Set<DocumentStatus> documentStatus;
 	
 	
 	public int getId() {
@@ -353,4 +368,96 @@ public class Student {
 	public void setMarks(Set<Mark> marks) {
 		this.marks = marks;
 	}
+	public Diocese getDiocese() {
+		return diocese;
+	}
+	public void setDiocese(Diocese diocese) {
+		this.diocese = diocese;
+	}
+	public Congregation getCongregation() {
+		return congregation;
+	}
+	public void setCongregation(Congregation congregation) {
+		this.congregation = congregation;
+	}
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+	public Set<Ministry> getMinistries() {
+		return ministries;
+	}
+	public void setMinistries(Set<Ministry> ministries) {
+		this.ministries = ministries;
+	}
+	public Set<DocumentStatus> getDocumentStatus() {
+		return documentStatus;
+	}
+	public void setDocumentStatus(Set<DocumentStatus> documentStatus) {
+		this.documentStatus = documentStatus;
+	}
+	public String getContactPerson() {
+		return contactPerson;
+	}
+	public void setContactPerson(String contactPerson) {
+		this.contactPerson = contactPerson;
+	}
+	public boolean isCertificateOfBaptism() {
+		return certificateOfBaptism;
+	}
+	public void setCertificateOfBaptism(boolean certificateOfBaptism) {
+		this.certificateOfBaptism = certificateOfBaptism;
+	}
+	public boolean isCertificateOfConfirmation() {
+		return certificateOfConfirmation;
+	}
+	public void setCertificateOfConfirmation(boolean certificateOfConfirmation) {
+		this.certificateOfConfirmation = certificateOfConfirmation;
+	}
+	public boolean isMarriageCertificateOfParents() {
+		return marriageCertificateOfParents;
+	}
+	public void setMarriageCertificateOfParents(boolean marriageCertificateOfParents) {
+		this.marriageCertificateOfParents = marriageCertificateOfParents;
+	}
+	public boolean isCertificateOfPhilosophy() {
+		return certificateOfPhilosophy;
+	}
+	public void setCertificateOfPhilosophy(boolean certificateOfPhilosophy) {
+		this.certificateOfPhilosophy = certificateOfPhilosophy;
+	}
+	public boolean isFinalReportFromThePhilosophate() {
+		return finalReportFromThePhilosophate;
+	}
+	public void setFinalReportFromThePhilosophate(
+			boolean finalReportFromThePhilosophate) {
+		this.finalReportFromThePhilosophate = finalReportFromThePhilosophate;
+	}
+	public boolean isRegencyReport() {
+		return regencyReport;
+	}
+	public void setRegencyReport(boolean regencyReport) {
+		this.regencyReport = regencyReport;
+	}
+	public boolean isSpiritualYearFinalAssessment() {
+		return spiritualYearFinalAssessment;
+	}
+	public void setSpiritualYearFinalAssessment(boolean spiritualYearFinalAssessment) {
+		this.spiritualYearFinalAssessment = spiritualYearFinalAssessment;
+	}
+	public boolean isDegreeCertificate() {
+		return degreeCertificate;
+	}
+	public void setDegreeCertificate(boolean degreeCertificate) {
+		this.degreeCertificate = degreeCertificate;
+	}
+	public boolean isPassportSizePhoto() {
+		return passportSizePhoto;
+	}
+	public void setPassportSizePhoto(boolean passportSizePhoto) {
+		this.passportSizePhoto = passportSizePhoto;
+	}
+	
 }

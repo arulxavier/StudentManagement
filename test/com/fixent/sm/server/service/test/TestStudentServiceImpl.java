@@ -1,8 +1,11 @@
 package com.fixent.sm.server.service.test;
 
 import java.util.Date;
+import java.util.HashSet;
+import java.util.Set;
 
 import com.fixent.sm.server.model.Batch;
+import com.fixent.sm.server.model.DocumentStatus;
 import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.service.impl.StudentServiceImpl;
 
@@ -61,6 +64,23 @@ public class TestStudentServiceImpl {
 		Batch batch = new Batch();
 		batch.setId(1);		
 		student.setBatch(batch);
+		
+		Set<DocumentStatus> documentStatus = new HashSet<DocumentStatus>();
+		DocumentStatus documentStatus2 = new DocumentStatus();
+		documentStatus2.setDocumentName("Certificate of Baptism");
+		documentStatus2.setDocumentStatus(true);
+		documentStatus.add(documentStatus2);
+		documentStatus2.setStudent(student);
+		
+		DocumentStatus documentStatus3 = new DocumentStatus();
+		documentStatus3.setDocumentName("Certificate of Confirmation");
+		documentStatus3.setDocumentStatus(true);
+		documentStatus.add(documentStatus3);
+		documentStatus3.setStudent(student);
+		
+		student.setDocumentStatus(documentStatus);
+		
+		
 		
 		StudentServiceImpl impl = new StudentServiceImpl();
 		impl.createStudent(student);

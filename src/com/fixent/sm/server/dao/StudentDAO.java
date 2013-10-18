@@ -9,6 +9,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
+import com.fixent.sm.server.model.Batch;
 import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.model.SubjectCategory;
 
@@ -47,11 +48,28 @@ extends BaseDAO {
 	public Student getStudent(String name) {
 
 		Session session = getSession();
-		Criteria criteria = session.createCriteria(SubjectCategory.class);
+		Criteria criteria = session.createCriteria(Student.class);
 		criteria.add(Restrictions.like("name", name));
 		@SuppressWarnings("unchecked")
 		List<Student> students =  criteria.list();
 		return students.get(0);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Object> getBatch() {
+		
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Batch.class);
+		return criteria.list();
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<Student> getStudents() {
+		
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Student.class);
+		List<Student> students =  criteria.list();
+		return students;
 	}
 
 

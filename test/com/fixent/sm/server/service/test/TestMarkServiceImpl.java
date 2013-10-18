@@ -1,5 +1,6 @@
 package com.fixent.sm.server.service.test;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 import com.fixent.sm.server.model.Mark;
@@ -23,7 +24,7 @@ public class TestMarkServiceImpl {
 		Student student = new Student();
 		student.setId(1);
 		
-		mark.setMark(75);
+		mark.setMark(new BigDecimal(75));
 		mark.setSyllabus(syllabus);
 		mark.setSubject(subject);
 		mark.setCreatedBy("admin");

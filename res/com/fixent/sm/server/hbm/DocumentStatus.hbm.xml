@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.fixent.sm.server.model.DocumentStatus" table="DOCUMENT_STATUS">
+		<id name="id" type="int">
+			<column name="ID" precision="5" scale="0" />
+			<generator class="increment" />
+		</id>
+		<property name="documentName" type="string">
+			<column name="DOCUMENT_NAME" not-null="true" />
+		</property>
+		<property name="documentStatus" type="boolean">
+			<column name="DOCUMENT_STATUS" length="20" not-null="true" />
+		</property>
+		<many-to-one name="student" class="com.fixent.sm.server.model.Student" fetch="select">
+            <column name="STUDENT_ID" not-null="true" />
+        </many-to-one>
+	</class>
+</hibernate-mapping>

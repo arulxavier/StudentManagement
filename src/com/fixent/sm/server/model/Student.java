@@ -1,5 +1,6 @@
 package com.fixent.sm.server.model;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
 
@@ -63,6 +64,7 @@ public class Student {
 	boolean spiritualYearFinalAssessment;
 	boolean degreeCertificate;
 	boolean passportSizePhoto;
+	Double mark;
 	
 	
 	Batch batch;	
@@ -458,6 +460,12 @@ public class Student {
 	}
 	public void setPassportSizePhoto(boolean passportSizePhoto) {
 		this.passportSizePhoto = passportSizePhoto;
+	}
+	public Double getMark() {
+		return mark;
+	}
+	public void setMark(Double mark) {
+		this.mark = mark;
 	}
 	
 }

@@ -2,7 +2,7 @@ package com.fixent.sm.main;
 
 import com.fixent.sm.client.login.view.LoginWindow;
 
-public class Main {
+public class StudentMain {
 	
 	public static void main(String[] args) {
 		

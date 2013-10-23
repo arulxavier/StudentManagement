@@ -24,7 +24,7 @@ public class TestMarkServiceImpl {
 		Student student = new Student();
 		student.setId(1);
 		
-		mark.setMark(new BigDecimal(75));
+		mark.setMark(75.34);
 		mark.setSyllabus(syllabus);
 		mark.setSubject(subject);
 		mark.setCreatedBy("admin");

@@ -3,6 +3,7 @@ package com.fixent.sm.server.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -13,6 +14,7 @@ import org.hibernate.criterion.Restrictions;
 import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.model.Syllabus;
+import com.fixent.sm.server.model.info.SyllabusInfo;
 
 public class SubjectDAO extends BaseDAO {
 
@@ -110,6 +112,31 @@ public class SubjectDAO extends BaseDAO {
 		List<SubjectCategory> categories = criteria.list();
 		session.close();
 		return categories.get(0);
+	}
+	
+	public List<Subject> searchSubject(SyllabusInfo syllabusInfo) {
+
+		List<Subject> subjects = new ArrayList<Subject>();
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Subject.class);
+
+		if (syllabusInfo.getYear() != 0) {
+			criteria.add(Restrictions.eq("year", syllabusInfo.getYear()));
+		}
+
+		if (syllabusInfo.getType() != null) {
+			criteria.add(Restrictions.eq("type", syllabusInfo.getType()));
+		}
+		if (syllabusInfo.getSemaster() != 0) {
+			criteria.add(Restrictions.eq("year", syllabusInfo.getYear()));
+		}
+		subjects = criteria.list();
+		if (subjects != null && !subjects.isEmpty()) {
+			for (Subject subject : subjects) {
+				Hibernate.initialize(subject);
+			}
+		}
+		return subjects;
 	}
 
 }

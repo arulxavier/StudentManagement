@@ -12,7 +12,10 @@ import com.fixent.component.accordion.LeftSidePanel;
 import com.fixent.component.accordion.MenuClickEvent;
 import com.fixent.sm.client.maintenance.controller.DioceseCongregationController;
 import com.fixent.sm.client.maintenance.controller.SubjectMaintenanceController;
+import com.fixent.sm.client.mark.controller.MarkDashboardController;
+import com.fixent.sm.client.mark.controller.MarkEntryController;
 import com.fixent.sm.client.student.controller.StudentDashboardController;
+import com.fixent.sm.client.syllabus.controller.SyllabusDashboardController;
 
 public class AccordionEventHandler 
 extends MenuClickEvent {
@@ -58,7 +61,12 @@ extends MenuClickEvent {
 							
 						} else if (item.getText().equalsIgnoreCase("Syllabus")) {
 							
+							rightSidePanel.add(new SyllabusDashboardController().view,BorderLayout.CENTER);
+							
+							
 						} else if (item.getText().equalsIgnoreCase("Mark")) {
+							
+							rightSidePanel.add(new MarkDashboardController().view,BorderLayout.CENTER);
 							
 						} else if (item.getText().equalsIgnoreCase("Ministry")) {
 							

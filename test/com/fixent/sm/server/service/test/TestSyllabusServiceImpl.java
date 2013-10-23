@@ -8,12 +8,31 @@ import java.util.Set;
 
 import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.Syllabus;
+import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.impl.SubjectServiceImpl;
 import com.fixent.sm.server.service.impl.SyllabusServiceImpl;
 
 public class TestSyllabusServiceImpl {
 	
+	
+	public static void testSearchSyllabus() {
+		
+		SyllabusInfo syllabusInfo = new SyllabusInfo();
+		syllabusInfo.setYear(2013);
+		syllabusInfo.setType("First Year");
+		syllabusInfo.setSemaster(1);
+		
+		SyllabusServiceImpl impl = new SyllabusServiceImpl();
+		List<Syllabus> syllabus = impl.searchSyllabus(syllabusInfo);
+		System.out.println(syllabus);
+	}
+	
 	public static void main(String[] args) {
+		
+		
+		TestSyllabusServiceImpl.testSearchSyllabus();
+		
+		/*
 		
 		List<Syllabus> syllabusList = new ArrayList<Syllabus>();
 		
@@ -97,6 +116,8 @@ public class TestSyllabusServiceImpl {
 			SyllabusServiceImpl impl = new SyllabusServiceImpl();
 			impl.createSyllabus(syllabus6);
 		}
+	*/
+		
 	}
 
 }

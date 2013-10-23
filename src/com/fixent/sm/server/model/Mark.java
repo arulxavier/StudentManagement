@@ -6,7 +6,7 @@ import java.util.Date;
 public class Mark {
 	
 	private int id;
-	private BigDecimal mark;
+	private Double mark;
 	private String createdBy;
 	private Date createdDate;
 	private String updatedBy;
@@ -21,10 +21,10 @@ public class Mark {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public BigDecimal getMark() {
+	public Double getMark() {
 		return mark;
 	}
-	public void setMark(BigDecimal mark) {
+	public void setMark(Double mark) {
 		this.mark = mark;
 	}
 	public String getCreatedBy() {

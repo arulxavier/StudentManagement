@@ -1,5 +1,6 @@
 package com.fixent.sm.server.service.impl;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,6 +8,7 @@ import java.util.Map;
 import com.fixent.sm.server.dao.StudentDAO;
 import com.fixent.sm.server.model.Ministry;
 import com.fixent.sm.server.model.Student;
+import com.fixent.sm.server.model.info.StudentInfo;
 import com.fixent.sm.server.service.StudentService;
 
 public class StudentServiceImpl 
@@ -64,6 +66,21 @@ implements StudentService {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		return students;
+	}
+
+	public List<Student> searchStudent(StudentInfo studentInfo) {
+		
+		List<Student> students = new ArrayList<Student>();
+		
+		try {
+			
+			StudentDAO dao = new StudentDAO();
+			students = dao.searchStudent(studentInfo);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 		return students;
 	}
 	

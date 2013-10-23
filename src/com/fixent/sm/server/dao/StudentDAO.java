@@ -3,15 +3,18 @@ package com.fixent.sm.server.dao;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
 import com.fixent.sm.server.model.Batch;
 import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.model.SubjectCategory;
+import com.fixent.sm.server.model.info.StudentInfo;
 
 public class StudentDAO 
 extends BaseDAO {
@@ -69,6 +72,18 @@ extends BaseDAO {
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(Student.class);
 		List<Student> students =  criteria.list();
+		return students;
+	}
+
+	public List<Student> searchStudent(StudentInfo studentInfo) {
+		
+		List<Student> students = new ArrayList<Student>();
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Student.class);
+		Criteria criteria2 = criteria.createCriteria("batch");
+		criteria2.add(Restrictions.eq("year", studentInfo.getYear()));
+		criteria2.add(Restrictions.ilike("type", studentInfo.getYearType()));
+		students = criteria.list();
 		return students;
 	}
 

@@ -1,15 +1,14 @@
 package com.fixent.sm.server.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Hibernate;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.proxy.HibernateProxy;
 
 import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.SubjectCategory;
@@ -24,15 +23,9 @@ public class SubjectDAO extends BaseDAO {
 		int id = 0;
 
 		Session session = getSession();
-		Connection connection = session.connection();
-		PreparedStatement preparedStatement = connection
-				.prepareStatement("select max(id) from SUBJECT;");
-		ResultSet resultSet = preparedStatement.executeQuery();
-
-		while (resultSet.next()) {
-			id = resultSet.getInt(1);
-		}
-
+		session.beginTransaction();
+		Query query = session.createSQLQuery("select max(id) from SUBJECT;");
+		id = (Integer) query.uniqueResult();
 		return id;
 	}
 
@@ -42,7 +35,6 @@ public class SubjectDAO extends BaseDAO {
 		session.beginTransaction();
 		session.save(subject);
 		session.getTransaction().commit();
-		session.close();
 		return true;
 	}
 
@@ -52,42 +44,60 @@ public class SubjectDAO extends BaseDAO {
 		Session session = getSession();
 		Criteria criteria = session.createCriteria(Subject.class);
 		criteria.add(Restrictions.like("name", name));
-		List<Subject> subjects = criteria.list();
-		initializeSubjects(subjects);
-		session.close();
-		return subjects.get(0);
+		Subject subject = (Subject) criteria.uniqueResult();
+		initializeSubject(subject);
+		return subject;
 	}
 
 	@SuppressWarnings("unchecked")
 	public List<Subject> getSubjects() {
 
 		Session session = getSession();
+		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Subject.class);
 		List<Subject> subjects = criteria.list();
 		initializeSubjects(subjects);
-		session.close();
+		session.getTransaction().commit();
 		return subjects;
 	}
 
 	private void initializeSubjects(List<Subject> subjects) {
 
 		if (subjects != null && !subjects.isEmpty()) {
-			for (Subject subject : subjects) {
-				if (subject != null) {
-					Hibernate.initialize(subject);
-					if (subject.getSubjectCategory() != null) {
-						Hibernate.initialize(subject.getSubjectCategory());
-					}
-					if (subject.getSyllabus() != null
-							&& !subject.getSyllabus().isEmpty()) {
-						for (Syllabus syllabus : subject.getSyllabus()) {
-							if (syllabus != null) {
-								Hibernate.initialize(subject
-										.getSubjectCategory());
-							}
-						}
-					}
 
+			for (Subject subject : subjects) {
+				initializeSubject(subject);
+			}
+		}
+	}
+
+	private void initializeSubject(Subject subject) {
+
+		if (subject != null) {
+
+			Hibernate.initialize(subject);
+
+			if (subject.getSubjectCategory() != null) {
+
+				Hibernate.initialize(subject.getSubjectCategory());
+				Hibernate.initialize(subject.getSubjectCategory().getName());
+			}
+			if (subject.getSubjectCategory() instanceof HibernateProxy) {
+				HibernateProxy proxy = (HibernateProxy) subject
+						.getSubjectCategory();
+				SubjectCategory subjectCategory = (SubjectCategory) proxy
+						.getHibernateLazyInitializer().getImplementation();
+				subject.setSubjectCategory(subjectCategory);
+			}
+			if (subject.getSyllabus() != null
+					&& !subject.getSyllabus().isEmpty()) {
+
+				for (Syllabus syllabus : subject.getSyllabus()) {
+
+					if (syllabus != null) {
+
+						Hibernate.initialize(syllabus.getSubjects());
+					}
 				}
 			}
 		}
@@ -99,7 +109,6 @@ public class SubjectDAO extends BaseDAO {
 		session.beginTransaction();
 		session.delete(subject);
 		session.getTransaction().commit();
-		session.close();
 		return true;
 	}
 
@@ -110,10 +119,9 @@ public class SubjectDAO extends BaseDAO {
 		Criteria criteria = session.createCriteria(Subject.class);
 		criteria.add(Restrictions.like("id", id));
 		List<SubjectCategory> categories = criteria.list();
-		session.close();
 		return categories.get(0);
 	}
-	
+
 	public List<Subject> searchSubject(SyllabusInfo syllabusInfo) {
 
 		List<Subject> subjects = new ArrayList<Subject>();
@@ -131,12 +139,28 @@ public class SubjectDAO extends BaseDAO {
 			criteria.add(Restrictions.eq("year", syllabusInfo.getYear()));
 		}
 		subjects = criteria.list();
-		if (subjects != null && !subjects.isEmpty()) {
-			for (Subject subject : subjects) {
-				Hibernate.initialize(subject);
-			}
-		}
+		initializeSubjects(subjects);
 		return subjects;
 	}
 
+	public boolean modifySubject(Subject subject) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		session.merge(subject);
+		session.getTransaction().commit();
+		return true;
+	}
+
+	@SuppressWarnings("unchecked")
+	public int getSubjectsCount(int subjectCategoryId) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(Subject.class);
+		criteria.add(Restrictions.like("subjectCategory.id", subjectCategoryId));
+		List<Subject> subjects = criteria.list();
+		session.getTransaction().commit();
+		return subjects != null ? subjects.size() : 0;
+	}
 }

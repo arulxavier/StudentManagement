@@ -1,18 +1,8 @@
 package com.fixent.sm.server.service.test;
 
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Random;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.Popup;
-import javax.swing.PopupFactory;
-import javax.swing.Timer;
-
 import java.awt.Dimension;
 import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 
 public class CenterJFrameOnScreen

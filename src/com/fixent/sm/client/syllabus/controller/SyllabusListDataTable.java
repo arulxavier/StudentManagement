@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.model.Syllabus;
 
 public class SyllabusListDataTable extends AbstractTableModel {
@@ -18,7 +17,7 @@ public class SyllabusListDataTable extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	
 	List<Syllabus> syllabus;
-	String columnList[] = new String[] { "Syllabus ID", "Year", "Type", "Semaster" };
+	String columnList[] = new String[] { "Syllabus ID", "Year", "Type", "Semester" };
 
 	@Override
 	public int getColumnCount() {

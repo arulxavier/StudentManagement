@@ -31,7 +31,8 @@ extends BaseDAO {
 		while(resultSet.next()) {
 			id = resultSet.getInt(1);
 		}
-
+		connection.close();
+		session.close();
 		return id;
 	}
 	
@@ -75,5 +76,4 @@ extends BaseDAO {
 		session.getTransaction().commit();
 		return true;
 	}
-
 }

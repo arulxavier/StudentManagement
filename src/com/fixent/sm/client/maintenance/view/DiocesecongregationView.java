@@ -45,10 +45,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
         dioceseTable.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         dioceseTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "ID", "Diocese Name"
@@ -62,6 +59,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        dioceseTable.setFillsViewportHeight(true);
         dioceseTable.setGridColor(new java.awt.Color(204, 204, 204));
         jScrollPane1.setViewportView(dioceseTable);
 
@@ -80,10 +78,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
 
         congregationTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "ID", "Congregation Name"
@@ -97,6 +92,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        congregationTable.setFillsViewportHeight(true);
         congregationTable.setGridColor(new java.awt.Color(204, 204, 204));
         jScrollPane2.setViewportView(congregationTable);
 
@@ -124,7 +120,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
                             .addComponent(jLabel2)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(dioceseAddButton)
@@ -134,7 +130,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
                                 .addComponent(congregationAddButton)
                                 .addGap(10, 10, 10)
                                 .addComponent(congregationDeleteButton)))))
-                .addContainerGap(66, Short.MAX_VALUE))
+                .addGap(66, 66, 66))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,7 +151,7 @@ public class DiocesecongregationView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(congregationDeleteButton)
                     .addComponent(congregationAddButton))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addGap(25, 25, 25))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables

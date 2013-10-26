@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.fixent.sm.server.dao.SyllabusDAO;
+import com.fixent.sm.server.model.Mark;
 import com.fixent.sm.server.model.Syllabus;
+import com.fixent.sm.server.model.info.MarkInfo;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.SyllabusService;
 
@@ -56,5 +58,52 @@ implements SyllabusService {
 		}
 		return null;
 	}
+	
+	public boolean isSyllabusConfigured(Syllabus syllabus) {
 
+		try {
+
+			MarkServiceImpl markDAO = new MarkServiceImpl();
+			MarkInfo markInfo = new MarkInfo();
+			markInfo.setSemaster(syllabus.getSemaster());
+			markInfo.setYear(syllabus.getYear());
+			markInfo.setType(syllabus.getType());
+			List<Mark> marks = markDAO.searchMark(markInfo);
+			return marks != null && marks.size() > 0 ? true : false;
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return false;
+	}
+	
+	public boolean modifySyllabus(Syllabus syllabus) {
+		
+		boolean status = false;
+		
+		try {
+			
+			SyllabusDAO dao = new SyllabusDAO();
+			status = dao.modifySyllabus(syllabus);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
+	
+	public boolean deleteSyllabus(Syllabus syllabus) {
+		
+		boolean status = false;
+		
+		try {
+			
+			SyllabusDAO dao = new SyllabusDAO();
+			status = dao.deleteSyllabus(syllabus);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
 }

@@ -17,7 +17,7 @@ public class SubjecCategorytListDataTable extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	
 	List<SubjectCategory> subjectCategories;
-	String columnList[] = new String[] { "Subject Category ID", "Subject Name" };
+	String columnList[] = new String[] { "ID", "Subject Category Name" };
 
 	@Override
 	public int getColumnCount() {

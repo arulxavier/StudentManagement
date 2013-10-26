@@ -4,11 +4,13 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import com.fixent.sm.server.service.util.SessionFactoryUtil;
+
 public class BaseDAO {
 	
-	private static final SessionFactory sessionFactory = buildSessionFactory();
+//	private static final SessionFactory sessionFactory = buildSessionFactory();
 
-	private static SessionFactory buildSessionFactory() {
+	/*private static SessionFactory buildSessionFactory() {
 		try {
 			// Create the SessionFactory from hibernate.cfg.xml
 			return new Configuration().configure().buildSessionFactory();
@@ -17,20 +19,21 @@ public class BaseDAO {
 			System.err.println("Initial SessionFactory creation failed." + ex);
 			throw new ExceptionInInitializerError(ex);
 		}
-	}
+	}*/
 
-	public static SessionFactory getSessionFactory() {
+	/*public static SessionFactory getSessionFactory() {
 		return sessionFactory;
-	}
+	}*/
 
 	public static void shutdown() {
 		// Close caches and connection pools
-		getSessionFactory().close();
+		SessionFactoryUtil.getInstance().close();
 	}
 	
 	public static Session getSession() {
 		
-		return BaseDAO.getSessionFactory().openSession();
+		return SessionFactoryUtil.getInstance().getCurrentSession();
+//		return BaseDAO.getSessionFactory().openSession();
 	}
 
 

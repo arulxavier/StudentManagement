@@ -2,7 +2,6 @@ package com.fixent.sm.client.mark.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -19,7 +18,6 @@ import com.fixent.sm.server.model.info.StudentInfo;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.impl.MarkServiceImpl;
 import com.fixent.sm.server.service.impl.StudentServiceImpl;
-import com.fixent.sm.server.service.impl.SubjectCategoryServiceImpl;
 import com.fixent.sm.server.service.impl.SyllabusServiceImpl;
 
 public class MarkEntryController {

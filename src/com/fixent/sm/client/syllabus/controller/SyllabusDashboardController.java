@@ -5,10 +5,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import com.fixent.sm.client.common.BaseController;
+import com.fixent.sm.client.common.ClientConstants;
 import com.fixent.sm.client.common.RightSidePanel;
-import com.fixent.sm.client.student.controller.StudentController;
 import com.fixent.sm.client.syllabus.view.SyllabusDashboardView;
-import com.fixent.sm.client.syllabus.view.SyllabusView;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 
 public class SyllabusDashboardController 
@@ -30,11 +29,21 @@ extends BaseController {
 		public void actionPerformed(ActionEvent e) {
 			
 			SyllabusInfo syllabusInfo = new SyllabusInfo();
-			syllabusInfo.setYear(Integer.parseInt(view.getYearComboBox().getSelectedItem().toString()));
-			syllabusInfo.setType(view.getTypeComboBox().getSelectedItem().toString());
-			syllabusInfo.setSemaster(Integer.parseInt(view.getSemasterComboBox().getSelectedItem().toString()));
 			
-			OBJECT_MAP.put("SyllabusInfo", syllabusInfo);
+			if (!"Select One".equals(view.getYearComboBox().getSelectedItem().toString())) {
+				
+				syllabusInfo.setYear(Integer.parseInt(view.getYearComboBox().getSelectedItem().toString()));
+			}
+			if (!"Select One".equals(view.getTypeComboBox().getSelectedItem().toString())) {
+				
+				syllabusInfo.setType(view.getTypeComboBox().getSelectedItem().toString());
+			}
+			if (!"Select One".equals(view.getSemasterComboBox().getSelectedItem().toString())) {
+				
+				syllabusInfo.setSemaster(Integer.parseInt(view.getSemasterComboBox().getSelectedItem().toString()));
+			}
+			
+			push("SyllabusInfo", syllabusInfo);
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
 			rightSidePanel.removeAll();
 			rightSidePanel.add(new SyllabusListController().view, BorderLayout.CENTER);
@@ -53,6 +62,7 @@ extends BaseController {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			push(ClientConstants.SCREEN_MODE, ClientConstants.ADD);
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
 			rightSidePanel.removeAll();
 			rightSidePanel.add(new SyllabusController().view, BorderLayout.CENTER);

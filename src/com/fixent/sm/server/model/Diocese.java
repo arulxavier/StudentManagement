@@ -9,7 +9,7 @@ public class Diocese {
 	private String createdBy;
 	private Date createdDate;
 	private String updatedBy;
-	private String updatedDate;
+	private Date updatedDate;
 	
 	public int getId() {
 		return id;
@@ -41,10 +41,10 @@ public class Diocese {
 	public void setUpdatedBy(String updatedBy) {
 		this.updatedBy = updatedBy;
 	}
-	public String getUpdatedDate() {
+	public Date getUpdatedDate() {
 		return updatedDate;
 	}
-	public void setUpdatedDate(String updatedDate) {
+	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
 	}
 }

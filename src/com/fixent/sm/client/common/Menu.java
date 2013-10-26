@@ -18,8 +18,8 @@ public class Menu {
 		masterSubMenu.put("1", "Subject/Category");
 		masterSubMenu.put("2", "Dio/Congregation");
 
-		studentSubMenu.put("1", "  Student Info  ");
-		studentSubMenu.put("2", "Syllabus");
+		studentSubMenu.put("1", "Syllabus");
+		studentSubMenu.put("2", "  Student Info  ");
 		studentSubMenu.put("3", "Mark");
 		studentSubMenu.put("4", "Ministry");
 		

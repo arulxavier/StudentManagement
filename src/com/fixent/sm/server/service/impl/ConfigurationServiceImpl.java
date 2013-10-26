@@ -55,12 +55,15 @@ implements ConfigurationService {
 		return dioceses;
 	}
 	
+	
 	public boolean createDioceses(Diocese diocese) {
 		
 		boolean status = false;
 		try {
 			
 			ConfigurationDAO dao = new ConfigurationDAO();
+			int maxId = dao.getDiocesesMaxId();
+			diocese.setId(maxId+1);
 			status = dao.createDiocese(diocese);
 			
 		} catch (Exception e) {
@@ -75,6 +78,8 @@ implements ConfigurationService {
 		try {
 			
 			ConfigurationDAO dao = new ConfigurationDAO();
+			int maxId = dao.getCongregationMaxId();
+			congregation.setId(maxId+1);
 			status = dao.createCongregation(congregation);
 			
 		} catch (Exception e) {
@@ -104,6 +109,34 @@ implements ConfigurationService {
 			
 			ConfigurationDAO dao = new ConfigurationDAO();
 			status = dao.deleteCongregation(id);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
+	
+	public boolean modifyDiocese(Diocese diocese) {
+		
+		boolean status = false;
+		try {
+			
+			ConfigurationDAO dao = new ConfigurationDAO();
+			status = dao.modifyDiocese(diocese);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
+	
+	public boolean modifyCongregation(Congregation congregation) {
+		
+		boolean status = false;
+		try {
+			
+			ConfigurationDAO dao = new ConfigurationDAO();
+			status = dao.modifyCongregation(congregation);
 			
 		} catch (Exception e) {
 			e.printStackTrace();

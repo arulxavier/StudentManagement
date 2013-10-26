@@ -10,9 +10,10 @@ import java.util.Map;
 
 import com.fixent.sm.client.common.BaseController;
 import com.fixent.sm.client.common.RightSidePanel;
-import com.fixent.sm.client.component.ADatePicker;
 import com.fixent.sm.client.student.view.StudentView;
 import com.fixent.sm.server.model.Batch;
+import com.fixent.sm.server.model.Congregation;
+import com.fixent.sm.server.model.Diocese;
 import com.fixent.sm.server.model.Student;
 import com.fixent.sm.server.service.impl.StudentServiceImpl;
 import com.fixent.sm.server.service.util.ServiceUtil;
@@ -26,11 +27,14 @@ extends BaseController {
 	CancelAction cancelAction;
 	Student student;
 	Map<String, List<Object>> prepopulates;
+	List<Diocese> dioceses;
+	List<Congregation> congregations;
 	
 	public StudentController() {
 		
 		Student student = (Student)OBJECT_MAP.get("student");
 		view = new StudentView();
+		
 		
 		if (student != null) {
 		

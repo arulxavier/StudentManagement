@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Criteria;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
@@ -21,14 +22,19 @@ extends BaseDAO {
 		int id = 0;
 		
 		Session session = getSession();
-		Connection connection = session.connection();
+		session.beginTransaction();
+		Query query = session.createSQLQuery("select max(id) from SUBJECT_CATEGORY;");
+		id =  (Integer) query.uniqueResult();
+		/*Connection connection = session.connection();
 		PreparedStatement preparedStatement = connection
 				.prepareStatement("select max(id) from SUBJECT_CATEGORY;");
 		ResultSet resultSet = preparedStatement.executeQuery();
 		
 		while(resultSet.next()) {
 			id = resultSet.getInt(1);
-		}
+		}*/
+//		session.close();
+		session.getTransaction().commit();
 		
 		return id;
 	}
@@ -57,8 +63,10 @@ extends BaseDAO {
 	public List<SubjectCategory> getSubjectCategories() {
 		
 		Session session = getSession();
+		session.beginTransaction();
 		Criteria criteria = session.createCriteria(SubjectCategory.class);
 		List<SubjectCategory> categories=  criteria.list();
+		session.getTransaction().commit();
 		return categories;
 	}
 
@@ -79,6 +87,15 @@ extends BaseDAO {
 		@SuppressWarnings("unchecked")
 		List<SubjectCategory> categories=  criteria.list();
 		return categories.get(0);
+	}
+
+	public boolean modifySubjectCategory(SubjectCategory subjectCategory) {
+		
+		Session session = getSession();
+		session.beginTransaction();
+		session.merge(subjectCategory);
+		session.getTransaction().commit();
+		return true;
 	}
 
 }

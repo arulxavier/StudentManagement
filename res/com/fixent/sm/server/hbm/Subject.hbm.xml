@@ -31,12 +31,12 @@
 			<column name="UPDATED_DATE" length="7" not-null="false" />
 		</property>
         
-         <set name="syllabus" table="SYLABUS_SUBJECT" inverse="true" lazy="true" fetch="select" cascade="all">
+         <set name="syllabus" table="SYLABUS_SUBJECT" inverse="true" fetch="select" cascade="all">
             <key>
                 <column name="SUBJECT_ID" not-null="true" />
             </key>
             <many-to-many entity-name="com.fixent.sm.server.model.Syllabus">
-                <column name="SYLABUS_ID" not-null="true" />
+                <column name="SYLABUS_ID"/>
             </many-to-many>
         </set>
 	</class>

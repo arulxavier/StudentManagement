@@ -36,6 +36,7 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
         subjectTable = new javax.swing.JTable();
         subjectAddButton = new javax.swing.JButton();
         subjectDeleteButton = new javax.swing.JButton();
+        errorMsgLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setAutoscrolls(true);
@@ -46,10 +47,7 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
         subjectCategoryTable.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         subjectCategoryTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "ID", "Subject Category Name"
@@ -63,6 +61,7 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        subjectCategoryTable.setFillsViewportHeight(true);
         subjectCategoryTable.setGridColor(new java.awt.Color(204, 204, 204));
         jScrollPane1.setViewportView(subjectCategoryTable);
 
@@ -82,13 +81,10 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
         subjectTable.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         subjectTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null},
-                {null, null, null},
-                {null, null, null},
-                {null, null, null}
+
             },
             new String [] {
-                "ID", "Category Name", "Subject Name"
+                "ID", "Subject Name", "Subject Category"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -99,8 +95,11 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        subjectTable.setFillsViewportHeight(true);
         subjectTable.setGridColor(new java.awt.Color(204, 204, 204));
+        subjectTable.getTableHeader().setReorderingAllowed(false);
         jScrollPane2.setViewportView(subjectTable);
+        subjectTable.getColumnModel().getColumn(0).setPreferredWidth(30);
 
         subjectAddButton.setBackground(new java.awt.Color(61, 86, 109));
         subjectAddButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
@@ -112,30 +111,37 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
         subjectDeleteButton.setForeground(new java.awt.Color(255, 255, 255));
         subjectDeleteButton.setText("Delete");
 
+        errorMsgLabel.setForeground(new java.awt.Color(255, 0, 0));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(subjectCategoryAddButton)
-                        .addGap(10, 10, 10)
-                        .addComponent(subjectCategoryDeleteButton))
-                    .addGroup(layout.createSequentialGroup()
+                        .addGap(80, 80, 80)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(subjectAddButton)
+                                .addComponent(subjectCategoryAddButton)
                                 .addGap(10, 10, 10)
-                                .addComponent(subjectDeleteButton))
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)))
-                        .addGap(2, 2, 2)))
-                .addContainerGap(65, Short.MAX_VALUE))
+                                .addComponent(subjectCategoryDeleteButton))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(subjectAddButton)
+                                        .addGap(10, 10, 10)
+                                        .addComponent(subjectDeleteButton))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)))
+                                .addGap(2, 2, 2))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(errorMsgLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(51, 51, 51))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +154,7 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(subjectCategoryAddButton)
                     .addComponent(subjectCategoryDeleteButton))
-                .addGap(30, 30, 30)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(20, 20, 20)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -156,10 +162,13 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(subjectAddButton)
                     .addComponent(subjectDeleteButton))
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(errorMsgLabel)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel errorMsgLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -251,6 +260,14 @@ public class SubjectMaintenanceView extends javax.swing.JPanel {
 
 	public void setSubjectTable(javax.swing.JTable subjectTable) {
 		this.subjectTable = subjectTable;
+	}
+
+	public javax.swing.JLabel getErrorMsgLabel() {
+		return errorMsgLabel;
+	}
+
+	public void setErrorMsgLabel(javax.swing.JLabel errorMsgLabel) {
+		this.errorMsgLabel = errorMsgLabel;
 	}
     
 }

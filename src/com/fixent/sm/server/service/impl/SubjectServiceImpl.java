@@ -3,11 +3,8 @@ package com.fixent.sm.server.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fixent.sm.server.dao.SubjectCategoryDAO;
 import com.fixent.sm.server.dao.SubjectDAO;
-import com.fixent.sm.server.dao.SyllabusDAO;
 import com.fixent.sm.server.model.Subject;
-import com.fixent.sm.server.model.Syllabus;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.SubjectService;
 
@@ -89,6 +86,19 @@ implements SubjectService {
 		}
 		
 		return subjects;
+	}
+
+	public boolean modifySubject(Subject subject) {
+		
+		boolean status = false;
+		try {
+			
+			SubjectDAO dao = new SubjectDAO();
+			status = dao.modifySubject(subject);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return status;
 	}
 
 }

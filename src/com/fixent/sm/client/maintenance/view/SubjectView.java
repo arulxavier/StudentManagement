@@ -29,8 +29,6 @@ public class SubjectView extends javax.swing.JPanel {
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        subjectIdTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         subjectNameTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
@@ -50,11 +48,6 @@ public class SubjectView extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel1.setText("Subject Info");
-
-        jLabel2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel2.setText("Subject ID");
-
-        subjectIdTextField.setColumns(15);
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel3.setText("Subject Name");
@@ -80,33 +73,30 @@ public class SubjectView extends javax.swing.JPanel {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(64, 64, 64)
+                            .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(layout.createSequentialGroup()
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel3)
                                 .addComponent(jLabel4)
-                                .addComponent(jLabel5)
-                                .addComponent(jLabel2))
+                                .addComponent(jLabel5))
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(subjectIdTextField)
                                 .addComponent(creditTextField)
                                 .addComponent(subjectNameTextField)
-                                .addComponent(subjectCategoryComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(80, Short.MAX_VALUE))
+                                .addComponent(subjectCategoryComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(20, 20, 20))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addComponent(jLabel1)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(subjectIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(subjectNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -118,24 +108,22 @@ public class SubjectView extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(subjectCategoryComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(20, 20, 20)
-                .addComponent(saveButton)
-                .addGap(20, 20, 20)
-                .addComponent(cancelButton)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(saveButton)
+                    .addComponent(cancelButton))
+                .addGap(20, 20, 20))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;
     private javax.swing.JTextField creditTextField;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JButton saveButton;
     private javax.swing.JComboBox subjectCategoryComboBox;
-    private javax.swing.JTextField subjectIdTextField;
     private javax.swing.JTextField subjectNameTextField;
     // End of variables declaration//GEN-END:variables
 	public javax.swing.JButton getCancelButton() {
@@ -160,14 +148,6 @@ public class SubjectView extends javax.swing.JPanel {
 
 	public void setjLabel1(javax.swing.JLabel jLabel1) {
 		this.jLabel1 = jLabel1;
-	}
-
-	public javax.swing.JLabel getjLabel2() {
-		return jLabel2;
-	}
-
-	public void setjLabel2(javax.swing.JLabel jLabel2) {
-		this.jLabel2 = jLabel2;
 	}
 
 	public javax.swing.JLabel getjLabel3() {
@@ -209,14 +189,6 @@ public class SubjectView extends javax.swing.JPanel {
 	public void setSubjectCategoryComboBox(
 			javax.swing.JComboBox subjectCategoryComboBox) {
 		this.subjectCategoryComboBox = subjectCategoryComboBox;
-	}
-
-	public javax.swing.JTextField getSubjectIdTextField() {
-		return subjectIdTextField;
-	}
-
-	public void setSubjectIdTextField(javax.swing.JTextField subjectIdTextField) {
-		this.subjectIdTextField = subjectIdTextField;
 	}
 
 	public javax.swing.JTextField getSubjectNameTextField() {

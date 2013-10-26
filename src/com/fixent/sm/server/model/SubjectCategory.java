@@ -10,6 +10,22 @@ public class SubjectCategory {
 	Date createdDate;
 	String updatedBy;
 	Date updatedDate;
+	
+	public SubjectCategory()
+	{
+		
+	}
+
+	public SubjectCategory(int id, String name, String createdBy,
+			Date createdDate, String updatedBy, Date updatedDate) {
+		
+		this.id = id;
+		this.name = name;
+		this.createdBy = createdBy;
+		this.createdDate = createdDate;
+		this.updatedBy = updatedBy;
+		this.updatedDate = updatedDate;
+	}
 
 	public int getId() {
 		return id;

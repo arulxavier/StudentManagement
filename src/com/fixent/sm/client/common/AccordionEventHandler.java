@@ -13,7 +13,6 @@ import com.fixent.component.accordion.MenuClickEvent;
 import com.fixent.sm.client.maintenance.controller.DioceseCongregationController;
 import com.fixent.sm.client.maintenance.controller.SubjectMaintenanceController;
 import com.fixent.sm.client.mark.controller.MarkDashboardController;
-import com.fixent.sm.client.mark.controller.MarkEntryController;
 import com.fixent.sm.client.student.controller.StudentDashboardController;
 import com.fixent.sm.client.syllabus.controller.SyllabusDashboardController;
 

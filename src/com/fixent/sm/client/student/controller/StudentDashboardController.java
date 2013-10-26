@@ -4,7 +4,6 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import com.fixent.sm.client.common.BaseLayout;
 import com.fixent.sm.client.common.RightSidePanel;
 import com.fixent.sm.client.student.view.StudentDashboardView;
 

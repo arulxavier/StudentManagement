@@ -7,6 +7,8 @@ import javax.swing.JPanel;
 public class FooterPanel 
 extends JPanel {
 	
+	FooterView footerView;
+	
 	/**
 	 * 
 	 */
@@ -14,8 +16,10 @@ extends JPanel {
 
 	public FooterPanel() {
 		
+		footerView = new FooterView();
+		
 		setLayout(new BorderLayout());
-		add(new FooterView());
+		add(footerView);
 	}
 
 }

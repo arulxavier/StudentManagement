@@ -37,6 +37,7 @@ public class SyllabusDashboardView extends javax.swing.JPanel {
         addButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel1.setText("Syllabus Dashboard");
@@ -59,10 +60,14 @@ public class SyllabusDashboardView extends javax.swing.JPanel {
         semasterComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         semasterComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "1", "2", "3" }));
 
+        searchButton.setBackground(new java.awt.Color(61, 86, 109));
         searchButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        searchButton.setForeground(new java.awt.Color(255, 255, 255));
         searchButton.setText("Search");
 
+        addButton.setBackground(new java.awt.Color(61, 86, 109));
         addButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        addButton.setForeground(new java.awt.Color(255, 255, 255));
         addButton.setText("Add");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

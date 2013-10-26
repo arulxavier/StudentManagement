@@ -1,6 +1,5 @@
 package com.fixent.sm.client.mark.controller;
 
-import java.math.BigDecimal;
 import java.util.List;
 
 import javax.swing.table.AbstractTableModel;

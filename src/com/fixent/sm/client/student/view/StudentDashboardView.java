@@ -36,10 +36,12 @@ public class StudentDashboardView extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        nameLabel.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         nameLabel.setText("Student Name");
 
         nameTextField.setMaximumSize(new java.awt.Dimension(6, 20));
 
+        dioceseLabel.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         dioceseLabel.setText("Student Diocese");
 
         dioceseTextField.setMaximumSize(new java.awt.Dimension(6, 20));
@@ -80,7 +82,7 @@ public class StudentDashboardView extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(nameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(dioceseTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))))))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

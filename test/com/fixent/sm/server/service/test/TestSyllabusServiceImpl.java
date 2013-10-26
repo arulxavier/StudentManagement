@@ -18,8 +18,8 @@ public class TestSyllabusServiceImpl {
 	public static void testSearchSyllabus() {
 		
 		SyllabusInfo syllabusInfo = new SyllabusInfo();
-		syllabusInfo.setYear(2013);
-		syllabusInfo.setType("First Year");
+		syllabusInfo.setYear(2016);
+		syllabusInfo.setType("Second Year");
 		syllabusInfo.setSemaster(1);
 		
 		SyllabusServiceImpl impl = new SyllabusServiceImpl();
@@ -30,9 +30,9 @@ public class TestSyllabusServiceImpl {
 	public static void main(String[] args) {
 		
 		
-		TestSyllabusServiceImpl.testSearchSyllabus();
+//		TestSyllabusServiceImpl.testSearchSyllabus();
 		
-		/*
+		
 		
 		List<Syllabus> syllabusList = new ArrayList<Syllabus>();
 		
@@ -40,7 +40,7 @@ public class TestSyllabusServiceImpl {
 		subjects.add(new SubjectServiceImpl().getSubject("Catechetics"));
 		
 		Syllabus syllabus = new Syllabus();
-		syllabus.setYear(2013);
+		syllabus.setYear(2016);
 		syllabus.setType("First Year");
 		syllabus.setSemaster(1);
 		syllabus.setSubjects(subjects);
@@ -52,7 +52,7 @@ public class TestSyllabusServiceImpl {
 		subjects1.add(new SubjectServiceImpl().getSubject("Parables and Miracles"));
 		
 		Syllabus syllabus1 = new Syllabus();
-		syllabus1.setYear(2013);
+		syllabus1.setYear(2016);
 		syllabus1.setType("First Year");
 		syllabus1.setSemaster(2);
 		syllabus1.setSubjects(subjects1);
@@ -64,7 +64,7 @@ public class TestSyllabusServiceImpl {
 		subjects2.add(new SubjectServiceImpl().getSubject("Sexuality and Marriage"));
 		
 		Syllabus syllabus2 = new Syllabus();
-		syllabus2.setYear(2013);
+		syllabus2.setYear(2016);
 		syllabus2.setType("Second Year");
 		syllabus2.setSemaster(1);
 		syllabus2.setSubjects(subjects2);
@@ -77,7 +77,7 @@ public class TestSyllabusServiceImpl {
 		subjects3.add(new SubjectServiceImpl().getSubject("Wisdom Literature"));
 		
 		Syllabus syllabus3 = new Syllabus();
-		syllabus3.setYear(2013);
+		syllabus3.setYear(2016);
 		syllabus3.setType("Second Year");
 		syllabus3.setSemaster(2);
 		syllabus3.setSubjects(subjects3);
@@ -90,7 +90,7 @@ public class TestSyllabusServiceImpl {
 		subjects4.add(new SubjectServiceImpl().getSubject("Sexuality and Marriage"));
 		
 		Syllabus syllabus4 = new Syllabus();
-		syllabus4.setYear(2013);
+		syllabus4.setYear(2016);
 		syllabus4.setType("Third Year");
 		syllabus4.setSemaster(1);
 		syllabus4.setSubjects(subjects4);
@@ -103,7 +103,7 @@ public class TestSyllabusServiceImpl {
 		subjects5.add(new SubjectServiceImpl().getSubject("Wisdom Literature"));
 		
 		Syllabus syllabus5 = new Syllabus();
-		syllabus5.setYear(2013);
+		syllabus5.setYear(2016);
 		syllabus5.setType("Third Year");
 		syllabus5.setSemaster(2);
 		syllabus5.setSubjects(subjects5);
@@ -116,7 +116,7 @@ public class TestSyllabusServiceImpl {
 			SyllabusServiceImpl impl = new SyllabusServiceImpl();
 			impl.createSyllabus(syllabus6);
 		}
-	*/
+	
 		
 	}
 

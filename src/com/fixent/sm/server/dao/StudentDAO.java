@@ -8,12 +8,10 @@ import java.util.List;
 
 import org.hibernate.Criteria;
 import org.hibernate.Session;
-import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
 import com.fixent.sm.server.model.Batch;
 import com.fixent.sm.server.model.Student;
-import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.model.info.StudentInfo;
 
 public class StudentDAO 

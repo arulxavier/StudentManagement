@@ -31,7 +31,7 @@ public class SyllabusListView extends javax.swing.JPanel {
         syllabusTable = new javax.swing.JTable();
         viewButton = new javax.swing.JButton();
         modifyButton = new javax.swing.JButton();
-        deleteButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -40,25 +40,29 @@ public class SyllabusListView extends javax.swing.JPanel {
 
         syllabusTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Syllabus ID", "Year", "Type", "Semester"
             }
         ));
+        syllabusTable.setFillsViewportHeight(true);
         jScrollPane1.setViewportView(syllabusTable);
 
+        viewButton.setBackground(new java.awt.Color(61, 86, 109));
         viewButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        viewButton.setForeground(new java.awt.Color(255, 255, 255));
         viewButton.setText("View");
 
+        modifyButton.setBackground(new java.awt.Color(61, 86, 109));
         modifyButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        modifyButton.setForeground(new java.awt.Color(255, 255, 255));
         modifyButton.setText("Modify");
 
-        deleteButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        deleteButton.setText("Delete");
+        cancelButton.setBackground(new java.awt.Color(61, 86, 109));
+        cancelButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        cancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        cancelButton.setText("Cancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -66,15 +70,18 @@ public class SyllabusListView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(deleteButton)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel1)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(viewButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(modifyButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(34, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 576, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(viewButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(modifyButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(503, 503, 503)
+                        .addComponent(cancelButton)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -87,26 +94,19 @@ public class SyllabusListView extends javax.swing.JPanel {
                 .addComponent(viewButton)
                 .addGap(10, 10, 10)
                 .addComponent(modifyButton)
-                .addGap(10, 10, 10)
-                .addComponent(deleteButton)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cancelButton)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton deleteButton;
+    private javax.swing.JButton cancelButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JButton modifyButton;
     private javax.swing.JTable syllabusTable;
     private javax.swing.JButton viewButton;
     // End of variables declaration//GEN-END:variables
-	public javax.swing.JButton getDeleteButton() {
-		return deleteButton;
-	}
-
-	public void setDeleteButton(javax.swing.JButton deleteButton) {
-		this.deleteButton = deleteButton;
-	}
 
 	public javax.swing.JLabel getjLabel1() {
 		return jLabel1;
@@ -147,6 +147,12 @@ public class SyllabusListView extends javax.swing.JPanel {
 	public void setViewButton(javax.swing.JButton viewButton) {
 		this.viewButton = viewButton;
 	}
-    
-    
+
+	public javax.swing.JButton getCancelButton() {
+		return cancelButton;
+	}
+
+	public void setCancelButton(javax.swing.JButton cancelButton) {
+		this.cancelButton = cancelButton;
+	}
 }

@@ -7,7 +7,6 @@ import java.util.Map;
 
 import com.fixent.sm.server.dao.MarkDAO;
 import com.fixent.sm.server.model.Mark;
-import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.info.MarkInfo;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.MarkService;

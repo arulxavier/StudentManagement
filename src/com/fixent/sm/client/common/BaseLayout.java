@@ -2,8 +2,6 @@ package com.fixent.sm.client.common;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;

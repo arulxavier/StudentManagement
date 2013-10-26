@@ -30,8 +30,6 @@ public class SubjectCategoryView extends javax.swing.JPanel {
         cancelButton = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        subjectCategoryIdTextField = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         subjectCategoryNameTextField = new javax.swing.JTextField();
 
@@ -50,11 +48,6 @@ public class SubjectCategoryView extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Verdana", 1, 14)); // NOI18N
         jLabel4.setText("Subject Category Info");
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        jLabel1.setText("Subject Category ID");
-
-        subjectCategoryIdTextField.setColumns(15);
-
         jLabel2.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel2.setText("Subject Category Name");
 
@@ -68,52 +61,39 @@ public class SubjectCategoryView extends javax.swing.JPanel {
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2))
-                                .addGap(22, 22, 22)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(subjectCategoryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(subjectCategoryIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addContainerGap(43, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49))))
+                        .addComponent(cancelButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jLabel2)
+                            .addGap(22, 22, 22)
+                            .addComponent(subjectCategoryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel4)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(subjectCategoryIdTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(subjectCategoryNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(saveButton)
                     .addComponent(cancelButton))
-                .addContainerGap())
+                .addContainerGap(28, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton cancelButton;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JButton saveButton;
-    private javax.swing.JTextField subjectCategoryIdTextField;
     private javax.swing.JTextField subjectCategoryNameTextField;
     // End of variables declaration//GEN-END:variables
 	public javax.swing.JButton getCancelButton() {
@@ -122,14 +102,6 @@ public class SubjectCategoryView extends javax.swing.JPanel {
 
 	public void setCancelButton(javax.swing.JButton cancelButton) {
 		this.cancelButton = cancelButton;
-	}
-
-	public javax.swing.JLabel getjLabel1() {
-		return jLabel1;
-	}
-
-	public void setjLabel1(javax.swing.JLabel jLabel1) {
-		this.jLabel1 = jLabel1;
 	}
 
 	public javax.swing.JLabel getjLabel2() {
@@ -162,15 +134,6 @@ public class SubjectCategoryView extends javax.swing.JPanel {
 
 	public void setSaveButton(javax.swing.JButton saveButton) {
 		this.saveButton = saveButton;
-	}
-
-	public javax.swing.JTextField getSubjectCategoryIdTextField() {
-		return subjectCategoryIdTextField;
-	}
-
-	public void setSubjectCategoryIdTextField(
-			javax.swing.JTextField subjectCategoryIdTextField) {
-		this.subjectCategoryIdTextField = subjectCategoryIdTextField;
 	}
 
 	public javax.swing.JTextField getSubjectCategoryNameTextField() {

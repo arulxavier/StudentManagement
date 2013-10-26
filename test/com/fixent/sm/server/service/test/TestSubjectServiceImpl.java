@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 
 import com.fixent.sm.server.model.Subject;
-import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.impl.SubjectCategoryServiceImpl;
 import com.fixent.sm.server.service.impl.SubjectServiceImpl;
 

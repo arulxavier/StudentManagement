@@ -5,8 +5,6 @@ import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
 import com.fixent.sm.server.model.Congregation;
-import com.fixent.sm.server.model.Diocese;
-import com.fixent.sm.server.model.Subject;
 
 public class CongregationListDataTable extends AbstractTableModel {
 
@@ -19,7 +17,7 @@ public class CongregationListDataTable extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	
 	List<Congregation> congregations;
-	String columnList[] = new String[] { "Diocese ID", "Diocese Name" };
+	String columnList[] = new String[] { "ID", "Congregation Name" };
 
 	@Override
 	public int getColumnCount() {

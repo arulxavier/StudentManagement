@@ -2,12 +2,15 @@ package com.fixent.sm.client.maintenance.controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.Date;
 import java.util.List;
 
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JDialog;
 
+import com.fixent.sm.client.common.BaseController;
 import com.fixent.sm.client.maintenance.view.SubjectCategoryView;
 import com.fixent.sm.client.maintenance.view.SubjectMaintenanceView;
 import com.fixent.sm.client.maintenance.view.SubjectView;
@@ -16,244 +19,343 @@ import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.impl.SubjectCategoryServiceImpl;
 import com.fixent.sm.server.service.impl.SubjectServiceImpl;
 
-public class SubjectMaintenanceController {
+public class SubjectMaintenanceController 
+extends BaseController {
 
 	public SubjectMaintenanceView view;
 	List<SubjectCategory> subjectCategories;
 	List<Subject> subjects;
 	JDialog subjectCategoryPopup;
 	JDialog subjectPopup;
-	
+	Subject subject;
+	SubjectCategory subjectCategory;
+
 	public SubjectMaintenanceController() {
-		
+
 		view = new SubjectMaintenanceView();
-		
-		view.getSubjectCategoryAddButton().addActionListener(new AddSubjectCategoryAction());
-		view.getSubjectCategoryDeleteButton().addActionListener(new DeleteSubjectCategoryAction());
-		
+
+		view.getSubjectCategoryAddButton().addActionListener(
+				new AddSubjectCategoryAction());
+		view.getSubjectCategoryDeleteButton().addActionListener(
+				new DeleteSubjectCategoryAction());
+
 		view.getSubjectAddButton().addActionListener(new AddSubjectAction());
-		view.getSubjectDeleteButton().addActionListener(new DeleteSubjectAction());
+		view.getSubjectDeleteButton().addActionListener(
+				new DeleteSubjectAction());
+		view.getSubjectTable().addMouseListener(new SubjectTableClickAction());
+		view.getSubjectCategoryTable().addMouseListener(new SubjectCategoryTableClickAction());
 		setView();
-		 
+
 	}
-	
+
 	private void setView() {
-		
+
 		setSubjectCategoryView();
 		setSubjectView();
 	}
 
 	private void setSubjectView() {
-		
+
 		SubjectServiceImpl impl = new SubjectServiceImpl();
 		subjects = impl.getSubjects();
 		SubjectListDataTable model = new SubjectListDataTable(subjects);
-		view.getSubjectTable().setModel(model);		
+		view.getSubjectTable().setModel(model);
+		view.getSubjectTable().getColumnModel().getColumn(0).setPreferredWidth(25);
+		view.getSubjectTable().getColumnModel().getColumn(0).setMaxWidth(25);
 	}
 
 	private void setSubjectCategoryView() {
-		
+
 		SubjectCategoryServiceImpl subjectCategoryServiceImpl = new SubjectCategoryServiceImpl();
 		subjectCategories = subjectCategoryServiceImpl.getSubjectCategories();
-		SubjecCategorytListDataTable dataModel = new SubjecCategorytListDataTable(subjectCategories);
-		view.getSubjectCategoryTable().setModel(dataModel);		
+		SubjecCategorytListDataTable dataModel = new SubjecCategorytListDataTable(
+				subjectCategories);
+		view.getSubjectCategoryTable().setModel(dataModel);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setPreferredWidth(25);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setMaxWidth(25);
 	}
 
-	class AddSubjectCategoryAction
-	implements ActionListener {
-		
+	class AddSubjectCategoryAction implements ActionListener {
+
 		public AddSubjectCategoryAction() {
-			// TODO Auto-generated constructor stub
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
+
+			setErrorMsg("");
 			SubjectCategoryView view = new SubjectCategoryView();
-			
-			view.getSaveButton().addActionListener(new SaveSubjectCategoryAction(view));
-			view.getCancelButton().addActionListener(new CancelSubjectCategoryAction());
-			view.getSubjectCategoryIdTextField().setEditable(false);
-			
+
+			view.getSaveButton().addActionListener(
+					new SaveSubjectCategoryAction(view));
+			view.getCancelButton().addActionListener(
+					new CancelSubjectCategoryAction());
 			subjectCategoryPopup = new JDialog();
 			subjectCategoryPopup.add(view);
 			subjectCategoryPopup.setSize(425, 300);
-			subjectCategoryPopup.setResizable(false);			
+			subjectCategoryPopup.setResizable(false);
 			subjectCategoryPopup.setLocationRelativeTo(null);
 			subjectCategoryPopup.setVisible(true);
-			
+
 		}
 	}
-	
-	class SaveSubjectCategoryAction
-	implements ActionListener {
-		
+
+	class SaveSubjectCategoryAction implements ActionListener {
+
 		SubjectCategoryView view = null;
+
 		public SaveSubjectCategoryAction(SubjectCategoryView view) {
 			this.view = view;
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-			System.out.println("Save Action");
-			SubjectCategory category = new SubjectCategory();
-			category.setName(view.getSubjectCategoryNameTextField().getText());
-			category.setCreatedBy("Admin");
-			category.setCreatedDate(new Date());
+
+			setErrorMsg("");
 			SubjectCategoryServiceImpl impl = new SubjectCategoryServiceImpl();
-			impl.createSubjectCategory(category);			
+			if (subjectCategory == null) {
+				subjectCategory = new SubjectCategory();
+				subjectCategory.setCreatedBy("Admin");
+				subjectCategory.setCreatedDate(new Date());
+				subjectCategory.setName(view.getSubjectCategoryNameTextField()
+						.getText());
+				impl.createSubjectCategory(subjectCategory);
+			} else {
+				subjectCategory.setUpdatedBy("Admin");
+				subjectCategory.setUpdatedDate(new Date());
+				subjectCategory.setName(view.getSubjectCategoryNameTextField()
+						.getText());
+				impl.modifySubjectCategory(subjectCategory);
+			}
 			setSubjectCategoryView();
+			setSubjectView();
 			subjectCategoryPopup.dispose();
-			
-			
-			
 		}
-		
-		
+
 	}
-	
-	class CancelSubjectCategoryAction
-	implements ActionListener {
+
+	class CancelSubjectCategoryAction implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
+
+			setErrorMsg("");
 			subjectCategoryPopup.dispose();
 		}
-		
+
 	}
-	
-	class DeleteSubjectCategoryAction
-	implements ActionListener {
+
+	class DeleteSubjectCategoryAction implements ActionListener {
 
 		public DeleteSubjectCategoryAction() {
-			// TODO Auto-generated constructor stub
-		}
-		
-		@Override
-		public void actionPerformed(ActionEvent e) {
-			
-	          final int row = view.getSubjectCategoryTable().getSelectedRow();
-//	          final int column = view.getSubjectCategoryTable().getSelectedColumn();
-	          System.out.println(view.getSubjectCategoryTable().getValueAt(row, 0));
-	          SubjectCategoryServiceImpl impl = new SubjectCategoryServiceImpl();
-	          impl.deleteSubjectCategory(Integer.parseInt(view.getSubjectCategoryTable().getValueAt(row, 0).toString()));
-	          setSubjectCategoryView();
-			
-		}
-		
-	}
-	
-	class AddSubjectAction
-	implements ActionListener {
-		
-		public AddSubjectAction() {
-			// TODO Auto-generated constructor stub
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
+
+			setErrorMsg("");
+			final int row = view.getSubjectCategoryTable().getSelectedRow();
+			SubjectCategory deleteObject = subjectCategories.get(row);
+			SubjectCategoryServiceImpl impl = new SubjectCategoryServiceImpl();
+			if (!impl.deleteSubjectCategory(deleteObject.getId())) {
+				
+				setErrorMessages(view.getParent(), "Cannot delete subject category when it is associated with subject");
+			}
 			
-			SubjectView view = new SubjectView();
-			view.getSaveButton().addActionListener(new SaveSubjectAction(view));
-			view.getCancelButton().addActionListener(new CancelSubjectAction());
+			setSubjectCategoryView();
+
+		}
+
+	}
+
+	class AddSubjectAction implements ActionListener {
+
+		public AddSubjectAction() {
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+
+			setErrorMsg("");
+			SubjectView subjectView = new SubjectView();
+			subjectView.getSaveButton().addActionListener(
+					new SaveSubjectAction(subjectView));
+			subjectView.getCancelButton().addActionListener(
+					new CancelSubjectAction());
 			DefaultComboBoxModel boxModel = new DefaultComboBoxModel();
 			boxModel.addElement("Select One");
 			for (SubjectCategory category : subjectCategories) {
 				boxModel.addElement(category.getName());
 			}
-			view.getSubjectCategoryComboBox().setModel(boxModel);
+			subjectView.getSubjectCategoryComboBox().setModel(boxModel);
 			subjectPopup = new JDialog();
-			subjectPopup.add(view);
+			subjectPopup.add(subjectView);
 			subjectPopup.setSize(400, 400);
 			subjectPopup.setLocationRelativeTo(null);
 			subjectPopup.setVisible(true);
-			
+
 		}
 	}
-	
-	class SaveSubjectAction
-	implements ActionListener {
-		
+
+	class SaveSubjectAction implements ActionListener {
+
 		SubjectView view = null;
+
 		public SaveSubjectAction(SubjectView view) {
 			this.view = view;
 		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-			System.out.println("Save Action");
-			Subject category = new Subject();
-			category.setName(view.getSubjectNameTextField().getText());
-			category.setCredit(Integer.parseInt(view.getCreditTextField().getText()));
-			category.setSubjectCategory(getSubjectGategory((String)view.getSubjectCategoryComboBox().getSelectedItem()));
-			category.setCreatedBy("Admin");
-			category.setCreatedDate(new Date());
+
+			setErrorMsg("");
 			SubjectServiceImpl impl = new SubjectServiceImpl();
-			impl.createSubject(category);
+			if (subject == null) {
+				subject = new Subject();
+				subject.setCreatedBy("Admin");
+				subject.setCreatedDate(new Date());
+				subject.setName(view.getSubjectNameTextField().getText());
+				subject.setCredit(Integer.parseInt(view.getCreditTextField()
+						.getText()));
+				subject.setSubjectCategory(getSubjectGategory((String) view
+						.getSubjectCategoryComboBox().getSelectedItem()));
+				impl.createSubject(subject);
+			} else {
+				subject.setUpdatedBy("Admin");
+				subject.setUpdatedDate(new Date());
+				subject.setName(view.getSubjectNameTextField().getText());
+				subject.setCredit(Integer.parseInt(view.getCreditTextField()
+						.getText()));
+				subject.setSubjectCategory(getSubjectGategory((String) view
+						.getSubjectCategoryComboBox().getSelectedItem()));
+				impl.modifySubject(subject);
+			}
 			setSubjectView();
 			subjectPopup.dispose();
-			
+
 		}
 
 		private SubjectCategory getSubjectGategory(String selectedItem) {
-			
+
 			for (SubjectCategory category : subjectCategories) {
-				
+
 				if (category.getName().equals(selectedItem)) {
 					return category;
 				}
 			}
 			return null;
 		}
-		
-		
+
 	}
-	
-	class CancelSubjectAction
-	implements ActionListener {
+
+	class CancelSubjectAction implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
+
+			setErrorMsg("");
 			subjectPopup.dispose();
 		}
-		
+
 	}
-	
-	class DeleteSubjectAction
-	implements ActionListener {
+
+	class DeleteSubjectAction implements ActionListener {
 
 		public DeleteSubjectAction() {
-			// TODO Auto-generated constructor stub
 		}
-		
+
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-	          final int row = view.getSubjectTable().getSelectedRow();
-//	          final int column = view.getSubjectTable().getSelectedColumn();
-	          System.out.println(view.getSubjectTable().getValueAt(row, 0));
-	          SubjectServiceImpl impl = new SubjectServiceImpl();
-	          impl.deleteSubject(getSubject(Integer.parseInt(view.getSubjectTable().getValueAt(row, 0).toString())));
-	          setSubjectView();
-			
+
+			setErrorMsg("");
+			final int row = view.getSubjectTable().getSelectedRow();
+			SubjectServiceImpl impl = new SubjectServiceImpl();
+			impl.deleteSubject(getSubject(Integer.parseInt(view
+					.getSubjectTable().getValueAt(row, 0).toString())));
+			setSubjectView();
+
 		}
-		
+
 	}
-	
+
 	private Subject getSubject(int id) {
-		
+
 		for (Subject subject : subjects) {
-			
+
 			if (subject.getId() == id) {
-				return subject;				
+				return subject;
 			}
 		}
 		return null;
-		
+	}
+
+	class SubjectTableClickAction extends MouseAdapter {
+
+		public void mouseClicked(MouseEvent e) {
+
+			setErrorMsg("");
+			if (e.getClickCount() == 2) {
+				final int row = view.getSubjectTable().getSelectedRow();
+				SubjectView subjectView = new SubjectView();
+				subjectView.getSaveButton().addActionListener(
+						new SaveSubjectAction(subjectView));
+				subjectView.getCancelButton().addActionListener(
+						new CancelSubjectAction());
+				DefaultComboBoxModel boxModel = new DefaultComboBoxModel();
+				boxModel.addElement("Select One");
+				for (SubjectCategory category : subjectCategories) {
+					boxModel.addElement(category.getName());
+				}
+				subjectView.getSubjectCategoryComboBox().setModel(boxModel);
+				subject = getSubjectBasedOnRowId(row);
+				subjectView.getCreditTextField().setText(
+						String.valueOf(subject.getCredit()));
+				subjectView.getSubjectNameTextField().setText(
+						subject.getName());
+				subjectView.getSubjectCategoryComboBox().setSelectedItem(
+						subject.getSubjectCategory().getName());
+				subjectPopup = new JDialog();
+				subjectPopup.add(subjectView);
+				subjectPopup.setSize(400, 400);
+				subjectPopup.setLocationRelativeTo(null);
+				subjectPopup.setVisible(true);
+			}
+		}
+	}
+
+	class SubjectCategoryTableClickAction extends MouseAdapter {
+
+		public void mouseClicked(MouseEvent e) {
+
+			setErrorMsg("");
+			if (e.getClickCount() == 2) {
+				final int row = view.getSubjectCategoryTable().getSelectedRow();
+				subjectCategory = subjectCategories.get(row);
+				
+				SubjectCategoryView view = new SubjectCategoryView();
+				view.getSaveButton().addActionListener(
+						new SaveSubjectCategoryAction(view));
+				view.getCancelButton().addActionListener(
+						new CancelSubjectCategoryAction());
+				view.getSubjectCategoryNameTextField().setText(subjectCategory.getName());
+				subjectCategoryPopup = new JDialog();
+				subjectCategoryPopup.add(view);
+				subjectCategoryPopup.setSize(425, 300);
+				subjectCategoryPopup.setResizable(false);
+				subjectCategoryPopup.setLocationRelativeTo(null);
+				subjectCategoryPopup.setVisible(true);
+			}
+		}
+	}
+
+	private Subject getSubjectBasedOnRowId(int id) {
+
+		return subjects.get(id);
+	}
+	
+	private void setErrorMsg(String msg)
+	{
+		setErrorMessages(view.getParent(), msg);
 	}
 
 }

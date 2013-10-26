@@ -17,7 +17,7 @@ public class SubjectListDataTable extends AbstractTableModel {
 	private static final long serialVersionUID = 1L;
 	
 	List<Subject> subjects;
-	String columnList[] = new String[] { "Subject ID", "Category Name", "Subject Name" };
+	String columnList[] = new String[] { "ID",  "Subject Name" , "Subject Category"};
 
 	@Override
 	public int getColumnCount() {
@@ -28,6 +28,7 @@ public class SubjectListDataTable extends AbstractTableModel {
 	public int getRowCount() {
 		return subjects.size();
 	}
+	
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
@@ -37,9 +38,9 @@ public class SubjectListDataTable extends AbstractTableModel {
 		case 0:
 			return entity.getId();
 		case 1:
-			return entity.getSubjectCategory().getName();
-		case 2:
 			return entity.getName();
+		case 2:
+			return entity.getSubjectCategory().getName();
 		default:
 			return null;
 		}

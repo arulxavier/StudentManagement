@@ -37,7 +37,7 @@
 				<column name="SYLABUS_ID" not-null="true" />
 			</key>
 			<many-to-many entity-name="com.fixent.sm.server.model.Subject">
-				<column name="SUBJECT_ID" not-null="true" />
+				<column name="SUBJECT_ID" />
 			</many-to-many>
 		</set>
 

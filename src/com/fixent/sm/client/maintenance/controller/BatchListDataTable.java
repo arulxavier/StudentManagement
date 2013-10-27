@@ -4,21 +4,20 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import com.fixent.sm.server.model.Subject;
+import com.fixent.sm.server.model.Batch;
 
-public class SubjectListDataTable extends AbstractTableModel {
+public class BatchListDataTable extends AbstractTableModel {
 
-	public SubjectListDataTable(List<Subject> subjects) {
+	public BatchListDataTable(List<Batch> subjects) {
 		super();
-		this.subjects = subjects;
+		this.batches = subjects;
 	}
 
 	/**/
 	private static final long serialVersionUID = 1L;
 
-	List<Subject> subjects;
-	String columnList[] = new String[] { "ID", "Subject Name",
-			"Subject Category" };
+	List<Batch> batches;
+	String columnList[] = new String[] { "Batch ID", "Year", "Type" };
 
 	@Override
 	public int getColumnCount() {
@@ -27,20 +26,20 @@ public class SubjectListDataTable extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return subjects != null ? subjects.size() : 0;
+		return batches != null ? batches.size() : 0;
 	}
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
-		Subject entity = subjects.get(rowIndex);
+		Batch entity = batches.get(rowIndex);
 		switch (columnIndex) {
 		case 0:
 			return entity.getId();
 		case 1:
-			return entity.getName();
+			return entity.getYear();
 		case 2:
-			return entity.getSubjectCategory().getName();
+			return entity.getType();
 		default:
 			return null;
 		}

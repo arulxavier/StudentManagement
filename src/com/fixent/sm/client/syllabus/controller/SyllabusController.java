@@ -37,6 +37,7 @@ public class SyllabusController extends BaseController {
 	public SyllabusController() {
 
 		view = new SyllabusView();
+		view.getYearComboBox().setModel(getYears());
 		screenMode = (String) pop(ClientConstants.SCREEN_MODE);
 		syllabusInfo = (SyllabusInfo) pop("SyllabusInfo");
 		selectedSubjects = new ArrayList<Subject>();
@@ -100,7 +101,7 @@ public class SyllabusController extends BaseController {
 
 			setErrorMessages(view.getParent(), "");
 			SyllabusServiceImpl impl = new SyllabusServiceImpl();
-			if(checkErrors())
+			if(checkErrors() && ClientConstants.ADD.equalsIgnoreCase(screenMode))
 			{
 				setErrorMessages(view.getParent(), "Syllabus created for the entered year & semester");
 				return;

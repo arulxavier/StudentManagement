@@ -39,6 +39,7 @@ extends JFrame{
 		add(new BasePane(), BorderLayout.CENTER);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
+		setResizable(false);
 		setVisible(true);
 
 	}

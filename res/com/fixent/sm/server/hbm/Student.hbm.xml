@@ -41,7 +41,7 @@
 		<property name="motherOccupation" type="string">
 			<column name="MOTHER_OCCUPATION" />
 		</property>
-		<property name="contactNumber" type="int">
+		<property name="contactNumber" type="string">
 			<column name="CONTACT_NUMBER" />
 		</property>
 		<property name="dateOfBaptism" type="date">
@@ -152,6 +152,15 @@
 <!-- 		<many-to-one name="diocese" class="com.fixent.sm.server.model.Diocese" column="DIOCESE_ID" not-null="true" /> -->
 <!-- 		<many-to-one name="address" class="com.fixent.sm.server.model.Address" column="ADDRESS_ID" not-null="true" /> -->
 		
+		<set name="address" table="ADDRESS" 
+				inverse="false" lazy="true" fetch="select" cascade="all">
+            <key>
+                <column name="STUDENT_ID"/>
+            </key>
+            <one-to-many class="com.fixent.sm.server.model.Address" />
+        </set>
+		
+		
 		 <set name="marks" table="MARK" 
 				inverse="true" lazy="true" fetch="select">
             <key>
@@ -167,9 +176,9 @@
             <one-to-many class="com.fixent.sm.server.model.Ministry" />
         </set>
          <set name="documentStatus" table="DOCUMENT_STATUS" 
-				inverse="true" lazy="true" fetch="select" cascade="all">
+				inverse="false" lazy="true" fetch="select" cascade="all">
             <key>
-                <column name="STUDENT_ID" not-null="true" />
+                <column name="STUDENT_ID" />
             </key>
             <one-to-many class="com.fixent.sm.server.model.DocumentStatus"/>
         </set>

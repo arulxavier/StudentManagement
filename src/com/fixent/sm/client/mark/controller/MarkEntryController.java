@@ -1,5 +1,6 @@
 package com.fixent.sm.client.mark.controller;
 
+import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -9,6 +10,8 @@ import java.util.Set;
 
 import javax.swing.DefaultComboBoxModel;
 
+import com.fixent.sm.client.common.BaseController;
+import com.fixent.sm.client.common.RightSidePanel;
 import com.fixent.sm.client.mark.view.MarkEntryView;
 import com.fixent.sm.server.model.Mark;
 import com.fixent.sm.server.model.Student;
@@ -20,7 +23,8 @@ import com.fixent.sm.server.service.impl.MarkServiceImpl;
 import com.fixent.sm.server.service.impl.StudentServiceImpl;
 import com.fixent.sm.server.service.impl.SyllabusServiceImpl;
 
-public class MarkEntryController {
+public class MarkEntryController
+extends BaseController{
 
 	public MarkEntryView view;
 	private Syllabus syllabus;
@@ -42,6 +46,7 @@ public class MarkEntryController {
 		public void actionPerformed(ActionEvent e) {
 			
 			SyllabusInfo syllabusInfo = new SyllabusInfo();
+			view.getYearComboBox().setModel(getYears());
 			syllabusInfo.setYear(Integer.parseInt(view.getYearComboBox().getSelectedItem().toString()));
 			syllabusInfo.setType(view.getYearTypeComboBox().getSelectedItem().toString());
 			syllabusInfo.setSemaster(Integer.parseInt(view.getSemasterComboBox().getSelectedItem().toString()));
@@ -100,6 +105,13 @@ public class MarkEntryController {
 			
 			MarkServiceImpl impl = new MarkServiceImpl();
 			impl.createMarks(marks);
+			
+			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
+			rightSidePanel.removeAll();
+			rightSidePanel.add(new MarkDashboardController().view, BorderLayout.CENTER);
+			rightSidePanel.repaint();
+			rightSidePanel.revalidate();
+			rightSidePanel.setVisible(true);
 			
 		}
 		

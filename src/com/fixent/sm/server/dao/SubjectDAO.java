@@ -25,7 +25,9 @@ public class SubjectDAO extends BaseDAO {
 		Session session = getSession();
 		session.beginTransaction();
 		Query query = session.createSQLQuery("select max(id) from SUBJECT;");
-		id = (Integer) query.uniqueResult();
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
 		return id;
 	}
 

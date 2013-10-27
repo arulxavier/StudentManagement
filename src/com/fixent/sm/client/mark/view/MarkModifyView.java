@@ -48,13 +48,13 @@ public class MarkModifyView extends javax.swing.JPanel {
         jLabel2.setText("Year");
 
         yearComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "2013", "2014", "2015", "2016" }));
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "2010", "2011", "2012", "2013", "2014", "2015", "2016" }));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel3.setText("Type");
 
         yearTypeComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        yearTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year" }));
+        yearTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year", "Fourth Year" }));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel4.setText("Semaster");
@@ -100,7 +100,7 @@ public class MarkModifyView extends javax.swing.JPanel {
                                 .addComponent(jLabel2))
                             .addGap(18, 18, 18)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(yearComboBox, 0, 93, Short.MAX_VALUE)
+                                .addComponent(yearComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(semasterComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGap(44, 44, 44)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,7 +108,7 @@ public class MarkModifyView extends javax.swing.JPanel {
                                 .addComponent(jLabel5))
                             .addGap(26, 26, 26)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(yearTypeComboBox, 0, 94, Short.MAX_VALUE)
+                                .addComponent(yearTypeComboBox, 0, 1, Short.MAX_VALUE)
                                 .addComponent(subjectComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 599, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(29, Short.MAX_VALUE))

@@ -5,7 +5,7 @@
 	<class name="com.fixent.sm.server.model.Address" table="ADDRESS">
 		<id name="id" type="int">
 			<column name="ID" precision="5" scale="0" />
-			<generator class="assigned" />
+			<generator class="increment" />
 		</id>
 
 		<property name="street" type="string">
@@ -24,5 +24,8 @@
 			<column name="PINCODE" not-null="true" />
 		</property>
 		
+		<many-to-one name="student" class="com.fixent.sm.server.model.Student" fetch="select">
+            <column name="STUDENT_ID" />
+        </many-to-one>
 	</class>
 </hibernate-mapping>

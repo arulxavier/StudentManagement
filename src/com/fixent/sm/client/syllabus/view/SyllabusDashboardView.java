@@ -46,13 +46,13 @@ public class SyllabusDashboardView extends javax.swing.JPanel {
         jLabel2.setText("Year");
 
         yearComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "2013", "2014", "2015", "2016" }));
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "2010", "2011", "2012", "2013", "2014", "2015", "2016" }));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel3.setText("Type");
 
         typeComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        typeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year" }));
+        typeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year", "Fourth Year" }));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel4.setText("Semaster");

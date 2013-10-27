@@ -1,8 +1,6 @@
 package com.fixent.sm.server.dao;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 import com.fixent.sm.server.service.util.SessionFactoryUtil;
 

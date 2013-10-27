@@ -5,7 +5,7 @@ import java.awt.Container;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.swing.JPanel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JScrollPane;
 import javax.swing.JViewport;
 
@@ -38,6 +38,16 @@ public class BaseController {
 				footerPanel.footerView.getErrorLabel().setText(message);
 			}
 		}
-				
+	}
+	
+	public DefaultComboBoxModel getYears()
+	{
+		DefaultComboBoxModel model = new DefaultComboBoxModel();
+		model.addElement("Select One");
+		for (int i = 1900; i<= 2050;  i++)
+		{
+			model.addElement(String.valueOf(i));
+		}
+		return model;
 	}
 }

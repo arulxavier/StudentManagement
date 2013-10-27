@@ -4,10 +4,13 @@ import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import com.fixent.sm.client.common.BaseController;
+import com.fixent.sm.client.common.ClientConstants;
 import com.fixent.sm.client.common.RightSidePanel;
 import com.fixent.sm.client.student.view.StudentDashboardView;
 
-public class StudentDashboardController {
+public class StudentDashboardController
+extends BaseController{
 	
 	public StudentDashboardView view;
 	AddEvent addEvent;
@@ -34,6 +37,7 @@ public class StudentDashboardController {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			
+			push(ClientConstants.SCREEN_MODE, ClientConstants.ADD);
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
 			rightSidePanel.removeAll();
 			rightSidePanel.add(new StudentController().view, BorderLayout.CENTER);

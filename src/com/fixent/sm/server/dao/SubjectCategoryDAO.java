@@ -1,8 +1,5 @@
 package com.fixent.sm.server.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -24,16 +21,9 @@ extends BaseDAO {
 		Session session = getSession();
 		session.beginTransaction();
 		Query query = session.createSQLQuery("select max(id) from SUBJECT_CATEGORY;");
-		id =  (Integer) query.uniqueResult();
-		/*Connection connection = session.connection();
-		PreparedStatement preparedStatement = connection
-				.prepareStatement("select max(id) from SUBJECT_CATEGORY;");
-		ResultSet resultSet = preparedStatement.executeQuery();
-		
-		while(resultSet.next()) {
-			id = resultSet.getInt(1);
-		}*/
-//		session.close();
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
 		session.getTransaction().commit();
 		
 		return id;

@@ -49,13 +49,13 @@ public class MarkEntryView extends javax.swing.JPanel {
         jLabel2.setText("Year");
 
         yearComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Year", "2013", "2014", "2015" }));
+        yearComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "2010", "2011", "2012", "2013", "2014", "2015", "2016" }));
 
         jLabel3.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel3.setText("Year Type");
 
         yearTypeComboBox.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
-        yearTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year" }));
+        yearTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "First Year", "Second Year", "Third Year", "Fourth Year" }));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel4.setText("Semaster");
@@ -131,7 +131,7 @@ public class MarkEntryView extends javax.swing.JPanel {
                         .addComponent(jLabel4)
                         .addGap(30, 30, 30)
                         .addComponent(semasterComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                         .addComponent(searchButton))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)

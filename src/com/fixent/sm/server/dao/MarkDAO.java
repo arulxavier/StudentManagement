@@ -49,6 +49,7 @@ extends BaseDAO {
 		
 		List<Mark> marks = new ArrayList<Mark>();
 		Session session = getSession();
+		session.beginTransaction();
 		Criteria criteria = session.createCriteria(Mark.class);
 		Criteria criteria2 = criteria.createCriteria("syllabus");
 		if (markInfo.getYear() != 0) {

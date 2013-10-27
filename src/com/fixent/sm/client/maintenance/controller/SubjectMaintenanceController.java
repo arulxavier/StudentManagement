@@ -19,8 +19,7 @@ import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.impl.SubjectCategoryServiceImpl;
 import com.fixent.sm.server.service.impl.SubjectServiceImpl;
 
-public class SubjectMaintenanceController 
-extends BaseController {
+public class SubjectMaintenanceController extends BaseController {
 
 	public SubjectMaintenanceView view;
 	List<SubjectCategory> subjectCategories;
@@ -43,7 +42,8 @@ extends BaseController {
 		view.getSubjectDeleteButton().addActionListener(
 				new DeleteSubjectAction());
 		view.getSubjectTable().addMouseListener(new SubjectTableClickAction());
-		view.getSubjectCategoryTable().addMouseListener(new SubjectCategoryTableClickAction());
+		view.getSubjectCategoryTable().addMouseListener(
+				new SubjectCategoryTableClickAction());
 		setView();
 
 	}
@@ -60,7 +60,8 @@ extends BaseController {
 		subjects = impl.getSubjects();
 		SubjectListDataTable model = new SubjectListDataTable(subjects);
 		view.getSubjectTable().setModel(model);
-		view.getSubjectTable().getColumnModel().getColumn(0).setPreferredWidth(25);
+		view.getSubjectTable().getColumnModel().getColumn(0)
+				.setPreferredWidth(25);
 		view.getSubjectTable().getColumnModel().getColumn(0).setMaxWidth(25);
 	}
 
@@ -71,8 +72,10 @@ extends BaseController {
 		SubjecCategorytListDataTable dataModel = new SubjecCategorytListDataTable(
 				subjectCategories);
 		view.getSubjectCategoryTable().setModel(dataModel);
-		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setPreferredWidth(25);
-		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setMaxWidth(25);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0)
+				.setPreferredWidth(25);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0)
+				.setMaxWidth(25);
 	}
 
 	class AddSubjectCategoryAction implements ActionListener {
@@ -85,7 +88,6 @@ extends BaseController {
 
 			setErrorMsg("");
 			SubjectCategoryView view = new SubjectCategoryView();
-
 			view.getSaveButton().addActionListener(
 					new SaveSubjectCategoryAction(view));
 			view.getCancelButton().addActionListener(
@@ -121,12 +123,19 @@ extends BaseController {
 						.getText());
 				impl.createSubjectCategory(subjectCategory);
 			} else {
-				subjectCategory.setUpdatedBy("Admin");
-				subjectCategory.setUpdatedDate(new Date());
-				subjectCategory.setName(view.getSubjectCategoryNameTextField()
-						.getText());
-				impl.modifySubjectCategory(subjectCategory);
+				SubjectCategory localSubjectCategory = new SubjectCategory();
+				localSubjectCategory.setCreatedBy(subjectCategory
+						.getCreatedBy());
+				localSubjectCategory.setCreatedDate(subjectCategory
+						.getCreatedDate());
+				localSubjectCategory.setId(subjectCategory.getId());
+				localSubjectCategory.setUpdatedBy("Admin");
+				localSubjectCategory.setUpdatedDate(new Date());
+				localSubjectCategory.setName(view
+						.getSubjectCategoryNameTextField().getText());
+				impl.modifySubjectCategory(localSubjectCategory);
 			}
+			subjectCategory = null;
 			setSubjectCategoryView();
 			setSubjectView();
 			subjectCategoryPopup.dispose();
@@ -140,6 +149,7 @@ extends BaseController {
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");
+			subjectCategory = null;
 			subjectCategoryPopup.dispose();
 		}
 
@@ -158,10 +168,10 @@ extends BaseController {
 			SubjectCategory deleteObject = subjectCategories.get(row);
 			SubjectCategoryServiceImpl impl = new SubjectCategoryServiceImpl();
 			if (!impl.deleteSubjectCategory(deleteObject.getId())) {
-				
-				setErrorMessages(view.getParent(), "Cannot delete subject category when it is associated with subject");
+
+				setErrorMessages(view.getParent(),
+						"Cannot delete subject category when it is associated with subject");
 			}
-			
 			setSubjectCategoryView();
 
 		}
@@ -215,21 +225,39 @@ extends BaseController {
 				subject.setCreatedBy("Admin");
 				subject.setCreatedDate(new Date());
 				subject.setName(view.getSubjectNameTextField().getText());
-				subject.setCredit(Integer.parseInt(view.getCreditTextField()
-						.getText()));
+				try {
+					subject.setCredit(Integer.parseInt(view.getCreditTextField()
+							.getText()));
+				} catch (NumberFormatException e1) {
+					setErrorMsg("Please enter anumerice value");
+					e1.printStackTrace();
+					return;
+				}
 				subject.setSubjectCategory(getSubjectGategory((String) view
 						.getSubjectCategoryComboBox().getSelectedItem()));
 				impl.createSubject(subject);
 			} else {
-				subject.setUpdatedBy("Admin");
-				subject.setUpdatedDate(new Date());
-				subject.setName(view.getSubjectNameTextField().getText());
-				subject.setCredit(Integer.parseInt(view.getCreditTextField()
-						.getText()));
-				subject.setSubjectCategory(getSubjectGategory((String) view
-						.getSubjectCategoryComboBox().getSelectedItem()));
+				Subject localSubject = new Subject();
+				localSubject.setCreatedBy(subject.getCreatedBy());
+				localSubject.setCreatedDate(subject.getCreatedDate());
+				localSubject.setId(subject.getId());
+				localSubject.setUpdatedBy("Admin");
+				localSubject.setUpdatedDate(new Date());
+				localSubject.setName(view.getSubjectNameTextField().getText());
+				try {
+					localSubject.setCredit(Integer.parseInt(view.getCreditTextField()
+							.getText()));
+				} catch (NumberFormatException e1) {
+					setErrorMsg("Please enter anumerice value");
+					e1.printStackTrace();
+					return;
+				}
+				localSubject
+						.setSubjectCategory(getSubjectGategory((String) view
+								.getSubjectCategoryComboBox().getSelectedItem()));
 				impl.modifySubject(subject);
 			}
+			subject = null;
 			setSubjectView();
 			subjectPopup.dispose();
 
@@ -254,6 +282,7 @@ extends BaseController {
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");
+			subject = null;
 			subjectPopup.dispose();
 		}
 
@@ -310,8 +339,8 @@ extends BaseController {
 				subject = getSubjectBasedOnRowId(row);
 				subjectView.getCreditTextField().setText(
 						String.valueOf(subject.getCredit()));
-				subjectView.getSubjectNameTextField().setText(
-						subject.getName());
+				subjectView.getSubjectNameTextField()
+						.setText(subject.getName());
 				subjectView.getSubjectCategoryComboBox().setSelectedItem(
 						subject.getSubjectCategory().getName());
 				subjectPopup = new JDialog();
@@ -331,13 +360,14 @@ extends BaseController {
 			if (e.getClickCount() == 2) {
 				final int row = view.getSubjectCategoryTable().getSelectedRow();
 				subjectCategory = subjectCategories.get(row);
-				
+
 				SubjectCategoryView view = new SubjectCategoryView();
 				view.getSaveButton().addActionListener(
 						new SaveSubjectCategoryAction(view));
 				view.getCancelButton().addActionListener(
 						new CancelSubjectCategoryAction());
-				view.getSubjectCategoryNameTextField().setText(subjectCategory.getName());
+				view.getSubjectCategoryNameTextField().setText(
+						subjectCategory.getName());
 				subjectCategoryPopup = new JDialog();
 				subjectCategoryPopup.add(view);
 				subjectCategoryPopup.setSize(425, 300);
@@ -352,9 +382,8 @@ extends BaseController {
 
 		return subjects.get(id);
 	}
-	
-	private void setErrorMsg(String msg)
-	{
+
+	private void setErrorMsg(String msg) {
 		setErrorMessages(view.getParent(), msg);
 	}
 

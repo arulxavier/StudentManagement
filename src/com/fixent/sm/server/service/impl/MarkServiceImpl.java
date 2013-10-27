@@ -71,7 +71,7 @@ implements MarkService {
 			MarkDAO dao = new MarkDAO();
 			marks = dao.searchMark(markInfo);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		return marks;
 	}

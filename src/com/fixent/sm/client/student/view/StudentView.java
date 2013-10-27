@@ -149,6 +149,7 @@ public class StudentView extends javax.swing.JPanel {
         jLabel36 = new javax.swing.JLabel();
         passportSizePhotoCheckBox = new javax.swing.JCheckBox();
         saveButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -173,7 +174,7 @@ public class StudentView extends javax.swing.JPanel {
         jLabel3.setText("Gender");
 
         genderComboBox.setFont(new java.awt.Font("Verdana", 0, 14)); // NOI18N
-        genderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Male", "Female", " " }));
+        genderComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select One", "Male", "Female" }));
 
         jLabel4.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel4.setText("Data Of Birth");
@@ -939,33 +940,43 @@ public class StudentView extends javax.swing.JPanel {
         tabContainer.addTab("Document Status", documentStatusPanel);
 
         saveButton.setBackground(new java.awt.Color(61, 86, 109));
+        saveButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         saveButton.setForeground(new java.awt.Color(255, 255, 255));
         saveButton.setText("Save");
+
+        cancelButton.setBackground(new java.awt.Color(61, 86, 109));
+        cancelButton.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
+        cancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        cancelButton.setText("Cancel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tabContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 655, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)))
+                .addComponent(tabContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 655, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(saveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cancelButton)
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(tabContainer, javax.swing.GroupLayout.PREFERRED_SIZE, 442, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(saveButton)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(saveButton)
+                    .addComponent(cancelButton))
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton cancelButton;
     private javax.swing.JCheckBox certificateOfConfirmationCheckBox;
     private javax.swing.JCheckBox certificateOfPhilosophyCheckBox;
     private javax.swing.JCheckBox certificateofBaptismCheckBox;
@@ -2029,6 +2040,94 @@ public class StudentView extends javax.swing.JPanel {
 
 	public void setVillageTextField(javax.swing.JTextField villageTextField) {
 		this.villageTextField = villageTextField;
+	}
+
+	public javax.swing.JButton getCancelButton() {
+		return cancelButton;
+	}
+
+	public void setCancelButton(javax.swing.JButton cancelButton) {
+		this.cancelButton = cancelButton;
+	}
+
+	public javax.swing.JTextField getCityTextField() {
+		return cityTextField;
+	}
+
+	public void setCityTextField(javax.swing.JTextField cityTextField) {
+		this.cityTextField = cityTextField;
+	}
+
+	public javax.swing.JComboBox getCountryComboBox() {
+		return countryComboBox;
+	}
+
+	public void setCountryComboBox(javax.swing.JComboBox countryComboBox) {
+		this.countryComboBox = countryComboBox;
+	}
+
+	public javax.swing.JLabel getjLabel25() {
+		return jLabel25;
+	}
+
+	public void setjLabel25(javax.swing.JLabel jLabel25) {
+		this.jLabel25 = jLabel25;
+	}
+
+	public javax.swing.JLabel getjLabel53() {
+		return jLabel53;
+	}
+
+	public void setjLabel53(javax.swing.JLabel jLabel53) {
+		this.jLabel53 = jLabel53;
+	}
+
+	public javax.swing.JLabel getjLabel54() {
+		return jLabel54;
+	}
+
+	public void setjLabel54(javax.swing.JLabel jLabel54) {
+		this.jLabel54 = jLabel54;
+	}
+
+	public javax.swing.JLabel getjLabel55() {
+		return jLabel55;
+	}
+
+	public void setjLabel55(javax.swing.JLabel jLabel55) {
+		this.jLabel55 = jLabel55;
+	}
+
+	public javax.swing.JLabel getjLabel56() {
+		return jLabel56;
+	}
+
+	public void setjLabel56(javax.swing.JLabel jLabel56) {
+		this.jLabel56 = jLabel56;
+	}
+
+	public javax.swing.JTextField getPincodeTextField() {
+		return pincodeTextField;
+	}
+
+	public void setPincodeTextField(javax.swing.JTextField pincodeTextField) {
+		this.pincodeTextField = pincodeTextField;
+	}
+
+	public javax.swing.JComboBox getStateComboBox() {
+		return stateComboBox;
+	}
+
+	public void setStateComboBox(javax.swing.JComboBox stateComboBox) {
+		this.stateComboBox = stateComboBox;
+	}
+
+	public javax.swing.JTextField getStreetTextField() {
+		return streetTextField;
+	}
+
+	public void setStreetTextField(javax.swing.JTextField streetTextField) {
+		this.streetTextField = streetTextField;
 	}
     
 }

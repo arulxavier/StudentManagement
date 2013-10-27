@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fixent.sm.server.model.Address;
 import com.fixent.sm.server.model.Batch;
 import com.fixent.sm.server.model.DocumentStatus;
 import com.fixent.sm.server.model.Student;
@@ -15,7 +16,7 @@ public class TestStudentServiceImpl {
 		
 		Student student = new Student();
 		
-		student.setContactNumber(123);
+		student.setContactNumber("123");
 		student.setCreatedBy("admin");
 		student.setCreatedDate(new Date());
 		student.setDateOfBaptism(new Date());
@@ -79,6 +80,17 @@ public class TestStudentServiceImpl {
 		documentStatus3.setStudent(student);
 		
 		student.setDocumentStatus(documentStatus);
+		
+		Set<Address> addresses = new HashSet<Address>();
+		Address address = new Address();
+		address.setStreet("sadhsadhsa");
+		address.setCity("dashfkadgf");
+		address.setState("dasfdhfdsk");
+		address.setCountry("adskaskdhks");
+		address.setPincode(132321);
+		addresses.add(address);
+		
+		student.setAddress(addresses);
 		
 		
 		

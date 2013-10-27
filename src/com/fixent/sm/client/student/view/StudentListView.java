@@ -28,11 +28,11 @@ public class StudentListView extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         studentListTable = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        viewBtn = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        modifyButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
+        cancelButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        viewButton = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -44,26 +44,27 @@ public class StudentListView extends javax.swing.JPanel {
 
             }
         ));
+        studentListTable.setFillsViewportHeight(true);
         jScrollPane1.setViewportView(studentListTable);
 
-        jButton1.setBackground(new java.awt.Color(61, 86, 109));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Modify");
+        modifyButton.setBackground(new java.awt.Color(61, 86, 109));
+        modifyButton.setForeground(new java.awt.Color(255, 255, 255));
+        modifyButton.setText("Modify");
 
-        viewBtn.setBackground(new java.awt.Color(61, 86, 109));
-        viewBtn.setForeground(new java.awt.Color(255, 255, 255));
-        viewBtn.setText("View");
+        deleteButton.setBackground(new java.awt.Color(61, 86, 109));
+        deleteButton.setForeground(new java.awt.Color(255, 255, 255));
+        deleteButton.setText("Delete");
 
-        jButton3.setBackground(new java.awt.Color(61, 86, 109));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("Delete");
-
-        jButton4.setBackground(new java.awt.Color(61, 86, 109));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("Cancel");
+        cancelButton.setBackground(new java.awt.Color(61, 86, 109));
+        cancelButton.setForeground(new java.awt.Color(255, 255, 255));
+        cancelButton.setText("Cancel");
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Student List View");
+
+        viewButton.setBackground(new java.awt.Color(61, 86, 109));
+        viewButton.setForeground(new java.awt.Color(255, 255, 255));
+        viewButton.setText("View");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -71,18 +72,16 @@ public class StudentListView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(viewBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4))
-                    .addComponent(jLabel1))
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(deleteButton)
+                        .addComponent(cancelButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(modifyButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(viewButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 560, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,23 +91,25 @@ public class StudentListView extends javax.swing.JPanel {
                 .addGap(8, 8, 8)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(viewBtn)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap())
+                .addComponent(viewButton)
+                .addGap(10, 10, 10)
+                .addComponent(modifyButton)
+                .addGap(10, 10, 10)
+                .addComponent(deleteButton)
+                .addGap(10, 10, 10)
+                .addComponent(cancelButton)
+                .addGap(19, 19, 19))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton cancelButton;
+    private javax.swing.JButton deleteButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JButton modifyButton;
     private javax.swing.JTable studentListTable;
-    private javax.swing.JButton viewBtn;
+    private javax.swing.JButton viewButton;
     // End of variables declaration//GEN-END:variables
 	public javax.swing.JTable getStudentListTable() {
 		return studentListTable;
@@ -119,11 +120,59 @@ public class StudentListView extends javax.swing.JPanel {
 	}
 
 	public javax.swing.JButton getViewBtn() {
-		return viewBtn;
+		return viewButton;
 	}
 
 	public void setViewBtn(javax.swing.JButton viewBtn) {
-		this.viewBtn = viewBtn;
+		this.viewButton = viewBtn;
+	}
+
+	public javax.swing.JButton getCancelButton() {
+		return cancelButton;
+	}
+
+	public void setCancelButton(javax.swing.JButton cancelButton) {
+		this.cancelButton = cancelButton;
+	}
+
+	public javax.swing.JButton getDeleteButton() {
+		return deleteButton;
+	}
+
+	public void setDeleteButton(javax.swing.JButton deleteButton) {
+		this.deleteButton = deleteButton;
+	}
+
+	public javax.swing.JLabel getjLabel1() {
+		return jLabel1;
+	}
+
+	public void setjLabel1(javax.swing.JLabel jLabel1) {
+		this.jLabel1 = jLabel1;
+	}
+
+	public javax.swing.JScrollPane getjScrollPane1() {
+		return jScrollPane1;
+	}
+
+	public void setjScrollPane1(javax.swing.JScrollPane jScrollPane1) {
+		this.jScrollPane1 = jScrollPane1;
+	}
+
+	public javax.swing.JButton getModifyButton() {
+		return modifyButton;
+	}
+
+	public void setModifyButton(javax.swing.JButton modifyButton) {
+		this.modifyButton = modifyButton;
+	}
+
+	public javax.swing.JButton getViewButton() {
+		return viewButton;
+	}
+
+	public void setViewButton(javax.swing.JButton viewButton) {
+		this.viewButton = viewButton;
 	}
     
 }

@@ -6,7 +6,6 @@ package com.fixent.sm.client.login.view;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -25,9 +24,7 @@ public class LoginView extends javax.swing.JPanel {
         initComponents();
         
         try {
-        	File file = new File("");
-        	String path = file.getAbsolutePath();
-			img = ImageIO.read(new File(path + "\\src\\com\\fixent\\sm\\client\\login\\view\\login_background.jpg"));
+			img = ImageIO.read(getClass().getResource("login_background.jpg"));
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
@@ -56,6 +53,7 @@ public class LoginView extends javax.swing.JPanel {
         loginButton = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        errorLable = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(255, 255, 255));
@@ -73,6 +71,8 @@ public class LoginView extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         jLabel1.setText("Password");
+
+        errorLable.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -93,11 +93,17 @@ public class LoginView extends javax.swing.JPanel {
                             .addComponent(userNameTextField)
                             .addComponent(passwordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(54, 54, 54))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(errorLable, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(73, Short.MAX_VALUE)
+                .addContainerGap(55, Short.MAX_VALUE)
+                .addComponent(errorLable)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(userNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
@@ -112,6 +118,7 @@ public class LoginView extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel errorLable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JButton loginButton;
@@ -129,6 +136,16 @@ public class LoginView extends javax.swing.JPanel {
 	public javax.swing.JPasswordField getPasswordField() {
 		return passwordField;
 	}
+
+	public javax.swing.JLabel getErrorLable() {
+		return errorLable;
+	}
+
+
+	public void setErrorLable(javax.swing.JLabel errorLable) {
+		this.errorLable = errorLable;
+	}
+
 
 	public void setPasswordField(javax.swing.JPasswordField passwordField) {
 		this.passwordField = passwordField;

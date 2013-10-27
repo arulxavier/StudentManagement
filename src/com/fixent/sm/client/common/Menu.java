@@ -14,16 +14,17 @@ public class Menu {
 		
 		rootMenu.put("1", "Master");
 		rootMenu.put("2", "Maintenance");
+		
 
 		masterSubMenu.put("1", "Subject/Category");
 		masterSubMenu.put("2", "Dio/Congregation");
+		masterSubMenu.put("3", "Batch");
 
 		studentSubMenu.put("1", "Syllabus");
 		studentSubMenu.put("2", "  Student Info  ");
 		studentSubMenu.put("3", "Mark");
 		studentSubMenu.put("4", "Ministry");
-		
-		
+		studentSubMenu.put("5", "Change Year");
 		subMenuMap.put("Master", masterSubMenu);
 		subMenuMap.put("Maintenance", studentSubMenu);
 		

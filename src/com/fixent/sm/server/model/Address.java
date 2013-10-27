@@ -8,6 +8,8 @@ public class Address {
 	private String state;
 	private String country;
 	private int pincode;
+	private Student student;
+	
 	public int getId() {
 		return id;
 	}
@@ -44,4 +46,11 @@ public class Address {
 	public void setPincode(int pincode) {
 		this.pincode = pincode;
 	}
+	public Student getStudent() {
+		return student;
+	}
+	public void setStudent(Student student) {
+		this.student = student;
+	}
+	
 }

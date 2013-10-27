@@ -1,8 +1,5 @@
 package com.fixent.sm.server.dao;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.util.List;
 
 import org.hibernate.Criteria;
@@ -10,6 +7,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
+import com.fixent.sm.server.model.Batch;
 import com.fixent.sm.server.model.Configuration;
 import com.fixent.sm.server.model.Congregation;
 import com.fixent.sm.server.model.Diocese;
@@ -54,15 +52,9 @@ public class ConfigurationDAO extends BaseDAO {
 		Session session = getSession();
 		session.beginTransaction();
 		Query query = session.createSQLQuery("select max(id) from DIOCESE;");
-		id =  (Integer) query.uniqueResult();
-		/*Connection connection = session.connection();
-		PreparedStatement preparedStatement = connection
-				.prepareStatement("select max(id) from DIOCESE;");
-		ResultSet resultSet = preparedStatement.executeQuery();
-
-		while (resultSet.next()) {
-			id = resultSet.getInt(1);
-		}*/
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
 		session.getTransaction().commit();
 		return id;
 	}
@@ -81,16 +73,11 @@ public class ConfigurationDAO extends BaseDAO {
 		int id = 0;
 		Session session = getSession();
 		session.beginTransaction();
-		Query query = session.createSQLQuery("select max(id) from congregation;");
-		id =  (Integer) query.uniqueResult();/*
-		Connection connection = session.connection();
-		PreparedStatement preparedStatement = connection
-				.prepareStatement("select max(id) from congregation;");
-		ResultSet resultSet = preparedStatement.executeQuery();
-
-		while (resultSet.next()) {
-			id = resultSet.getInt(1);
-		}*/
+		Query query = session
+				.createSQLQuery("select max(id) from congregation;");
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
 		return id;
 	}
 
@@ -153,6 +140,74 @@ public class ConfigurationDAO extends BaseDAO {
 		Session session = getSession();
 		session.beginTransaction();
 		session.merge(congregation);
+		session.getTransaction().commit();
+		return true;
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Batch> getBatchs() {
+
+		Session session = getSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(Batch.class);
+		return criteria.list();
+	}
+
+	@SuppressWarnings("unchecked")
+	public Batch getBatch(int year, String type) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		Criteria criteria = session.createCriteria(Batch.class);
+		criteria.add(Restrictions.eq("year", year));
+		criteria.add(Restrictions.ilike("type", type));
+		return (Batch) criteria.uniqueResult();
+	}
+
+	public Batch getBatch(int id) {
+
+		Session session = getSession();
+		Criteria criteria = session.createCriteria(Batch.class);
+		criteria.add(Restrictions.idEq(id));
+		Batch congregation = (Batch) criteria.list().get(0);
+		return congregation;
+	}
+
+	public boolean deletebatch(Batch batch) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		session.delete(batch);
+		session.getTransaction().commit();
+		return true;
+	}
+
+	public boolean modifybatch(Batch batch) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		session.merge(batch);
+		session.getTransaction().commit();
+		return true;
+	}
+
+	public int getBatchMaxId() {
+
+		int id = 0;
+		Session session = getSession();
+		session.beginTransaction();
+		Query query = session.createSQLQuery("select max(id) from batch;");
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
+		return id;
+	}
+
+	public boolean createbatch(Batch batch) {
+
+		Session session = getSession();
+		session.beginTransaction();
+		session.save(batch);
 		session.getTransaction().commit();
 		return true;
 	}

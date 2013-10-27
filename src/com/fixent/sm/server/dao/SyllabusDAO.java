@@ -24,7 +24,9 @@ public class SyllabusDAO extends BaseDAO {
 		Session session = getSession();
 		session.beginTransaction();
 		Query query = session.createSQLQuery("select max(id) from SYLLABUS;");
-		id =  (Integer) query.uniqueResult();
+		if (query.uniqueResult() != null) {
+			id = (Integer) query.uniqueResult();
+		}
 		session.getTransaction().commit();
 		
 		return id;

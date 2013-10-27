@@ -18,6 +18,7 @@ extends BaseController {
 	public SyllabusDashboardController() {
 		
 		view = new SyllabusDashboardView();
+		view.getYearComboBox().setModel(getYears());
 		view.getSearchButton().addActionListener(new SearchAction());
 		view.getAddButton().addActionListener(new AddAction());
 	}

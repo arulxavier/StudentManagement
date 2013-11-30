@@ -26,7 +26,7 @@ public class DioceseListDataTable extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return dioceses.size();
+		return dioceses != null ? dioceses.size() : 0;
 	}
 
 	@Override

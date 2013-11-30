@@ -23,19 +23,29 @@ public class BaseController {
 		return OBJECT_MAP.remove(key);
 	}
 	
-	public void setErrorMessages(Container jPanel, String message) {
+	public void setErrorMessages(Container jPanel, String msg) {
 		
 		RightSidePanel rightSidePanel = (RightSidePanel) jPanel;
 		JViewport jViewport = (JViewport)rightSidePanel.getParent();
 		JScrollPane jScrollPane = (JScrollPane) jViewport.getParent();
 		BaseLayout baseLayout = (BaseLayout) jScrollPane.getParent();
-		
+		String message = "";
 		for (Component component : baseLayout.getComponents()) {
 			
 			if (component instanceof FooterPanel) {
 				
 				FooterPanel footerPanel = (FooterPanel)component;
-				footerPanel.footerView.getErrorLabel().setText(message);
+				
+				footerPanel.footerView.getErrorLabel().setText("Error Accured click more to view detail msg");
+				footerPanel.footerView.getMoreLabel().setText("more.....");
+				if (footerPanel.errorMessageView.getMessageLabel().getText().length() > 0) {
+					
+					message = footerPanel.errorMessageView.getMessageLabel().getText();
+					message = message + "\n" + msg;
+				} else {
+					message = msg;
+				}
+				footerPanel.errorMessageView.getMessageLabel().setText(message);
 			}
 		}
 	}

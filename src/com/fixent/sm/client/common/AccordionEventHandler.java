@@ -14,6 +14,7 @@ import com.fixent.sm.client.changeyear.controller.ChangeYearControler;
 import com.fixent.sm.client.maintenance.controller.BatchController;
 import com.fixent.sm.client.maintenance.controller.DioceseCongregationController;
 import com.fixent.sm.client.maintenance.controller.SubjectMaintenanceController;
+import com.fixent.sm.client.maintenance.view.SubjectMaintenanceView;
 import com.fixent.sm.client.mark.controller.MarkDashboardController;
 import com.fixent.sm.client.student.controller.StudentDashboardController;
 import com.fixent.sm.client.syllabus.controller.SyllabusDashboardController;
@@ -50,9 +51,11 @@ public class AccordionEventHandler extends MenuClickEvent {
 						rightSidePanel.removeAll();
 						if (item.getText().equalsIgnoreCase("Subject/Category")) {
 
-							rightSidePanel.add(
-									new SubjectMaintenanceController().view,
-									BorderLayout.CENTER);
+							SubjectMaintenanceController controller = new SubjectMaintenanceController();
+							SubjectMaintenanceView maintenanceView = controller.view;
+							rightSidePanel.add(maintenanceView, BorderLayout.CENTER);
+							controller.init();
+							
 						} else if (item.getText().equalsIgnoreCase(
 								"Dio/Congregation")) {
 

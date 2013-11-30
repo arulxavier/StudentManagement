@@ -358,6 +358,104 @@ CREATE  TABLE IF NOT EXISTS `STPAULS`.`SUBSCRIBE_INFO` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+
+-- -----------------------------------------------------
+-- Table `STPAULS`.`GROUP_ST`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `STPAULS`.`GROUP_ST` (
+  `ID` INT NOT NULL ,
+  `GROUP_NAME` VARCHAR(45) NULL ,
+  `STATUS` TINYINT(1) NULL ,
+  PRIMARY KEY (`ID`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `STPAULS`.`SHOP`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `STPAULS`.`SHOP` (
+  `ID` INT NOT NULL ,
+  `SHOP_NUMBER` VARCHAR(45) NULL ,
+  `SQARE_FEET` DOUBLE NULL ,
+  `GROUP_ID` INT NOT NULL ,
+  PRIMARY KEY (`ID`) ,
+  INDEX `fk_SHOP_GROUP1_idx` (`GROUP_ID` ASC) ,
+  CONSTRAINT `fk_SHOP_GROUP1`
+    FOREIGN KEY (`GROUP_ID` )
+    REFERENCES `STPAULS`.`GROUP_ST` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `STPAULS`.`TENANT`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `STPAULS`.`TENANT` (
+  `ID` INT NOT NULL ,
+  `SHOP_NAME` VARCHAR(45) NULL ,
+  `YEAR` INT NULL ,
+  `PAYMENT_MODE` VARCHAR(45) NULL ,
+  `PAYMENT_AMOUNT` DOUBLE NULL ,
+  `SHOP_ID` INT NOT NULL ,
+  PRIMARY KEY (`ID`) ,
+  INDEX `fk_TENANT_SHOP1_idx` (`SHOP_ID` ASC) ,
+  CONSTRAINT `fk_TENANT_SHOP1`
+    FOREIGN KEY (`SHOP_ID` )
+    REFERENCES `STPAULS`.`SHOP` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `STPAULS`.`ADDRESS_RENT`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `STPAULS`.`ADDRESS_RENT` (
+  `ID` INT NOT NULL ,
+  `STREET` VARCHAR(45) NULL ,
+  `CITY` VARCHAR(45) NULL ,
+  `STATE` VARCHAR(45) NULL ,
+  `COUNTRY` VARCHAR(45) NULL ,
+  `PINCODE` VARCHAR(45) NULL ,
+  `TENANT_ID` INT NOT NULL ,
+  PRIMARY KEY (`ID`) ,
+  INDEX `fk_ADDRESS_RENT_TENANT1_idx` (`TENANT_ID` ASC) ,
+  CONSTRAINT `fk_ADDRESS_RENT_TENANT1`
+    FOREIGN KEY (`TENANT_ID` )
+    REFERENCES `STPAULS`.`TENANT` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `STPAULS`.`SCHEDULER`
+-- -----------------------------------------------------
+CREATE  TABLE IF NOT EXISTS `STPAULS`.`SCHEDULER` (
+  `ID` INT NOT NULL ,
+  `BOOKING_DATE` DATE NULL ,
+  `EXPIRY_DATE` DATE NULL ,
+  `FROM_DATE` DATE NULL ,
+  `TO_DATE` DATE NULL ,
+  `DUE_DATE` DATE NULL ,
+  `DAYS` INT NULL ,
+  `DUE_AMOUNT` DOUBLE NULL ,
+  `SERVICE_TAX` DOUBLE NULL ,
+  `TAX_AMOUNT` DOUBLE NULL ,
+  `TOTAL_DUE` DOUBLE NULL ,
+  `PAYMENT_AMOUNT` DOUBLE NULL ,
+  `PAYMENT_DATE` DATE NULL ,
+  `TENANT_ID` INT NOT NULL ,
+  PRIMARY KEY (`ID`) ,
+  INDEX `fk_SCHEDULER_TENANT1_idx` (`TENANT_ID` ASC) ,
+  CONSTRAINT `fk_SCHEDULER_TENANT1`
+    FOREIGN KEY (`TENANT_ID` )
+    REFERENCES `STPAULS`.`TENANT` (`ID` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 USE `STPAULS` ;
 
 

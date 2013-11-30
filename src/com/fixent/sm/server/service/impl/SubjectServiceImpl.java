@@ -3,12 +3,15 @@ package com.fixent.sm.server.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fixent.sm.server.BaseService;
+import com.fixent.sm.server.ErrorCode;
 import com.fixent.sm.server.dao.SubjectDAO;
 import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.info.SyllabusInfo;
 import com.fixent.sm.server.service.SubjectService;
 
 public class SubjectServiceImpl 
+extends BaseService
 implements SubjectService {
 
 	@Override
@@ -53,8 +56,8 @@ implements SubjectService {
 			SubjectDAO dao = new SubjectDAO();
 			subjects = dao.getSubjects();
 			
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Throwable th) {
+			handleServiceException(th, ErrorCode.CAN_NOT_FETCH_SUBJECTS.toString(), null);
 		}
 		return subjects;
 	}

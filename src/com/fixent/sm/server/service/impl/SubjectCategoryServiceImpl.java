@@ -2,12 +2,16 @@ package com.fixent.sm.server.service.impl;
 
 import java.util.List;
 
+import com.fixent.sm.server.BaseService;
+import com.fixent.sm.server.ErrorCode;
+import com.fixent.sm.server.ServerException;
 import com.fixent.sm.server.dao.SubjectCategoryDAO;
 import com.fixent.sm.server.dao.SubjectDAO;
 import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.SubjectCategoryService;
 
-public class SubjectCategoryServiceImpl 
+public class SubjectCategoryServiceImpl
+extends BaseService
 implements SubjectCategoryService {
 
 	@Override
@@ -46,18 +50,21 @@ implements SubjectCategoryService {
 	
 	}
 	
-	public List<SubjectCategory> getSubjectCategories() {
+	public List<SubjectCategory> getSubjectCategories() 
+	throws ServerException {
 		
 		List<SubjectCategory> subjectCategories = null;
 		try {
 			
 			SubjectCategoryDAO dao = new SubjectCategoryDAO();
 			subjectCategories = dao.getSubjectCategories();
-		} catch (Exception e) {
-			e.printStackTrace();
+		} catch (Throwable th) {
+			handleServiceException(th, ErrorCode.CAN_NOT_FETCH_SUBJECT_CATEGORIES.toString(), null);
 		}
 		return subjectCategories;
 	}
+	
+	
 	
 	public boolean deleteSubjectCategory(int id) {
 		

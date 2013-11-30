@@ -26,7 +26,7 @@ public class SubjecCategorytListDataTable extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return subjectCategories.size();
+		return subjectCategories != null ? subjectCategories.size() : 0;
 	}
 
 	@Override

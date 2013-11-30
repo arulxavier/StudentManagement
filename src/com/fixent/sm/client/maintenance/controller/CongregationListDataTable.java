@@ -26,7 +26,7 @@ public class CongregationListDataTable extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return congregations.size();
+		return congregations != null ? congregations.size() : 0;
 	}
 
 	@Override

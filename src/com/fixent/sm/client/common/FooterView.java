@@ -27,11 +27,14 @@ public class FooterView extends javax.swing.JPanel {
     private void initComponents() {
 
         errorLabel = new javax.swing.JLabel();
+        moreLabel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         errorLabel.setBackground(new java.awt.Color(255, 255, 255));
         errorLabel.setForeground(new java.awt.Color(255, 0, 51));
+
+        moreLabel.setForeground(new java.awt.Color(255, 51, 51));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -39,16 +42,20 @@ public class FooterView extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(557, Short.MAX_VALUE))
+                .addComponent(errorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(moreLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(1016, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(errorLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(errorLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+            .addComponent(moreLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel errorLabel;
+    private javax.swing.JLabel moreLabel;
     // End of variables declaration//GEN-END:variables
 	public javax.swing.JLabel getErrorLabel() {
 		return errorLabel;
@@ -56,6 +63,14 @@ public class FooterView extends javax.swing.JPanel {
 
 	public void setErrorLabel(javax.swing.JLabel errorLabel) {
 		this.errorLabel = errorLabel;
+	}
+
+	public javax.swing.JLabel getMoreLabel() {
+		return moreLabel;
+	}
+
+	public void setMoreLabel(javax.swing.JLabel moreLabel) {
+		this.moreLabel = moreLabel;
 	}
     
 }

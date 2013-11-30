@@ -14,12 +14,16 @@ import com.fixent.sm.client.common.BaseController;
 import com.fixent.sm.client.maintenance.view.SubjectCategoryView;
 import com.fixent.sm.client.maintenance.view.SubjectMaintenanceView;
 import com.fixent.sm.client.maintenance.view.SubjectView;
+import com.fixent.sm.server.ServiceMessage;
 import com.fixent.sm.server.model.Subject;
 import com.fixent.sm.server.model.SubjectCategory;
 import com.fixent.sm.server.service.impl.SubjectCategoryServiceImpl;
 import com.fixent.sm.server.service.impl.SubjectServiceImpl;
+import com.fixent.sm.server.service.util.SubjectCategoryServiceUtil;
+import com.fixent.sm.server.service.util.SubjectServiceUtil;
 
-public class SubjectMaintenanceController extends BaseController {
+public class SubjectMaintenanceController 
+extends BaseController {
 
 	public SubjectMaintenanceView view;
 	List<SubjectCategory> subjectCategories;
@@ -32,6 +36,10 @@ public class SubjectMaintenanceController extends BaseController {
 	public SubjectMaintenanceController() {
 
 		view = new SubjectMaintenanceView();
+	}
+	
+	public void init() {
+		
 
 		view.getSubjectCategoryAddButton().addActionListener(
 				new AddSubjectCategoryAction());
@@ -45,7 +53,7 @@ public class SubjectMaintenanceController extends BaseController {
 		view.getSubjectCategoryTable().addMouseListener(
 				new SubjectCategoryTableClickAction());
 		setView();
-
+		
 	}
 
 	private void setView() {
@@ -54,31 +62,41 @@ public class SubjectMaintenanceController extends BaseController {
 		setSubjectView();
 	}
 
+	@SuppressWarnings("unchecked")
 	private void setSubjectView() {
 
-		SubjectServiceImpl impl = new SubjectServiceImpl();
-		subjects = impl.getSubjects();
+		ServiceMessage serviceMessage = SubjectServiceUtil.getSubjects();
+		if (!serviceMessage.getStatus().equals("KO")) {
+			subjects = (List<Subject>) serviceMessage.getInfo();
+		} else {
+			setErrorMessages(view.getParent(), "Can't Fetch Subject");
+		}
 		SubjectListDataTable model = new SubjectListDataTable(subjects);
 		view.getSubjectTable().setModel(model);
-		view.getSubjectTable().getColumnModel().getColumn(0)
-				.setPreferredWidth(25);
+		view.getSubjectTable().getColumnModel().getColumn(0).setPreferredWidth(25);
 		view.getSubjectTable().getColumnModel().getColumn(0).setMaxWidth(25);
 	}
 
+	@SuppressWarnings("unchecked")
 	private void setSubjectCategoryView() {
-
-		SubjectCategoryServiceImpl subjectCategoryServiceImpl = new SubjectCategoryServiceImpl();
-		subjectCategories = subjectCategoryServiceImpl.getSubjectCategories();
+		
+		ServiceMessage serviceMessage =  SubjectCategoryServiceUtil.getSubjectCategories();
+		
+		if (!serviceMessage.getStatus().equals("KO")) {
+			
+			subjectCategories = (List<SubjectCategory>) serviceMessage.getInfo();
+		} else {
+			setErrorMessages(view.getParent(), "Can't Fetch Subject Category");
+		}
 		SubjecCategorytListDataTable dataModel = new SubjecCategorytListDataTable(
-				subjectCategories);
+																				subjectCategories);
 		view.getSubjectCategoryTable().setModel(dataModel);
-		view.getSubjectCategoryTable().getColumnModel().getColumn(0)
-				.setPreferredWidth(25);
-		view.getSubjectCategoryTable().getColumnModel().getColumn(0)
-				.setMaxWidth(25);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setPreferredWidth(25);
+		view.getSubjectCategoryTable().getColumnModel().getColumn(0).setMaxWidth(25);
 	}
 
-	class AddSubjectCategoryAction implements ActionListener {
+	class AddSubjectCategoryAction 
+	implements ActionListener {
 
 		public AddSubjectCategoryAction() {
 		}
@@ -229,7 +247,7 @@ public class SubjectMaintenanceController extends BaseController {
 					subject.setCredit(Integer.parseInt(view.getCreditTextField()
 							.getText()));
 				} catch (NumberFormatException e1) {
-					setErrorMsg("Please enter anumerice value");
+					setErrorMsg("Please enter a numerice value");
 					e1.printStackTrace();
 					return;
 				}

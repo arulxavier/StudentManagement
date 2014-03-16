@@ -25,7 +25,7 @@ public class StudentListDataTable extends AbstractTableModel {
 
 	@Override
 	public int getRowCount() {
-		return studentList.size();
+		return studentList != null ? studentList.size() : 0;
 	}
 
 	@Override

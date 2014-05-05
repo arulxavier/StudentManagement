@@ -18,17 +18,17 @@ public class StudentListDataTable extends AbstractTableModel {
 	List<Student> studentList;
 	String columnList[] = new String[] { "Student ID", "Name" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return studentList != null ? studentList.size() : 0;
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Student entity = studentList.get(rowIndex);
@@ -42,7 +42,7 @@ public class StudentListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

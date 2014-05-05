@@ -54,7 +54,6 @@ public class BatchController extends BaseController {
 		public AddButtonAction() {
 		}
 
-		@Override
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");
@@ -80,7 +79,6 @@ public class BatchController extends BaseController {
 			this.view = view;
 		}
 
-		@Override
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");
@@ -148,7 +146,6 @@ public class BatchController extends BaseController {
 
 	class CancelBatchAction implements ActionListener {
 
-		@Override
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");
@@ -163,7 +160,7 @@ public class BatchController extends BaseController {
 		public DeleteButtonAction() {
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMsg("");

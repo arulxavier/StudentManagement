@@ -14,7 +14,7 @@ import com.fixent.sm.server.service.MarkService;
 public class MarkServiceImpl 
 implements MarkService {
 
-	@Override
+	
 	public boolean createMark(Mark mark) {
 		
 		boolean status = false;

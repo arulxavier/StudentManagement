@@ -24,23 +24,23 @@ public class MarkListDataTable extends AbstractTableModel {
 		        Integer.class, String.class, String.class, Double.class
 	};
 	 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return marks.size();
 	}
 	
-	@Override
+	
     public Class<?> getColumnClass(int columnIndex)
     {
         return columnClass[columnIndex];
     }
 	
-	@Override
+	
 	public boolean isCellEditable(int row, int col) {
 		
 		if (col == 3) {
@@ -51,7 +51,7 @@ public class MarkListDataTable extends AbstractTableModel {
 	 }
 	
 	
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Mark entity = marks.get(rowIndex);
@@ -69,12 +69,12 @@ public class MarkListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}
 	
-	@Override
+	
     public void setValueAt(Object aValue, int rowIndex, int columnIndex)
     {
 		Mark row = marks.get(rowIndex);

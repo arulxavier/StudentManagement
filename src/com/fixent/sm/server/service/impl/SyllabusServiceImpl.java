@@ -13,7 +13,7 @@ import com.fixent.sm.server.service.SyllabusService;
 public class SyllabusServiceImpl 
 implements SyllabusService {
 
-	@Override
+	
 	public boolean createSyllabus(Syllabus syllabus) {
 		
 		boolean status = false;

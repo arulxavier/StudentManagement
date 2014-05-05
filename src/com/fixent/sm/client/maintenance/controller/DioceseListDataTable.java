@@ -19,17 +19,17 @@ public class DioceseListDataTable extends AbstractTableModel {
 	List<Diocese> dioceses;
 	String columnList[] = new String[] { "ID", "Diocese Name" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return dioceses != null ? dioceses.size() : 0;
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Diocese entity = dioceses.get(rowIndex);
@@ -43,7 +43,7 @@ public class DioceseListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

@@ -80,7 +80,7 @@ public class StudentController extends BaseController {
 			super();
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			if (student == null) {
@@ -317,7 +317,7 @@ public class StudentController extends BaseController {
 			super();
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			RightSidePanel rightSidePanel = (RightSidePanel) view.getParent();
@@ -628,7 +628,7 @@ public class StudentController extends BaseController {
 
 	class DioCongChnageAction implements ItemListener {
 
-		@Override
+		
 		public void itemStateChanged(ItemEvent e) {
 
 			String value = view.getDioConLayComboBox().getSelectedItem()

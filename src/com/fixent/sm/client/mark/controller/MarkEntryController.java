@@ -42,7 +42,7 @@ extends BaseController{
 	class SearchAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			SyllabusInfo syllabusInfo = new SyllabusInfo();
@@ -80,7 +80,7 @@ extends BaseController{
 	class SaveAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			int row = view.getMarkEntryTable().getRowCount();

@@ -24,23 +24,23 @@ public class MarEntryListDataTable extends AbstractTableModel {
 		        Integer.class, String.class, Double.class
 	};
 	 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return students.size();
 	}
 	
-	@Override
+	
     public Class<?> getColumnClass(int columnIndex)
     {
         return columnClass[columnIndex];
     }
 	
-	@Override
+	
 	public boolean isCellEditable(int row, int col) {
 		
 		if (col == 2) {
@@ -51,7 +51,7 @@ public class MarEntryListDataTable extends AbstractTableModel {
 	 }
 	
 	
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Student entity = students.get(rowIndex);
@@ -67,12 +67,12 @@ public class MarEntryListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}
 	
-	@Override
+	
     public void setValueAt(Object aValue, int rowIndex, int columnIndex)
     {
 		Student row = students.get(rowIndex);

@@ -19,17 +19,17 @@ public class BatchListDataTable extends AbstractTableModel {
 	List<Batch> batches;
 	String columnList[] = new String[] { "Batch ID", "Year", "Type" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return batches != null ? batches.size() : 0;
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Batch entity = batches.get(rowIndex);
@@ -45,7 +45,7 @@ public class BatchListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

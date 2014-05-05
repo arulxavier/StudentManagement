@@ -13,7 +13,7 @@ import com.fixent.sm.server.service.ConfigurationService;
 
 public class ConfigurationServiceImpl implements ConfigurationService {
 
-	@Override
+	
 	public boolean createConfiguration(Configuration configuration) {
 
 		boolean status = false;

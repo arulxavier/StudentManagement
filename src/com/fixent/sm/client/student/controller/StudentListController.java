@@ -37,7 +37,7 @@ public class StudentListController extends BaseController {
 
 	class ViewAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			int row = view.getStudentListTable().getSelectedRow();
@@ -58,7 +58,7 @@ public class StudentListController extends BaseController {
 
 	class ModifyAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			int row = view.getStudentListTable().getSelectedRow();

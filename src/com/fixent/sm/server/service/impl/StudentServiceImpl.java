@@ -13,7 +13,7 @@ import com.fixent.sm.server.service.StudentService;
 
 public class StudentServiceImpl implements StudentService {
 
-	@Override
+	
 	public boolean createStudent(Student student) {
 
 		boolean status = false;
@@ -34,7 +34,7 @@ public class StudentServiceImpl implements StudentService {
 
 	}
 
-	@Override
+	
 	public boolean createMinistry(Ministry ministry) {
 		// TODO Auto-generated method stub
 		return false;

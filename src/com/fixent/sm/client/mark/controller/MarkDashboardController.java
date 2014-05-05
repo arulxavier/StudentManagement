@@ -24,7 +24,7 @@ extends BaseController {
 	class AddAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
@@ -41,7 +41,7 @@ extends BaseController {
 	class ModifyAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();

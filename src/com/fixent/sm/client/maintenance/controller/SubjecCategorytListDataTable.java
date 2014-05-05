@@ -19,17 +19,17 @@ public class SubjecCategorytListDataTable extends AbstractTableModel {
 	List<SubjectCategory> subjectCategories;
 	String columnList[] = new String[] { "ID", "Subject Category Name" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return subjectCategories != null ? subjectCategories.size() : 0;
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		SubjectCategory entity = subjectCategories.get(rowIndex);
@@ -43,7 +43,7 @@ public class SubjecCategorytListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

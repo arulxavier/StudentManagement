@@ -19,17 +19,17 @@ public class CongregationListDataTable extends AbstractTableModel {
 	List<Congregation> congregations;
 	String columnList[] = new String[] { "ID", "Congregation Name" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return congregations != null ? congregations.size() : 0;
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Congregation entity = congregations.get(rowIndex);
@@ -43,7 +43,7 @@ public class CongregationListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

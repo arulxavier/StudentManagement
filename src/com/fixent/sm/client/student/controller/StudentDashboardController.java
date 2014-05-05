@@ -34,7 +34,7 @@ extends BaseController{
 	class AddEvent
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			push(ClientConstants.SCREEN_MODE, ClientConstants.ADD);
@@ -51,7 +51,7 @@ extends BaseController{
 	class SearchEvent
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();

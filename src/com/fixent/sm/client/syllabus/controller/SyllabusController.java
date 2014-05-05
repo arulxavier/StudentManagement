@@ -96,7 +96,7 @@ public class SyllabusController extends BaseController {
 
 	class SaveAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMessages(view.getParent(), "");
@@ -158,7 +158,7 @@ public class SyllabusController extends BaseController {
 
 	class AddAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMessages(view.getParent(), "");
@@ -190,7 +190,7 @@ public class SyllabusController extends BaseController {
 			popupView = view;
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMessages(view.getParent(), "");
@@ -210,7 +210,7 @@ public class SyllabusController extends BaseController {
 
 	class CancelSubjectAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			setErrorMessages(view.getParent(), "");
@@ -244,7 +244,7 @@ public class SyllabusController extends BaseController {
 
 	class CancelAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMessages(view.getParent(), "");
@@ -268,7 +268,7 @@ public class SyllabusController extends BaseController {
 
 	class DeleteAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			setErrorMessages(view.getParent(), "");
@@ -283,7 +283,7 @@ public class SyllabusController extends BaseController {
 
 	class MainDeleteAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			SyllabusServiceImpl syllabusServiceImpl = new SyllabusServiceImpl();

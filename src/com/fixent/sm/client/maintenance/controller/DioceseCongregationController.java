@@ -82,7 +82,7 @@ public class DioceseCongregationController {
 		public AddDioceseAction() {
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			DioceseView dioceseView = new DioceseView();
@@ -107,7 +107,7 @@ public class DioceseCongregationController {
 			this.view = view;
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			ConfigurationServiceImpl impl = new ConfigurationServiceImpl();
@@ -132,7 +132,7 @@ public class DioceseCongregationController {
 
 	class CancelDioceseAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			diocesePopup.dispose();
@@ -145,7 +145,7 @@ public class DioceseCongregationController {
 		public DeleteDioceseAction() {
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			final int row = view.getDioceseTable().getSelectedRow();
@@ -164,7 +164,7 @@ public class DioceseCongregationController {
 			// TODO Auto-generated constructor stub
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			CongregationView congregationView = new CongregationView();
@@ -189,7 +189,7 @@ public class DioceseCongregationController {
 			this.view = view;
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			ConfigurationServiceImpl impl = new ConfigurationServiceImpl();
@@ -215,7 +215,7 @@ public class DioceseCongregationController {
 
 	class CancelCongregationAction implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			congregationPopup.dispose();
@@ -229,7 +229,7 @@ public class DioceseCongregationController {
 			// TODO Auto-generated constructor stub
 		}
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 
 			final int row = view.getCongregationTable().getSelectedRow();

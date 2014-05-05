@@ -14,7 +14,7 @@ public class SubjectCategoryServiceImpl
 extends BaseService
 implements SubjectCategoryService {
 
-	@Override
+	
 	public boolean createSubjectCategory(SubjectCategory category) {
 		
 		boolean status = false;
@@ -33,7 +33,7 @@ implements SubjectCategoryService {
 	
 	}
 
-	@Override
+	
 	public SubjectCategory getSubjectCategory(String name) {
 		
 		SubjectCategory subjectCategory = null;

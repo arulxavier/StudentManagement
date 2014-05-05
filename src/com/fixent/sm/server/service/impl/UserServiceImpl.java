@@ -7,7 +7,7 @@ import com.fixent.sm.server.service.UserService;
 public class UserServiceImpl 
 implements UserService{
 
-	@Override
+	
 	public Boolean login(User user) {
 		
 		UserDAO dao = new UserDAO();

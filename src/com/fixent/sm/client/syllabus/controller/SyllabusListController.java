@@ -44,7 +44,7 @@ extends BaseController {
 	class ViewAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 		
 			push(ClientConstants.SCREEN_MODE, ClientConstants.VIEW);
@@ -77,7 +77,7 @@ extends BaseController {
 	class CancelAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 			
 			RightSidePanel rightSidePanel = (RightSidePanel)view.getParent();
@@ -93,7 +93,7 @@ extends BaseController {
 	class ModifyAction
 	implements ActionListener {
 
-		@Override
+		
 		public void actionPerformed(ActionEvent e) {
 		
 			push(ClientConstants.SCREEN_MODE, ClientConstants.MODIFY);

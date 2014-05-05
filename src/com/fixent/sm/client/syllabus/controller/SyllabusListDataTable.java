@@ -19,17 +19,17 @@ public class SyllabusListDataTable extends AbstractTableModel {
 	List<Syllabus> syllabus;
 	String columnList[] = new String[] { "Syllabus ID", "Year", "Type", "Semester" };
 
-	@Override
+	
 	public int getColumnCount() {
 		return columnList.length;
 	}
 
-	@Override
+	
 	public int getRowCount() {
 		return syllabus.size();
 	}
 
-	@Override
+	
 	public Object getValueAt(int rowIndex, int columnIndex) {
 
 		Syllabus entity = syllabus.get(rowIndex);
@@ -47,7 +47,7 @@ public class SyllabusListDataTable extends AbstractTableModel {
 		}
 	}
 
-	@Override
+	
 	public String getColumnName(int col) {
 		return columnList[col];
 	}

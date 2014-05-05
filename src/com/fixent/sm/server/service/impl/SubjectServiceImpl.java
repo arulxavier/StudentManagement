@@ -14,7 +14,7 @@ public class SubjectServiceImpl
 extends BaseService
 implements SubjectService {
 
-	@Override
+	
 	public boolean createSubject(Subject subject) {
 		
 		boolean status = false;
@@ -33,7 +33,7 @@ implements SubjectService {
 	
 	}
 
-	@Override
+	
 	public Subject getSubject(String name) {
 		
 		Subject subject = null;

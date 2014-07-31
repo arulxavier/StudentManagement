@@ -22,7 +22,7 @@ public class UserDAO extends BaseDAO {
 
 			Class.forName("com.mysql.jdbc.Driver");
 			connect = DriverManager
-					.getConnection("jdbc:mysql://localhost:3306/STUDENT_MANAGEMENT?user=smuser&password=smpw");
+					.getConnection("jdbc:mysql://localhost:3306/STUDENT_MANAGEMENT?user=root&password=root@123");
 
 			preparedStatement = connect
 					.prepareStatement("select count(*) from user where user_name = ? and password = ?;");
